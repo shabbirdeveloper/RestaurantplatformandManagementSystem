@@ -413,6 +413,10 @@ const dishCardVariants = {
   }),
 };
 
+const dishPhotoSpin = { rotateY: [0, 360] };
+const dishPhotoSpinTransition = { duration: 1.15, ease: [.22, 1, .36, 1] };
+const dishPhotoSpinViewport = { once: true, amount: .7 };
+
 function DishCard({ item, onDetails, index = 0 }) {
   const reduceMotion = useReducedMotion();
   return <motion.article
@@ -430,7 +434,20 @@ function DishCard({ item, onDetails, index = 0 }) {
   >
     <div className="dish-card-image">
       <div className="dish-card-photo">
-        <SafeImage src={item.image} alt={item.name} loading="lazy" />
+        <motion.div
+          className="dish-card-photo-rotor"
+          initial={false}
+          whileInView={reduceMotion ? undefined : dishPhotoSpin}
+          viewport={dishPhotoSpinViewport}
+          transition={dishPhotoSpinTransition}
+        >
+          <span className="dish-card-photo-face dish-card-photo-front">
+            <SafeImage src={item.image} alt={item.name} loading="lazy" />
+          </span>
+          <span className="dish-card-photo-face dish-card-photo-back" aria-hidden="true">
+            <SafeImage src={item.image} alt="" loading="lazy" />
+          </span>
+        </motion.div>
       </div>
       <span className="food-badge">{item.badge}</span>
       <button className="dish-card-quick-view" type="button" onClick={() => onDetails?.(item)} aria-label={`View ${item.name} details`}><ArrowUpRight size={17} /></button>

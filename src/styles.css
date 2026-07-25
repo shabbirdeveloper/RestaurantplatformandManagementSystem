@@ -1279,9 +1279,26 @@ body { overflow-x: hidden; background: var(--white); }
   border-radius: 16px;
   background: rgba(255, 255, 255, .08);
   box-shadow: 0 16px 34px rgba(5, 27, 20, .24);
+  perspective: 900px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform .65s cubic-bezier(.22, 1, .36, 1), box-shadow .35s ease;
 }
+.dish-card-photo-rotor {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.dish-card-photo-face {
+  position: absolute;
+  inset: 0;
+  display: block;
+  overflow: hidden;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.dish-card-photo-back { transform: rotateY(180deg); }
 .dish-card-photo img {
   position: static;
   width: 100%;
@@ -1302,6 +1319,16 @@ body { overflow-x: hidden; background: var(--white); }
 .dish-card:hover .dish-card-photo img {
   filter: saturate(1.04) contrast(1.02);
   transform: scale(1.035);
+}
+@keyframes dish-photo-spin-360 {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .dish-card:hover .dish-card-photo-rotor,
+  .dish-card:focus-within .dish-card-photo-rotor {
+    animation: dish-photo-spin-360 1.15s cubic-bezier(.22, 1, .36, 1) both;
+  }
 }
 .dish-card-image .food-badge,
 .dish-card-quick-view { z-index: 3; }
