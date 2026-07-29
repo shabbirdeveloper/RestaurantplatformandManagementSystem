@@ -1309,9 +1309,9 @@ body { overflow-x: hidden; background: var(--white); }
   object-fit: contain;
   object-position: center;
   box-shadow: none;
-  filter: drop-shadow(0 14px 15px rgba(5, 27, 20, .28));
-  -webkit-mask-image: radial-gradient(ellipse 36% 72% at center, #000 40%, rgba(0, 0, 0, .9) 58%, transparent 100%);
-  mask-image: radial-gradient(ellipse 36% 72% at center, #000 40%, rgba(0, 0, 0, .9) 58%, transparent 100%);
+  filter: none;
+  -webkit-mask-image: none;
+  mask-image: none;
   transform: scale(1);
   transition: transform .8s cubic-bezier(.22, 1, .36, 1), filter .45s ease;
 }
@@ -1319,7 +1319,7 @@ body { overflow-x: hidden; background: var(--white); }
   transform: translate(-50%, calc(-50% - 3px)) scale(1.035);
 }
 .dish-card:hover .dish-card-photo img {
-  filter: saturate(1.04) contrast(1.02) drop-shadow(0 17px 18px rgba(5, 27, 20, .32));
+  filter: saturate(1.04) contrast(1.02);
   transform: scale(1.035);
 }
 @keyframes dish-photo-spin-360 {
