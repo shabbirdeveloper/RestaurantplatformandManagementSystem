@@ -986,9 +986,10 @@ input:focus, select:focus, textarea:focus { border-color: var(--maroon); box-sha
   max-width: 560px;
   margin-bottom: 24px;
   color: var(--white);
-  font-size: clamp(40px, 4.6vw, 62px);
-  line-height: 1.02;
-  letter-spacing: -.05em;
+  font-family: var(--hero-title-font-family, Montserrat, system-ui, sans-serif);
+  font-size: var(--hero-title-size-desktop, 62px);
+  line-height: var(--hero-title-line-height, 1.02);
+  letter-spacing: var(--hero-title-letter-spacing, -3px);
 }
 .home-page .hero-description { max-width: 520px; color: rgba(255, 255, 255, .84); font-size: 16px; line-height: 1.75; }
 .home-page .hero-actions { gap: 12px; }
@@ -1045,7 +1046,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--maroon); box-sha
       linear-gradient(0deg, var(--maroon-dark) 0%, rgba(18, 56, 43, .9) 18%, rgba(18, 56, 43, .08) 70%);
   }
   .home-page .hero-copy { max-width: 560px; padding: 112px 0 0; }
-  .home-page .hero-copy h1 { max-width: 520px; font-size: clamp(38px, 7vw, 52px); }
+  .home-page .hero-copy h1 { max-width: 520px; font-size: min(var(--hero-title-size-desktop, 62px), 52px); }
   .home-page .hero-description { max-width: 500px; font-size: 14px; }
   .home-page .hero-carousel-controls { right: 0; bottom: 27px; }
   .home-page .quick-info { margin-top: -26px; }
@@ -1063,7 +1064,7 @@ input:focus, select:focus, textarea:focus { border-color: var(--maroon); box-sha
   .home-page .hero-media { inset: 46% 0 0; }
   .home-page .hero-copy { padding-top: 102px; }
   .home-page .hero-copy .eyebrow { margin-bottom: 14px; font-size: 10px; }
-  .home-page .hero-copy h1 { max-width: 430px; margin-bottom: 16px; font-size: clamp(33px, 9vw, 40px); }
+  .home-page .hero-copy h1 { max-width: 430px; margin-bottom: 16px; font-size: var(--hero-title-size-mobile, 40px); }
   .home-page .hero-description { margin-bottom: 20px; font-size: 13px; line-height: 1.55; }
   .home-page .hero-actions { gap: 8px; margin-top: clamp(150px, 52vw, 200px); }
   .home-page .hero-actions .button { min-height: 42px; padding-inline: 12px; font-size: 11px; }

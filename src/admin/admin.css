@@ -247,6 +247,9 @@
 .admin-form-panel { box-shadow: var(--admin-shadow); }
 .admin-editor-form { max-width: 730px; }
 .admin-two-col { display: grid; grid-template-columns: repeat(2, 1fr); gap: 13px; }
+.admin-typography-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; padding: 15px; border: 1px solid var(--admin-border); border-radius: 11px; background: var(--admin-soft); }
+.admin-typography-fields label:first-child { grid-column: 1 / -1; }
+.admin-field-help { margin-top: -6px; color: var(--admin-muted); font-size: 9px; font-weight: 600; line-height: 1.5; }
 .admin-save-wide { width: 100%; min-height: 44px; }
 .admin-preview-panel { position: sticky; top: 95px; }
 .admin-hero-preview { overflow: hidden; border: 1px solid var(--admin-border); border-radius: 10px; background: var(--admin-soft); }
@@ -565,6 +568,8 @@
 .admin-about-upload-button:has(input:disabled) { opacity: .55; cursor: wait; }
 
 @media (max-width: 760px) {
+  .admin-typography-fields { grid-template-columns: 1fr; }
+  .admin-typography-fields label:first-child { grid-column: auto; }
   .admin-hero-slides-panel > .admin-panel-heading { align-items: flex-start; flex-direction: column; }
   .admin-hero-slides-panel > .admin-panel-heading > button { width: 100%; justify-content: center; }
   .admin-hero-slide-layout { grid-template-columns: 1fr; }
