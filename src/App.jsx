@@ -414,7 +414,7 @@ const dishCardVariants = {
 };
 
 const dishPhotoSpin = { rotateY: [0, 360] };
-const dishPhotoSpinTransition = { duration: 1.15, ease: [.22, 1, .36, 1] };
+const dishPhotoSpinTransition = { duration: 1.8, ease: [.22, 1, .36, 1] };
 const dishPhotoSpinViewport = { once: true, amount: .7 };
 
 function DishCard({ item, onDetails, index = 0 }) {

@@ -1260,7 +1260,7 @@ body { overflow-x: hidden; background: var(--white); }
   position: absolute;
   inset: 12px;
   z-index: 0;
-  border: 1px solid rgba(255, 255, 255, .1);
+  border: 0;
   border-radius: 18px;
   background: radial-gradient(circle at 50% 38%, rgba(255, 255, 255, .13), transparent 66%);
   pointer-events: none;
@@ -1274,14 +1274,14 @@ body { overflow-x: hidden; background: var(--white); }
   z-index: 1;
   width: min(68%, 190px);
   aspect-ratio: 1;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, .28);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, .08);
-  box-shadow: 0 16px 34px rgba(5, 27, 20, .24);
+  overflow: visible;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
   perspective: 900px;
   transform: translate(-50%, -50%) scale(1);
-  transition: transform .65s cubic-bezier(.22, 1, .36, 1), box-shadow .35s ease;
+  transition: transform .8s cubic-bezier(.22, 1, .36, 1);
 }
 .dish-card-photo-rotor {
   position: relative;
@@ -1294,7 +1294,7 @@ body { overflow-x: hidden; background: var(--white); }
   position: absolute;
   inset: 0;
   display: block;
-  overflow: hidden;
+  overflow: visible;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
@@ -1306,18 +1306,20 @@ body { overflow-x: hidden; background: var(--white); }
   max-width: none;
   max-height: none;
   border-radius: 0;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   box-shadow: none;
+  filter: drop-shadow(0 14px 15px rgba(5, 27, 20, .28));
+  -webkit-mask-image: radial-gradient(ellipse 36% 72% at center, #000 40%, rgba(0, 0, 0, .9) 58%, transparent 100%);
+  mask-image: radial-gradient(ellipse 36% 72% at center, #000 40%, rgba(0, 0, 0, .9) 58%, transparent 100%);
   transform: scale(1);
-  transition: transform .65s cubic-bezier(.22, 1, .36, 1), filter .35s ease;
+  transition: transform .8s cubic-bezier(.22, 1, .36, 1), filter .45s ease;
 }
 .dish-card:hover .dish-card-photo {
-  box-shadow: 0 20px 40px rgba(5, 27, 20, .3);
   transform: translate(-50%, calc(-50% - 3px)) scale(1.035);
 }
 .dish-card:hover .dish-card-photo img {
-  filter: saturate(1.04) contrast(1.02);
+  filter: saturate(1.04) contrast(1.02) drop-shadow(0 17px 18px rgba(5, 27, 20, .32));
   transform: scale(1.035);
 }
 @keyframes dish-photo-spin-360 {
@@ -1327,7 +1329,7 @@ body { overflow-x: hidden; background: var(--white); }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .dish-card:hover .dish-card-photo-rotor,
   .dish-card:focus-within .dish-card-photo-rotor {
-    animation: dish-photo-spin-360 1.15s cubic-bezier(.22, 1, .36, 1) both;
+    animation: dish-photo-spin-360 1.8s cubic-bezier(.22, 1, .36, 1) both;
   }
 }
 .dish-card-image .food-badge,
@@ -1348,7 +1350,6 @@ body { overflow-x: hidden; background: var(--white); }
   .dish-card-image::before { inset: 9px; border-radius: 15px; }
   .dish-card-photo {
     width: min(72%, 220px);
-    border-radius: 14px;
   }
   .dish-card-content { padding: 18px; }
   .dish-card-content h3 { font-size: 20px; }
