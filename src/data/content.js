@@ -27,9 +27,37 @@ export const defaultHomepageStats = [
   { id: 'services', value: '4+', label: 'Event Services' },
 ];
 
+export const heroTitleFontOptions = [
+  { value: 'montserrat', label: 'Montserrat', family: 'Montserrat, system-ui, sans-serif' },
+  { value: 'playfair-display', label: 'Playfair Display', family: '"Playfair Display", Georgia, serif' },
+  { value: 'georgia', label: 'Georgia', family: 'Georgia, "Times New Roman", serif' },
+  { value: 'arial', label: 'Arial', family: 'Arial, Helvetica, sans-serif' },
+];
+
+const heroTitleFontMap = new Map(heroTitleFontOptions.map((option) => [option.value, option.family]));
+const clampTypographyValue = (value, min, max, fallback) => {
+  const number = Number(value);
+  return Number.isFinite(number) ? Math.min(max, Math.max(min, number)) : fallback;
+};
+
+export function normalizeHeroTypography(value = {}) {
+  return {
+    heroTitleFont: heroTitleFontMap.has(value.heroTitleFont) ? value.heroTitleFont : 'montserrat',
+    heroTitleSizeDesktop: clampTypographyValue(value.heroTitleSizeDesktop, 32, 96, 62),
+    heroTitleSizeMobile: clampTypographyValue(value.heroTitleSizeMobile, 24, 64, 40),
+    heroTitleLetterSpacing: clampTypographyValue(value.heroTitleLetterSpacing, -6, 12, -3),
+    heroTitleLineHeight: clampTypographyValue(value.heroTitleLineHeight, .85, 1.5, 1.02),
+  };
+}
+
+export function getHeroTitleFontFamily(value) {
+  return heroTitleFontMap.get(value) || heroTitleFontMap.get('montserrat');
+}
+
 const defaultHomepageContent = {
   heroHeading: 'Authentic Flavours, Freshly Served',
   heroText: 'Enjoy freshly prepared Pakistani favourites, delicious chapati, flavourful curries, biryani, grills, drinks, and family meals at Naseeb Chapati.',
+  ...normalizeHeroTypography(),
   desktopImage: imageUrls.hero,
   mobileImage: imageUrls.hero,
   primaryButtonLabel: 'View Menu',
@@ -75,6 +103,7 @@ const persistedHomepageContent = persistedAdminState?.homepage || {};
 export const homepageContent = {
   ...defaultHomepageContent,
   ...persistedHomepageContent,
+  ...normalizeHeroTypography({ ...defaultHomepageContent, ...persistedHomepageContent }),
   trendingTitle: persistedHomepageContent.trendingTitle === 'Trending now'
     ? defaultHomepageContent.signatureLabel
     : persistedHomepageContent.trendingTitle || persistedHomepageContent.signatureLabel || defaultHomepageContent.signatureLabel,

@@ -6,6 +6,7 @@ import {
   menuCategories as publicCategories,
   menuItems as publicMenuItems,
   normalizeHeroSlides,
+  normalizeHeroTypography,
   promotions as publicPromotions,
   reviews as publicReviews,
   socialLinks as publicSocial,
@@ -132,6 +133,7 @@ const makeSeedState = () => ({
   homepage: {
     heroHeading: 'Authentic Flavours, Freshly Served',
     heroText: 'Enjoy freshly prepared Pakistani favourites, delicious chapati, flavourful curries, biryani, grills, drinks, and family meals at Naseeb Chapati.',
+    ...normalizeHeroTypography(),
     desktopImage: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1800&q=85',
     mobileImage: 'https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=1000&q=82',
     primaryButtonLabel: 'View Menu',
@@ -211,6 +213,7 @@ function normalizeAdminState(state) {
     homepage: {
       ...seed.homepage,
       ...incomingHomepage,
+      ...normalizeHeroTypography({ ...seed.homepage, ...incomingHomepage }),
       heroSlides: normalizeHeroSlides(incomingHomepage.heroSlides),
     },
     servicesContent: normalizeServicesContent(incoming.servicesContent),

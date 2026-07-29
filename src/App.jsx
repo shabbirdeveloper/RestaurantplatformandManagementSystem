@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence, LazyMotion, domAnimation, m as motion, useReducedMotion } from 'framer-motion';
 import {
   ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Bike, BookOpen, Check, ChevronLeft, ChevronRight, CircleAlert, Clock3, Flame, Heart, Home, Leaf, Mail, MapPin, Menu as MenuIcon, MessageCircle, Moon, Navigation, Phone, Search, Send, Share2, ShoppingBag, ShoppingCart, Star, TicketPercent, Utensils, Users, X, } from 'lucide-react';
-import { branches, contactInfo, galleryItems, heroSlides, homepageContent, imageUrls, menuCategories, menuItems, promotions, reviews, servicesContent, socialLinks } from './data/content';
+import { branches, contactInfo, galleryItems, getHeroTitleFontFamily, heroSlides, homepageContent, imageUrls, menuCategories, menuItems, normalizeHeroTypography, promotions, reviews, servicesContent, socialLinks } from './data/content';
 import { CategoryIcon } from './categoryIcons';
 import AdminApp from './admin/AdminApp';
 import { listPublishedTeamMembers, submitEnquiry, submitReservation } from './lib/supabase';
@@ -298,6 +298,14 @@ const heroImageTransition = { type: 'spring', stiffness: 150, damping: 25, mass:
 
 function Hero() {
   const slides = (Array.isArray(heroSlides) ? heroSlides : []).filter((slide) => slide.active !== false && slide.desktopImage);
+  const heroTypography = normalizeHeroTypography(homepageContent);
+  const heroTypographyStyle = {
+    '--hero-title-font-family': getHeroTitleFontFamily(heroTypography.heroTitleFont),
+    '--hero-title-size-desktop': `${heroTypography.heroTitleSizeDesktop}px`,
+    '--hero-title-size-mobile': `${heroTypography.heroTitleSizeMobile}px`,
+    '--hero-title-letter-spacing': `${heroTypography.heroTitleLetterSpacing}px`,
+    '--hero-title-line-height': heroTypography.heroTitleLineHeight,
+  };
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
   const reduceMotion = useReducedMotion();
@@ -312,7 +320,7 @@ function Hero() {
   const onPointerDown = (event) => { if (event.target.closest?.('button, a')) return; pointerStart.current = event.clientX; setPaused(true); event.currentTarget.setPointerCapture?.(event.pointerId); };
   const onPointerUp = (event) => { if (pointerStart.current !== null) { const distance = event.clientX - pointerStart.current; if (Math.abs(distance) > 42) step(distance < 0 ? 1 : -1); } pointerStart.current = null; setPaused(false); };
   if (!current) return null;
-  return <section className="hero-section" aria-roledescription="carousel" aria-label="Naseeb Chapati highlights" tabIndex="0" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocus={() => setPaused(true)} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false); }} onKeyDown={(event) => { if (event.key === 'ArrowLeft') step(-1); if (event.key === 'ArrowRight') step(1); }} onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={() => { pointerStart.current = null; setPaused(false); }}>
+  return <section className="hero-section" style={heroTypographyStyle} aria-roledescription="carousel" aria-label="Naseeb Chapati highlights" tabIndex="0" onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onFocus={() => setPaused(true)} onBlur={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) setPaused(false); }} onKeyDown={(event) => { if (event.key === 'ArrowLeft') step(-1); if (event.key === 'ArrowRight') step(1); }} onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={() => { pointerStart.current = null; setPaused(false); }}>
     <motion.div className="hero-media" initial={reduceMotion ? false : { opacity: 0, scale: .99 }} animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }} transition={reduceMotion ? { duration: 0 } : heroImageTransition}>
       <AnimatePresence initial={false} mode="sync">
         <motion.div className="hero-slide is-active" key={current.id || current.heading} initial={reduceMotion ? false : { opacity: 0, scale: 1.025 }} animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }} exit={reduceMotion ? undefined : { opacity: 0, scale: .99 }} transition={reduceMotion ? { duration: 0 } : heroImageTransition}>
@@ -390,7 +398,7 @@ function HomeTeamSection() {
     <div className="container">
       <SectionHeading title="Meet our team" copy="The people guiding Naseeb Chapati with care, experience, and a commitment to warm hospitality." action={<Button href="/our-team" variant="outline" icon={ArrowUpRight}>View Our Team</Button>} />
       <div className="home-team-content">
-        {status === 'loading' && <div className="home-team-grid" aria-label="Loading team members">{Array.from({ length: 3 }, (_, index) => <div className="home-team-skeleton" key={index}><span /><i /><i /></div>)}</div>}
+        {status === 'loading' && <div className="home-team-grid" aria-label="Loading team members">{Array.from({ length: 2 }, (_, index) => <div className="home-team-skeleton" key={index}><span /><i /><i /></div>)}</div>}
         {status === 'ready' && members.length > 0 && <MotionGroup className="home-team-grid" amount={.12}>{members.map((member, index) => <MotionCard as="a" className="home-team-card" href={`/our-team/${member.slug}`} key={member.id} index={index} onClick={(event) => { event.preventDefault(); navigateTo(`/our-team/${member.slug}`); }}><div className="home-team-photo">{member.profile_image ? <SafeImage src={member.profile_image} fallback="/naseeb-chapati-logo.png" alt={member.image_alt || `${member.full_name}, ${member.position}`} loading="lazy" /> : <span><Users size={34} /></span>}</div><div className="home-team-card-copy"><span>{member.position}</span><h3>{member.full_name}</h3>{member.short_intro && <p>{member.short_intro}</p>}<strong>View profile <ArrowUpRight size={14} /></strong></div></MotionCard>)}</MotionGroup>}
         {status !== 'loading' && members.length === 0 && <MotionReveal className="home-team-empty" y={12}><span><Users size={25} /></span><div><h3>Our leadership profiles are being prepared.</h3><p>Published profiles from the Team Members dashboard will appear here automatically.</p></div><Button href="/our-team" variant="primary" icon={ArrowUpRight}>Visit Our Team</Button></MotionReveal>}
       </div>
