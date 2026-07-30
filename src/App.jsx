@@ -433,6 +433,8 @@ const dishCardVariants = {
 const dishPhotoSpin = { rotateY: [0, 360] };
 const dishPhotoSpinTransition = { duration: 3.2, ease: [.45, 0, .55, 1] };
 const dishPhotoSpinViewport = { once: false, amount: .62 };
+const dishPhotoZoom = { opacity: 1, scale: 1 };
+const dishPhotoZoomTransition = { duration: 1.35, ease: [.22, 1, .36, 1] };
 
 function DishCard({ item, onDetails, index = 0 }) {
   const reduceMotion = useReducedMotion();
@@ -452,18 +454,26 @@ function DishCard({ item, onDetails, index = 0 }) {
     <div className="dish-card-image">
       <div className="dish-card-photo">
         <motion.div
-          className="dish-card-photo-rotor"
-          initial={reduceMotion ? false : { rotateY: 0 }}
-          whileInView={reduceMotion ? undefined : dishPhotoSpin}
+          className="dish-card-photo-zoom"
+          initial={reduceMotion ? false : { opacity: .45, scale: .76 }}
+          whileInView={reduceMotion ? undefined : dishPhotoZoom}
           viewport={dishPhotoSpinViewport}
-          transition={dishPhotoSpinTransition}
+          transition={dishPhotoZoomTransition}
         >
-          <span className="dish-card-photo-face dish-card-photo-front">
-            <SafeImage src={item.image} alt={item.name} loading="lazy" />
-          </span>
-          <span className="dish-card-photo-face dish-card-photo-back" aria-hidden="true">
-            <SafeImage src={item.image} alt="" loading="lazy" />
-          </span>
+          <motion.div
+            className="dish-card-photo-rotor"
+            initial={reduceMotion ? false : { rotateY: 0 }}
+            whileInView={reduceMotion ? undefined : dishPhotoSpin}
+            viewport={dishPhotoSpinViewport}
+            transition={dishPhotoSpinTransition}
+          >
+            <span className="dish-card-photo-face dish-card-photo-front">
+              <SafeImage src={item.image} alt={item.name} loading="lazy" />
+            </span>
+            <span className="dish-card-photo-face dish-card-photo-back" aria-hidden="true">
+              <SafeImage src={item.image} alt="" loading="lazy" />
+            </span>
+          </motion.div>
         </motion.div>
       </div>
       <span className="food-badge">{item.badge}</span>
