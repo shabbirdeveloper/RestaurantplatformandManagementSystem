@@ -209,6 +209,8 @@
 .admin-table-primary { display: flex; align-items: center; gap: 9px; min-width: 190px; }
 .admin-table-primary img { width: 34px; height: 34px; flex: 0 0 auto; border-radius: 7px; object-fit: cover; background: var(--admin-soft); }
 .admin-category-table-icon { display: grid; place-items: center; width: 34px; height: 34px; flex: 0 0 auto; border-radius: 9px; background: rgba(31,77,58,.1); color: var(--admin-green); }
+.admin-category-table-image { position: relative; display: grid; place-items: center; width: 34px; height: 34px; flex: 0 0 auto; overflow: hidden; border-radius: 9px; background: rgba(31,77,58,.1); color: var(--admin-green); }
+.admin-category-table-image img { position: absolute; inset: 0; z-index: 1; width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
 .admin-order-number { display: inline-grid; place-items: center; min-width: 29px; height: 29px; padding: 0 8px; border-radius: 8px; background: var(--admin-soft); color: var(--admin-green-dark); font-weight: 800; }
 .admin-table-primary > span:not(.admin-avatar) { display: grid; gap: 4px; min-width: 0; }
 .admin-table-primary strong { overflow: hidden; color: var(--admin-black); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }

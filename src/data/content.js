@@ -156,6 +156,8 @@ export const menuCategories = (persistedAdminState?.categories?.length
   : fallbackMenuCategories)
   .map((category, index) => ({
     ...category,
+    image: typeof category.image === 'string' ? category.image.trim() : '',
+    imageAlt: typeof category.imageAlt === 'string' && category.imageAlt.trim() ? category.imageAlt.trim() : category.name,
     icon: category.icon || 'utensils',
     order: Number.isFinite(Number(category.order)) && Number(category.order) > 0 ? Number(category.order) : index + 1,
   }))

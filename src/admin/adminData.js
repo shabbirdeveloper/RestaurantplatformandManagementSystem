@@ -227,6 +227,9 @@ function normalizeAdminState(state) {
   });
   normalized.categories = normalized.categories.map((category, index) => ({
     ...category,
+    image: typeof category.image === 'string' ? category.image.trim() : '',
+    imageAlt: typeof category.imageAlt === 'string' ? category.imageAlt.trim() : '',
+    storagePath: typeof category.storagePath === 'string' ? category.storagePath : '',
     icon: category.icon || 'utensils',
     order: Number.isFinite(Number(category.order)) && Number(category.order) > 0 ? Number(category.order) : index + 1,
   }));
