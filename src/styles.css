@@ -1368,7 +1368,7 @@ body { overflow-x: hidden; background: var(--white); }
 @media (hover: hover) and (prefers-reduced-motion: no-preference) {
   .dish-card:hover .dish-card-photo-rotor,
   .dish-card:focus-within .dish-card-photo-rotor {
-    animation: dish-photo-spin-360 1.8s cubic-bezier(.22, 1, .36, 1) both;
+    animation: dish-photo-spin-360 3.2s cubic-bezier(.45, 0, .55, 1) both;
   }
 }
 .dish-card-image .food-badge,
