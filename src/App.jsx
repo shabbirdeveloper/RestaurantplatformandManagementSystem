@@ -425,7 +425,7 @@ const dishCardVariants = {
 
 const dishPhotoSpin = { rotateY: [0, 360] };
 const dishPhotoSpinTransition = { duration: 1.8, ease: [.22, 1, .36, 1] };
-const dishPhotoSpinViewport = { once: true, amount: .7 };
+const dishPhotoSpinViewport = { once: false, amount: .62 };
 
 function DishCard({ item, onDetails, index = 0 }) {
   const reduceMotion = useReducedMotion();
@@ -435,7 +435,7 @@ function DishCard({ item, onDetails, index = 0 }) {
     variants={dishCardVariants}
     initial={reduceMotion ? false : 'hidden'}
     whileInView={reduceMotion ? undefined : 'show'}
-    viewport={{ once: true, amount: .12 }}
+    viewport={{ once: false, amount: .16 }}
     whileHover={reduceMotion ? undefined : { y: -9 }}
     whileTap={reduceMotion ? undefined : { scale: .992 }}
     transition={motionSpring}
@@ -446,7 +446,7 @@ function DishCard({ item, onDetails, index = 0 }) {
       <div className="dish-card-photo">
         <motion.div
           className="dish-card-photo-rotor"
-          initial={false}
+          initial={reduceMotion ? false : { rotateY: 0 }}
           whileInView={reduceMotion ? undefined : dishPhotoSpin}
           viewport={dishPhotoSpinViewport}
           transition={dishPhotoSpinTransition}
