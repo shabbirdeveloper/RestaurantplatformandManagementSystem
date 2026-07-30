@@ -311,6 +311,8 @@ function Hero() {
   const reduceMotion = useReducedMotion();
   const pointerStart = useRef(null);
   const current = slides[active] || slides[0];
+  const currentHeading = current?.heading?.trim() || homepageContent.heroHeading || 'Authentic Flavours, Freshly Served';
+  const currentText = current?.text?.trim() || homepageContent.heroText || '';
   const step = (direction) => setActive((value) => (value + direction + slides.length) % slides.length);
   useEffect(() => {
     if (paused || slides.length < 2 || homepageContent.heroAutoplay === false) return undefined;
@@ -324,15 +326,15 @@ function Hero() {
     <motion.div className="hero-media" initial={reduceMotion ? false : { opacity: 0, scale: .99 }} animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }} transition={reduceMotion ? { duration: 0 } : heroImageTransition}>
       <AnimatePresence initial={false} mode="sync">
         <motion.div className="hero-slide is-active" key={current.id || current.heading} initial={reduceMotion ? false : { opacity: 0, scale: 1.025 }} animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }} exit={reduceMotion ? undefined : { opacity: 0, scale: .99 }} transition={reduceMotion ? { duration: 0 } : heroImageTransition}>
-          <picture><source media="(max-width: 720px)" srcSet={current.mobileImage || current.desktopImage} /><SafeImage src={current.desktopImage} fallback={imageUrls.hero} alt={current.imageAlt || current.heading} loading={active === 0 ? 'eager' : 'lazy'} fetchPriority={active === 0 ? 'high' : 'auto'} /></picture>
+          <picture><source media="(max-width: 720px)" srcSet={current.mobileImage || current.desktopImage} /><SafeImage src={current.desktopImage} fallback={imageUrls.hero} alt={current.imageAlt || currentHeading} loading={active === 0 ? 'eager' : 'lazy'} fetchPriority={active === 0 ? 'high' : 'auto'} /></picture>
         </motion.div>
       </AnimatePresence>
     </motion.div>
     <div className="container hero-inner">
       <motion.div className="hero-copy" key={current.id || current.heading} initial={reduceMotion ? false : 'hidden'} animate={reduceMotion ? undefined : 'show'} variants={heroCopyVariants}>
         <motion.p className="eyebrow" variants={heroItemVariants}>Naseeb Chapati Restaurant</motion.p>
-        <motion.h1 variants={heroItemVariants}>{current.heading}</motion.h1>
-        <motion.p className="hero-description" variants={heroItemVariants}>{current.text}</motion.p>
+        <motion.h1 variants={heroItemVariants}>{currentHeading}</motion.h1>
+        <motion.p className="hero-description" variants={heroItemVariants}>{currentText}</motion.p>
         <motion.div className="hero-actions" variants={heroActionsVariants}>
           <Button animationProps={{ variants: heroButtonVariants }} href={current.primaryButtonUrl || '/menu'} icon={BookOpen}>{current.primaryButtonLabel || 'View Menu'}</Button>
           <Button animationProps={{ variants: heroButtonVariants }} href={current.secondaryButtonUrl || contactInfo.orderUrl} variant="accent" icon={ShoppingBag}>{current.secondaryButtonLabel || 'Order Now'}</Button>
@@ -340,7 +342,7 @@ function Hero() {
         </motion.div>
         <motion.div className="hero-note" variants={heroItemVariants}><span className="hero-note-dot"><Check size={13} /></span><span>Halal food · Dine-in, takeaway and delivery</span></motion.div>
       </motion.div>
-      <div className="hero-carousel-controls"><button className="hero-carousel-arrow" type="button" aria-label="Previous hero slide" onClick={() => step(-1)}><ChevronLeft size={19} /></button><div className="hero-carousel-dots" role="tablist" aria-label="Hero slides">{slides.map((slide, index) => <button type="button" key={slide.id || index} role="tab" aria-label={`Show slide ${index + 1}: ${slide.heading}`} aria-selected={index === active} className={index === active ? 'active' : ''} onClick={() => { setActive(index); setPaused(true); }} />)}</div><button className="hero-carousel-arrow" type="button" aria-label="Next hero slide" onClick={() => step(1)}><ChevronRight size={19} /></button></div>
+      <div className="hero-carousel-controls"><button className="hero-carousel-arrow" type="button" aria-label="Previous hero slide" onClick={() => step(-1)}><ChevronLeft size={19} /></button><div className="hero-carousel-dots" role="tablist" aria-label="Hero slides">{slides.map((slide, index) => <button type="button" key={slide.id || index} role="tab" aria-label={`Show slide ${index + 1}: ${slide.heading?.trim() || homepageContent.heroHeading || 'Restaurant highlight'}`} aria-selected={index === active} className={index === active ? 'active' : ''} onClick={() => { setActive(index); setPaused(true); }} />)}</div><button className="hero-carousel-arrow" type="button" aria-label="Next hero slide" onClick={() => step(1)}><ChevronRight size={19} /></button></div>
     </div>
   </section>;
 }
