@@ -245,7 +245,15 @@ export const reviews = persistedAdminState?.reviews?.length ? persistedAdminStat
   { name: 'Food delivery guest', text: 'Capati, roti, kimah and kebab all good. Biryani kambing recommended.', rating: 5, source: 'Public delivery review reference', branch: 'Pasir Gudang' },
 ];
 
-const persistedGalleryItems = persistedAdminState?.gallery?.filter((item) => ['Published', 'Active', undefined].includes(item.status) && item.image && !item.image.startsWith('blob:')) || [];
+const persistedGalleryItems = persistedAdminState?.gallery
+  ?.filter((item) => ['Published', 'Active', undefined].includes(item.status) && item.image && !item.image.startsWith('blob:'))
+  .map((item) => ({
+    ...item,
+    title: typeof item.title === 'string' && item.title.trim() ? item.title.trim() : 'Naseeb Chapati moment',
+    category: typeof item.category === 'string' && item.category.trim() ? item.category.trim() : 'Uncategorised',
+    image: item.image.trim(),
+    alt: typeof item.alt === 'string' && item.alt.trim() ? item.alt.trim() : (item.title || 'Naseeb Chapati gallery image'),
+  })) || [];
 
 export const galleryItems = persistedGalleryItems.length ? persistedGalleryItems : [
   { id: 'gallery-food-1', title: 'Fresh chapati and curry', category: 'Food', image: imageUrls.naan, alt: 'Fresh flatbread served with curry' },

@@ -246,6 +246,8 @@ function normalizeAdminState(state) {
   }));
   normalized.gallery = normalized.gallery.map((item) => ({
     ...item,
+    title: typeof item.title === 'string' && item.title.trim() ? item.title.trim() : 'Naseeb Chapati moment',
+    category: typeof item.category === 'string' && item.category.trim() ? item.category.trim() : 'Uncategorised',
     image: typeof item.image === 'string' ? item.image.trim() : '',
     alt: typeof item.alt === 'string' ? item.alt.trim() : '',
     storagePath: typeof item.storagePath === 'string' ? item.storagePath : '',

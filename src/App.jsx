@@ -2,7 +2,7 @@ import { Component, Suspense, createContext, lazy, useCallback, useContext, useE
 import { createPortal } from 'react-dom';
 import { AnimatePresence, LazyMotion, domAnimation, m as motion, useReducedMotion } from 'framer-motion';
 import {
-  ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Bike, BookOpen, Check, ChevronLeft, ChevronRight, CircleAlert, Clock3, Flame, Heart, Home, Leaf, Mail, MapPin, Menu as MenuIcon, MessageCircle, Moon, Navigation, Phone, Search, Send, Share2, ShoppingBag, ShoppingCart, Star, TicketPercent, Utensils, Users, X, } from 'lucide-react';
+  ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Bike, BookOpen, Camera, Check, ChevronLeft, ChevronRight, CircleAlert, Clock3, Flame, Heart, Home, Leaf, Mail, MapPin, Maximize2, Menu as MenuIcon, MessageCircle, Moon, Navigation, Phone, Search, Send, Share2, ShoppingBag, ShoppingCart, Star, TicketPercent, Utensils, Users, X, } from 'lucide-react';
 import { branches, contactInfo, galleryItems, getHeroTitleFontFamily, heroSlides, homepageContent, imageUrls, menuCategories, menuItems, normalizeHeroTypography, promotions, reviews, servicesContent, socialLinks } from './data/content';
 import { CategoryIcon } from './categoryIcons';
 import AdminApp from './admin/AdminApp';
@@ -630,9 +630,80 @@ function BranchPage({ slug }) {
   return <><PageHero eyebrow="Naseeb Chapati branch" title={branch.name} copy={branch.address} image={branch.image || imageUrls.interior} imageAlt={branch.imageAlt || `${branch.name} branch profile`} /><section className="section branch-detail"><div className="container"><div className="branch-detail-top"><div><BranchStatus branch={branch} /><h2>Come hungry. Leave happy.</h2><p>Everything you need for your visit, from today’s hours to directions and ordering.</p></div><div className="hero-actions"><Button href={branch.mapUrl} variant="accent" icon={Navigation}>Directions</Button><Button href={`https://wa.me/${branch.whatsapp}`} variant="outline" icon={MessageCircle}>WhatsApp</Button><Button href={`tel:${branch.phone.replace(/\s/g, '')}`} variant="outline" icon={Phone}>Call</Button></div></div><div className="branch-detail-grid"><div className="branch-detail-panel"><h3>Branch information</h3><div className="detail-list"><span><MapPin size={17} /><strong>{branch.address}</strong></span><span><Phone size={17} /><a href={`tel:${branch.phone.replace(/\s/g, '')}`}>{branch.phone}</a></span><span><Clock3 size={17} /><strong>{getBranchStatus(branch).detail} today</strong></span></div><div className="facility-list">{branch.facilities.map((facility) => <span key={facility}><Check size={14} />{facility}</span>)}</div></div><div className="branch-detail-map"><iframe title={`${branch.name} Google Maps`} src={`https://www.google.com/maps?q=${encodeURIComponent(branch.mapQuery)}&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" /></div></div><div className="branch-menu-block"><SectionHeading title="Available menu reference" copy={`Items listed for ${branch.name}; confirm availability with the branch.`} action={<Button href="/menu" variant="text" icon={ArrowUpRight}>Full menu</Button>} /><div className="dish-grid">{branchMenu.slice(0, 6).map((item) => <DishCard key={item.id} item={item} />)}</div></div></div></section><CalloutBand title="Planning a group meal?" copy="Message this branch directly for table requests, large orders, and availability." action={<Button href={`https://wa.me/${branch.whatsapp}`} variant="accent" icon={MessageCircle}>Message branch</Button>} /></>;
 }
 
+function GalleryVisual({ item, eager = false }) {
+  const [failed, setFailed] = useState(false);
+  useEffect(() => setFailed(false), [item.image]);
+  if (failed || !item.image) return <span className="gallery-media-placeholder" role="img" aria-label={`${item.title} image unavailable`}><Camera size={28} /><small>Image unavailable</small></span>;
+  return <img src={item.image} alt={item.alt || item.title} loading={eager ? 'eager' : 'lazy'} decoding="async" onError={() => setFailed(true)} />;
+}
+
+function GalleryCard({ item, index, onOpen }) {
+  return <MotionCard as="button" type="button" className="gallery-editorial-card" index={index} onClick={() => onOpen(item)} aria-label={`Open ${item.title}`}>
+    <GalleryVisual item={item} eager={index < 2} />
+    <span className="gallery-card-shade" aria-hidden="true" />
+    <span className="gallery-card-topline"><small>{item.category}</small><span><Maximize2 size={15} /></span></span>
+    <span className="gallery-card-caption"><small>{String(index + 1).padStart(2, '0')}</small><strong>{item.title}</strong></span>
+  </MotionCard>;
+}
+
+function GalleryLightbox({ item, items, onClose, onSelect }) {
+  const reduceMotion = useReducedMotion();
+  const currentIndex = Math.max(0, items.findIndex((candidate) => candidate.id === item.id));
+  const showPrevious = useCallback(() => onSelect(items[(currentIndex - 1 + items.length) % items.length]), [currentIndex, items, onSelect]);
+  const showNext = useCallback(() => onSelect(items[(currentIndex + 1) % items.length]), [currentIndex, items, onSelect]);
+
+  useEffect(() => {
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') onClose();
+      if (event.key === 'ArrowLeft' && items.length > 1) showPrevious();
+      if (event.key === 'ArrowRight' && items.length > 1) showNext();
+    };
+    document.body.classList.add('modal-open');
+    window.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.classList.remove('modal-open');
+      window.removeEventListener('keydown', onKeyDown);
+    };
+  }, [items.length, onClose, showNext, showPrevious]);
+
+  if (typeof document === 'undefined') return null;
+  return createPortal(<motion.div className="gallery-lightbox" role="presentation" initial={reduceMotion ? false : { opacity: 0 }} animate={reduceMotion ? undefined : { opacity: 1 }} exit={reduceMotion ? undefined : { opacity: 0 }} onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+    <motion.div className="gallery-lightbox-dialog" role="dialog" aria-modal="true" aria-label={item.title} initial={reduceMotion ? false : { opacity: 0, y: 18, scale: .985 }} animate={reduceMotion ? undefined : { opacity: 1, y: 0, scale: 1 }} exit={reduceMotion ? undefined : { opacity: 0, y: 10, scale: .985 }} transition={{ duration: reduceMotion ? 0 : .32, ease: [.22, 1, .36, 1] }}>
+      <button className="gallery-lightbox-close" type="button" onClick={onClose} aria-label="Close image"><X size={20} /></button>
+      <div className="gallery-lightbox-media"><GalleryVisual item={item} eager /></div>
+      <div className="gallery-lightbox-copy">
+        <span className="eyebrow">{item.category}</span>
+        <p className="gallery-lightbox-count">{String(currentIndex + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}</p>
+        <h2>{item.title}</h2>
+        {item.alt && item.alt !== item.title && <p>{item.alt}</p>}
+        {items.length > 1 && <div className="gallery-lightbox-controls">
+          <button type="button" onClick={showPrevious} aria-label="Previous image"><ArrowLeft size={18} />Previous</button>
+          <button type="button" onClick={showNext} aria-label="Next image">Next<ArrowRight size={18} /></button>
+        </div>}
+      </div>
+    </motion.div>
+  </motion.div>, document.body);
+}
+
 function GalleryPage() {
-  const [filter, setFilter] = useState('All'); const [selected, setSelected] = useState(null); const filters = ['All', 'Food', 'Interior', 'Events', 'Customers', 'Behind the Scenes']; const filtered = galleryItems.filter((item) => filter === 'All' || item.category === filter); const reduceMotion = useReducedMotion();
-  return <><PageHero eyebrow="Gallery" title="A visual taste of the table." copy="Browse food, interiors, behind-the-scenes moments, and family dining scenes." image={imageUrls.grill} /><section className="section gallery-page"><div className="container"><div className="filter-tabs gallery-filters">{filters.map((item) => <motion.button whileTap={reduceMotion ? undefined : { scale: .96 }} className={filter === item ? 'active' : ''} key={item} onClick={() => setFilter(item)}>{item}</motion.button>)}</div><MotionGroup className="gallery-masonry" amount={.1}>{filtered.map((item, index) => <MotionCard as="button" className="gallery-tile" key={item.id} index={index} onClick={() => setSelected(item)}><img src={item.image} alt={item.alt} loading="lazy" /><span><strong>{item.title}</strong><small>{item.category}</small></span></MotionCard>)}</MotionGroup></div></section><AnimatePresence>{selected && <motion.div className="lightbox" role="presentation" initial={reduceMotion ? false : { opacity: 0 }} animate={reduceMotion ? undefined : { opacity: 1 }} exit={reduceMotion ? undefined : { opacity: 0 }} onMouseDown={(event) => event.target === event.currentTarget && setSelected(null)}><button className="modal-close" onClick={() => setSelected(null)} aria-label="Close image"><X size={20} /></button><motion.img initial={reduceMotion ? false : { opacity: 0, scale: .96 }} animate={reduceMotion ? undefined : { opacity: 1, scale: 1 }} transition={{ duration: reduceMotion ? 0 : .3 }} src={selected.image} alt={selected.alt} /><div><strong>{selected.title}</strong><span>{selected.category}</span></div></motion.div>}</AnimatePresence></>;
+  const [filter, setFilter] = useState('All');
+  const [selected, setSelected] = useState(null);
+  const reduceMotion = useReducedMotion();
+  const filters = useMemo(() => ['All', ...new Set(galleryItems.map((item) => item.category?.trim()).filter(Boolean))], []);
+  const filtered = useMemo(() => galleryItems.filter((item) => filter === 'All' || item.category === filter), [filter]);
+
+  useEffect(() => {
+    if (!filters.includes(filter)) setFilter('All');
+  }, [filter, filters]);
+
+  return <><PageHero eyebrow="Gallery" title="A visual taste of the table." copy="Restaurant moments, fresh dishes, and warm hospitality—curated by the Naseeb Chapati team." image={imageUrls.grill} /><section className="section gallery-page gallery-editorial"><div className="container">
+    <MotionReveal className="gallery-editorial-heading" y={14}>
+      <div><p className="eyebrow">The Naseeb collection</p><h2>Stories served in every frame.</h2><p>Explore moments from our kitchen, dining rooms, events, and tables through collections published by the restaurant team.</p></div>
+      <span className="gallery-result-count">{filtered.length} {filtered.length === 1 ? 'moment' : 'moments'}</span>
+    </MotionReveal>
+    <div className="filter-tabs gallery-filters" role="tablist" aria-label="Gallery collections">{filters.map((item) => <motion.button type="button" role="tab" aria-selected={filter === item} whileTap={reduceMotion ? undefined : { scale: .96 }} className={filter === item ? 'active' : ''} key={item} onClick={() => { setFilter(item); setSelected(null); }}>{item}</motion.button>)}</div>
+    {filtered.length ? <MotionGroup className="gallery-editorial-grid" amount={.08}>{filtered.map((item, index) => <GalleryCard key={item.id} item={item} index={index} onOpen={setSelected} />)}</MotionGroup> : <MotionReveal className="gallery-empty" y={10}><Camera size={28} /><h3>No published images yet</h3><p>Add and publish images from Admin → Gallery Items.</p></MotionReveal>}
+  </div></section><AnimatePresence>{selected && <GalleryLightbox key={selected.id} item={selected} items={filtered} onClose={() => setSelected(null)} onSelect={setSelected} />}</AnimatePresence></>;
 }
 
 function PromotionsPage() { const activePromotions = promotions.filter((promo) => promo.active); return <><PageHero eyebrow="Promotions" title="More reasons to gather." copy="Explore offers, family meals, and seasonal specials — with branch details ready to be updated by the restaurant team." image={imageUrls.family} /><section className="section promotions-page"><div className="container"><MotionGroup className="promotion-list" amount={.12}>{activePromotions.map((promo, index) => <MotionCard as="article" className="promotion-feature" key={promo.id} index={index}><PromotionImage promotion={promo} /><div className="promotion-feature-copy"><span className="promo-label"><TicketPercent size={13} />Current offer</span><h2>{promo.title}</h2><p>{promo.details}</p><dl><div><dt>Validity</dt><dd>{promo.validity}</dd></div><div><dt>Branches</dt><dd>{promo.branches}</dd></div><div><dt>Terms</dt><dd>{promo.terms}</dd></div></dl><Button href="https://www.foodpanda.my/chain/cx8vw/naseeb-capati-nan" variant="accent" icon={ShoppingBag}>Order now</Button></div></MotionCard>)}</MotionGroup><p className="data-note"><CircleAlert size={15} />Expired promotions are designed to be filtered by the <code>active</code> field in the shared content model.</p></div></section></>; }
