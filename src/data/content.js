@@ -228,10 +228,15 @@ function promotionIsLive(item) {
   return (!starts || now >= starts) && (!ends || now <= ends);
 }
 
-export const promotions = persistedAdminState?.promotions?.length ? persistedAdminState.promotions.filter((item) => ['Published', 'Active', undefined].includes(item.status) && promotionIsLive(item)).map((item) => ({ ...item, active: true })) : [
-  { id: 'family-feast', title: 'Family Feast', details: 'A generous spread for sharing with family and friends.', validity: 'Add active dates', branches: 'All branches', terms: 'Subject to branch availability. Confirm offer details with the restaurant.', image: imageUrls.family, active: true },
-  { id: 'biryani-weekend', title: 'Biryani Weekend Special', details: 'Make the weekend memorable with fragrant rice and rich, slow-cooked flavours.', validity: 'Add active dates', branches: 'Selected branches', terms: 'Offer terms, dates, and serving times to be confirmed by the restaurant.', image: imageUrls.biryani, active: true },
-  { id: 'student-meal', title: 'Student Meal', details: 'A satisfying plate for study breaks and late-night cravings.', validity: 'Add active dates', branches: 'Add applicable branch', terms: 'Valid student ID may be required. Final terms to be confirmed.', image: imageUrls.grill, active: true },
+export const promotions = persistedAdminState?.promotions?.length ? persistedAdminState.promotions.filter((item) => ['Published', 'Active', undefined].includes(item.status) && promotionIsLive(item)).map((item) => ({
+  ...item,
+  image: typeof item.image === 'string' ? item.image.trim() : '',
+  imageAlt: typeof item.imageAlt === 'string' ? item.imageAlt.trim() : '',
+  active: true,
+})) : [
+  { id: 'family-feast', title: 'Family Feast', details: 'A generous spread for sharing with family and friends.', validity: 'Add active dates', branches: 'All branches', terms: 'Subject to branch availability. Confirm offer details with the restaurant.', image: imageUrls.family, imageAlt: 'Family feast promotion', active: true },
+  { id: 'biryani-weekend', title: 'Biryani Weekend Special', details: 'Make the weekend memorable with fragrant rice and rich, slow-cooked flavours.', validity: 'Add active dates', branches: 'Selected branches', terms: 'Offer terms, dates, and serving times to be confirmed by the restaurant.', image: imageUrls.biryani, imageAlt: 'Biryani weekend promotion', active: true },
+  { id: 'student-meal', title: 'Student Meal', details: 'A satisfying plate for study breaks and late-night cravings.', validity: 'Add active dates', branches: 'Add applicable branch', terms: 'Valid student ID may be required. Final terms to be confirmed.', image: imageUrls.grill, imageAlt: 'Student meal promotion', active: true },
 ];
 
 export const reviews = persistedAdminState?.reviews?.length ? persistedAdminState.reviews.filter((item) => ['Approved', 'Published', undefined].includes(item.status)) : [

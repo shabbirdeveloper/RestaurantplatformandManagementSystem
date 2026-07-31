@@ -238,6 +238,18 @@ function normalizeAdminState(state) {
     order: Number.isFinite(Number(item.order)) && Number(item.order) > 0 ? Number(item.order) : index + 1,
     featured: typeof item.featured === 'boolean' ? item.featured : index < 4,
   }));
+  normalized.promotions = normalized.promotions.map((promotion) => ({
+    ...promotion,
+    image: typeof promotion.image === 'string' ? promotion.image.trim() : '',
+    imageAlt: typeof promotion.imageAlt === 'string' ? promotion.imageAlt.trim() : '',
+    storagePath: typeof promotion.storagePath === 'string' ? promotion.storagePath : '',
+  }));
+  normalized.gallery = normalized.gallery.map((item) => ({
+    ...item,
+    image: typeof item.image === 'string' ? item.image.trim() : '',
+    alt: typeof item.alt === 'string' ? item.alt.trim() : '',
+    storagePath: typeof item.storagePath === 'string' ? item.storagePath : '',
+  }));
   ['user', 'settings'].forEach((key) => {
     const value = incoming[key];
     normalized[key] = value && typeof value === 'object' && !Array.isArray(value) ? value : seed[key];
