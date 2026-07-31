@@ -62,7 +62,7 @@ export function MotionCard({ children, className = '', as = 'article', index = 0
 export function MotionImage({ children, className = '', as = 'div', ...props }) {
   const reduceMotion = useReducedMotion();
   const Component = components[as] || m.div;
-  return <Component {...props} className={`motion-image-reveal ${className}`.trim()} initial={reduceMotion ? false : { opacity: 0, clipPath: 'inset(0 100% 0 0)' }} whileInView={reduceMotion ? undefined : { opacity: 1, clipPath: 'inset(0 0% 0 0)' }} viewport={{ once: true, amount: .15 }} transition={reduceMotion ? { duration: 0 } : { duration: .8, ease: motionEase }}>{children}</Component>;
+  return <Component {...props} className={`motion-image-reveal ${className}`.trim()} initial={reduceMotion ? false : { opacity: .82, scale: .985 }} whileInView={reduceMotion ? undefined : { opacity: 1, scale: 1 }} viewport={{ once: true, amount: .15 }} transition={reduceMotion ? { duration: 0 } : { duration: .75, ease: motionEase }}>{children}</Component>;
 }
 
 export function MotionPage({ children }) {

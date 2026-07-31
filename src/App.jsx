@@ -313,6 +313,9 @@ function Hero() {
   const current = slides[active] || slides[0];
   const currentHeading = current?.heading?.trim() || homepageContent.heroHeading || 'Authentic Flavours, Freshly Served';
   const currentText = current?.text?.trim() || homepageContent.heroText || '';
+  const secondaryButtonLabel = current?.secondaryButtonLabel || 'Order Now';
+  const secondaryButtonUrl = current?.secondaryButtonUrl || contactInfo.orderUrl;
+  const alreadyHasBranchAction = secondaryButtonUrl === '/branches' || /branch/i.test(secondaryButtonLabel);
   const step = (direction) => setActive((value) => (value + direction + slides.length) % slides.length);
   useEffect(() => {
     if (paused || slides.length < 2 || homepageContent.heroAutoplay === false) return undefined;
@@ -337,8 +340,8 @@ function Hero() {
         <motion.p className="hero-description" variants={heroItemVariants}>{currentText}</motion.p>
         <motion.div className="hero-actions" variants={heroActionsVariants}>
           <Button animationProps={{ variants: heroButtonVariants }} href={current.primaryButtonUrl || '/menu'} icon={BookOpen}>{current.primaryButtonLabel || 'View Menu'}</Button>
-          <Button animationProps={{ variants: heroButtonVariants }} href={current.secondaryButtonUrl || contactInfo.orderUrl} variant="accent" icon={ShoppingBag}>{current.secondaryButtonLabel || 'Order Now'}</Button>
-          <Button animationProps={{ variants: heroButtonVariants }} href="/branches" variant="outline" icon={MapPin}>Find Nearest Branch</Button>
+          <Button animationProps={{ variants: heroButtonVariants }} href={secondaryButtonUrl} variant="accent" icon={ShoppingBag}>{secondaryButtonLabel}</Button>
+          {!alreadyHasBranchAction && <Button animationProps={{ variants: heroButtonVariants }} href="/branches" variant="outline" icon={MapPin}>Find Nearest Branch</Button>}
         </motion.div>
         <motion.div className="hero-note" variants={heroItemVariants}><span className="hero-note-dot"><Check size={13} /></span><span>Halal food · Dine-in, takeaway and delivery</span></motion.div>
       </motion.div>
@@ -530,7 +533,7 @@ function BranchSection() {
 
 function PromotionsSection() {
   const activePromotions = promotions.filter((promo) => promo.active);
-  if (homepageContent.showPromotions === false) return null;
+  if (homepageContent.showPromotions === false || !activePromotions.length) return null;
   return <section className="section promotions-section"><div className="container"><SectionHeading title="Made for sharing" copy="Keep an eye out for family-friendly offers and seasonal specials." action={<Button href="/promotions" variant="text" icon={ArrowUpRight}>All promotions</Button>} /><MotionGroup className="promotion-grid" amount={.12}>{activePromotions.slice(0, 3).map((promo, index) => <MotionCard as="article" className="promotion-card" key={promo.id} index={index}><PromotionImage promotion={promo} /><div className="promotion-content"><span className="promo-label"><TicketPercent size={13} />Offer</span><h3>{promo.title}</h3><p>{promo.details}</p><div className="promotion-meta"><span>{promo.validity}</span><span>{promo.branches}</span></div><Button href="https://www.foodpanda.my/chain/cx8vw/naseeb-capati-nan" variant="small" icon={ShoppingBag}>Order now</Button></div></MotionCard>)}</MotionGroup><p className="data-note"><CircleAlert size={15} />Promotion dates and terms are editable content and should be confirmed by the restaurant before publishing.</p></div></section>;
 }
 
@@ -603,7 +606,7 @@ function DishModal({ item, onClose }) {
 }
 
 function PageHero({ eyebrow, title, copy, image = imageUrls.interior, imageAlt = 'Naseeb Chapati Restaurant' }) {
-  return <section className="page-hero"><MotionImage className="page-hero-image"><img src={image} alt={imageAlt} /></MotionImage><MotionReveal className="container page-hero-inner" amount={.25} y={14}><p className="eyebrow">{eyebrow}</p><h1>{title}</h1>{copy && <p>{copy}</p>}</MotionReveal></section>;
+  return <section className="page-hero"><div className="page-hero-image"><img src={image} alt={imageAlt} /></div><MotionReveal className="container page-hero-inner" amount={.25} y={14}><p className="eyebrow">{eyebrow}</p><h1>{title}</h1>{copy && <p>{copy}</p>}</MotionReveal></section>;
 }
 
 function MenuPage() {
