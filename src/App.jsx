@@ -260,12 +260,17 @@ function MobileActionBar() {
   return <div className="mobile-action-bar"><a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}><Phone size={17} /><span>Call</span></a><a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noreferrer"><MessageCircle size={17} /><span>WhatsApp</span></a><a href={branches[0].mapUrl} target="_blank" rel="noreferrer"><Navigation size={17} /><span>Directions</span></a><a href={contactInfo.orderUrl} target="_blank" rel="noreferrer"><ShoppingBag size={17} /><span>{homepageContent.secondaryButtonLabel || 'Order Now'}</span></a></div>;
 }
 
+function WhatsAppBrandIcon() {
+  return <svg className="whatsapp-brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.148-.67-1.611-.916-2.207-.242-.579-.487-.5-.67-.51l-.57-.01c-.198 0-.52.075-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.981.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.002-5.45 4.438-9.886 9.892-9.886 2.64.001 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.99c-.003 5.45-4.437 9.887-9.889 9.887m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.3-1.652a11.87 11.87 0 0 0 5.69 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.481-8.415" /></svg>;
+}
+
 function FloatingWhatsApp() {
-  return <a className="floating-whatsapp" href={`https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent('Hi Naseeb Chapati, I would like to place an order.')}`} target="_blank" rel="noreferrer" aria-label="Order on WhatsApp" title="Order on WhatsApp"><MessageCircle size={21} /><span>WhatsApp</span></a>;
+  return <a className="floating-whatsapp" href={`https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent('Hi Naseeb Chapati, I would like to place an order.')}`} target="_blank" rel="noreferrer" aria-label="Chat with Naseeb Chapati on WhatsApp" title="Chat with us on WhatsApp"><WhatsAppBrandIcon /></a>;
 }
 
 function Footer() {
-  return <footer className="site-footer"><div className="container footer-grid"><div className="footer-brand"><Logo light /><p>Authentic Pakistani flavours, freshly served for family meals, quick bites, and late-night cravings.</p><div className="social-row">{socialLinks.map((social) => <a className={`social-icon ${social.className}`} key={social.label} href={social.href} target="_blank" rel="noreferrer" aria-label={social.label}>{social.label === 'TikTok' ? <span className="tiktok-mark">♪</span> : social.label === 'Google Business' ? <MapPin size={16} /> : <Share2 size={16} />}</a>)}</div></div><div><h3>Explore</h3><div className="footer-links">{navItems.slice(1, 6).map((item) => <a key={item.href} href={item.href} onClick={(event) => { event.preventDefault(); navigateTo(item.href); }}>{item.label}</a>)}</div></div><div><h3>Menu favourites</h3><div className="footer-links">{menuCategories.slice(0, 5).map((item, index) => <a key={item.id || item.slug || `${item.name}-${index}`} href="/menu" onClick={(event) => { event.preventDefault(); navigateTo('/menu'); }}>{item.name}</a>)}</div></div><div><h3>Contact</h3><div className="footer-contact"><a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}><Phone size={14} />{contactInfo.phone}</a><a href={`mailto:${contactInfo.email}`}><Mail size={14} />{contactInfo.email}</a><span><Clock3 size={14} />Branch hours vary</span><span><MapPin size={14} />{contactInfo.address || 'Johor, Malaysia'}</span></div></div></div><div className="container footer-bottom"><span>{contactInfo.copyright || `© ${new Date().getFullYear()} Naseeb Chapati Restaurant. All rights reserved.`}</span><span><a href="/privacy" onClick={(event) => event.preventDefault()}>Privacy Policy</a><a href="/terms" onClick={(event) => event.preventDefault()}>Terms & Conditions</a></span></div></footer>;
+  const footerSocials = prepareSocialCards(socialLinks, 5);
+  return <footer className="site-footer"><div className="container footer-grid"><div className="footer-brand"><Logo light /><p>Authentic Pakistani flavours, freshly served for family meals, quick bites, and late-night cravings.</p><div className="social-row">{footerSocials.map(({ social, platform, details }, index) => { const SocialIcon = details.icon; return <a className={`social-icon ${platform}`} key={social.id || `${platform}-${index}`} href={social.href} target="_blank" rel="noreferrer" aria-label={details.label}><SocialIcon size={17} /></a>; })}</div></div><div><h3>Explore</h3><div className="footer-links">{navItems.slice(1, 6).map((item) => <a key={item.href} href={item.href} onClick={(event) => { event.preventDefault(); navigateTo(item.href); }}>{item.label}</a>)}</div></div><div><h3>Menu favourites</h3><div className="footer-links">{menuCategories.slice(0, 5).map((item, index) => <a key={item.id || item.slug || `${item.name}-${index}`} href="/menu" onClick={(event) => { event.preventDefault(); navigateTo('/menu'); }}>{item.name}</a>)}</div></div><div><h3>Contact</h3><div className="footer-contact"><a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}><Phone size={14} />{contactInfo.phone}</a><a href={`mailto:${contactInfo.email}`}><Mail size={14} />{contactInfo.email}</a><span><Clock3 size={14} />Branch hours vary</span><span><MapPin size={14} />{contactInfo.address || 'Johor, Malaysia'}</span></div></div></div><div className="container footer-bottom"><span>{contactInfo.copyright || `© ${new Date().getFullYear()} Naseeb Chapati Restaurant. All rights reserved.`}</span><span><a href="/privacy" onClick={(event) => event.preventDefault()}>Privacy Policy</a><a href="/terms" onClick={(event) => event.preventDefault()}>Terms & Conditions</a></span></div></footer>;
 }
 
 function AppShell({ children }) {
@@ -579,19 +584,59 @@ function TikTokBrandIcon({ size = 34, ...props }) {
   return <svg width={size} height={size} viewBox="-1 -1 26 26" fill="none" aria-hidden="true" {...props}><path d={mark} fill="#25F4EE" transform="translate(-.45 .45)" /><path d={mark} fill="#FE2C55" transform="translate(.45 -.25)" /><path d={mark} fill="currentColor" /></svg>;
 }
 
+function ThreadsBrandIcon({ size = 34, ...props }) {
+  return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}><path d="M17.78 8.26C16.62 6.06 14.57 4.9 11.9 4.9c-4.32 0-7.2 2.94-7.2 7.2 0 4.04 2.72 7 6.92 7 3.85 0 6.55-2.02 6.55-5.05 0-2.47-1.67-4.06-4.31-4.06-2.72 0-4.55 1.24-4.55 3.12 0 1.55 1.2 2.57 2.91 2.57 2.35 0 3.84-1.78 3.72-4.83-.06-1.55-.5-2.86-1.29-3.88" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" /></svg>;
+}
+
 function GoogleBrandIcon({ size = 34, ...props }) {
   return <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}><path fill="#4285F4" d="M21.56 12.23c0-.71-.06-1.4-.18-2.06H12v3.9h5.36a4.58 4.58 0 0 1-1.99 3v2.53h3.22c1.88-1.73 2.97-4.29 2.97-7.37Z" /><path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.6-2.4l-3.23-2.53c-.89.6-2.03.96-3.37.96-2.6 0-4.8-1.76-5.59-4.12H3.08v2.61A9.98 9.98 0 0 0 12 22Z" /><path fill="#FBBC05" d="M6.41 13.91A6 6 0 0 1 6.1 12c0-.66.11-1.31.31-1.91V7.48H3.08A10 10 0 0 0 2 12c0 1.61.38 3.13 1.08 4.52l3.33-2.61Z" /><path fill="#EA4335" d="M12 5.97c1.47 0 2.78.51 3.82 1.49l2.85-2.86A9.56 9.56 0 0 0 12 2a9.98 9.98 0 0 0-8.92 5.48l3.33 2.61C7.2 7.73 9.4 5.97 12 5.97Z" /></svg>;
 }
 
 const socialPlatformDetails = {
-  facebook: { icon: FacebookBrandIcon, description: 'Follow our page for restaurant news, promotions, and daily updates.', cta: 'Like page' },
-  instagram: { icon: InstagramBrandIcon, description: 'Explore fresh dishes, restaurant moments, and food photography.', cta: 'Follow us' },
-  tiktok: { icon: TikTokBrandIcon, description: 'Watch our latest food videos, kitchen moments, and behind-the-scenes stories.', cta: 'Watch now' },
-  google: { icon: GoogleBrandIcon, description: 'Read guest feedback and leave your own review for Naseeb Chapati.', cta: 'Write a review' },
+  facebook: { label: 'Facebook', icon: FacebookBrandIcon, description: 'Follow our page for restaurant news, promotions, and daily updates.', cta: 'Like page' },
+  instagram: { label: 'Instagram', icon: InstagramBrandIcon, description: 'Explore fresh dishes, restaurant moments, and food photography.', cta: 'Follow us' },
+  tiktok: { label: 'TikTok', icon: TikTokBrandIcon, description: 'Watch our latest food videos, kitchen moments, and behind-the-scenes stories.', cta: 'Watch now' },
+  threads: { label: 'Threads', icon: ThreadsBrandIcon, description: 'Join our conversations, quick updates, and fresh stories from the restaurant.', cta: 'Follow us' },
+  google: { label: 'Google Reviews', icon: GoogleBrandIcon, description: 'Read guest feedback and leave your own review for Naseeb Chapati.', cta: 'Write a review' },
 };
 
+const socialPlatformOrder = ['instagram', 'tiktok', 'threads', 'google', 'facebook'];
+
+function inferSocialPlatform(social) {
+  const explicitPlatform = String(social.platform || '').toLowerCase().trim();
+  if (socialPlatformDetails[explicitPlatform]) return explicitPlatform;
+  const href = String(social.href || '').toLowerCase();
+  const identity = `${social.title || ''} ${social.label || ''}`.toLowerCase();
+  if (href.includes('threads.net') || identity.includes('threads')) return 'threads';
+  if (href.includes('instagram.com') || identity.includes('instagram')) return 'instagram';
+  if (href.includes('tiktok.com') || identity.includes('tiktok')) return 'tiktok';
+  if (href.includes('google.') || href.includes('goo.gl/maps') || identity.includes('google')) return 'google';
+  if (href.includes('facebook.com') || identity.includes('facebook')) return 'facebook';
+  const legacyClass = String(social.className || '').toLowerCase().trim();
+  return socialPlatformDetails[legacyClass] ? legacyClass : '';
+}
+
+function prepareSocialCards(items, limit = 4) {
+  const sorted = items.slice().sort((a, b) => (Number(a.displayOrder) || 999) - (Number(b.displayOrder) || 999)).slice(0, limit);
+  const detectedPlatforms = sorted.map(inferSocialPlatform);
+  const validPlatforms = detectedPlatforms.filter(Boolean);
+  const hasRepeatedPlatform = new Set(validPlatforms).size < validPlatforms.length;
+  const usedPlatforms = new Set();
+  return sorted.map((social, index) => {
+    const detected = detectedPlatforms[index];
+    const platform = hasRepeatedPlatform
+      ? socialPlatformOrder[index % socialPlatformOrder.length]
+      : detected && !usedPlatforms.has(detected)
+        ? detected
+        : socialPlatformOrder.find((candidate) => !usedPlatforms.has(candidate)) || 'instagram';
+    usedPlatforms.add(platform);
+    return { social, platform, details: socialPlatformDetails[platform] };
+  });
+}
+
 function SocialSection() {
-  return <section className="social-section"><div className="container social-inner"><MotionReveal className="social-heading" y={14}><p className="eyebrow">Stay connected</p><h2>Follow Our <span>Social Media</span></h2><p>Stay connected with us for the latest dishes, restaurant news, offers, and guest updates.</p></MotionReveal><MotionGroup className="social-links social-card-grid" amount={.14}>{socialLinks.slice().sort((a, b) => (Number(a.displayOrder) || 999) - (Number(b.displayOrder) || 999)).slice(0, 4).map((social, index) => { const details = socialPlatformDetails[social.className] || { icon: Share2, description: 'Keep up with the latest from Naseeb Chapati.', cta: 'Follow us' }; const SocialIcon = details.icon; return <MotionCard as="a" className={`social-card ${social.className || ''}`} key={social.label} index={index} href={social.href} target="_blank" rel="noreferrer" aria-label={`${social.title || social.label}: ${social.ctaLabel || details.cta}`}><span className="social-card-icon" aria-hidden="true"><SocialIcon size={34} strokeWidth={2} /></span><h3>{social.title || social.label}</h3><strong>{social.username || 'Naseeb Chapati'}</strong><p>{social.description || details.description}</p><span className="social-card-cta">{social.ctaLabel || details.cta}<ArrowUpRight size={15} /></span></MotionCard>; })}</MotionGroup></div></section>;
+  const socialCards = prepareSocialCards(socialLinks);
+  return <section className="social-section" id="social-media"><div className="container social-inner"><MotionReveal className="social-heading" y={14}><p className="eyebrow">Stay connected</p><h2>Follow Our <span>Social Media</span></h2><p>Stay connected with us for the latest dishes, restaurant news, offers, and guest updates.</p></MotionReveal><MotionGroup className="social-links social-card-grid" amount={.14}>{socialCards.map(({ social, platform, details }, index) => { const SocialIcon = details.icon; const useSavedCopy = Boolean(social.platform) && social.platform === platform; return <MotionCard as="a" className={`social-card ${platform}`} key={social.id || `${platform}-${index}`} index={index} href={social.href} target="_blank" rel="noreferrer" aria-label={`${details.label}: ${useSavedCopy && social.ctaLabel ? social.ctaLabel : details.cta}`}><span className="social-card-icon" aria-hidden="true"><SocialIcon size={34} /></span><h3>{details.label}</h3><strong>{social.username || 'Naseeb Chapati'}</strong><p>{useSavedCopy && social.description ? social.description : details.description}</p><span className="social-card-cta">{useSavedCopy && social.ctaLabel ? social.ctaLabel : details.cta}<ArrowUpRight size={15} /></span></MotionCard>; })}</MotionGroup></div></section>;
 }
 
 function HomePage() {

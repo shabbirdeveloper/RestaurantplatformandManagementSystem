@@ -267,10 +267,11 @@ export const galleryItems = persistedGalleryItems.length ? persistedGalleryItems
 ];
 
 export const socialLinks = persistedAdminState?.social?.length ? persistedAdminState.social.filter((item) => item.status !== 'Inactive' && item.status !== 'Archived') : [
-  { label: 'Facebook', href: 'https://www.facebook.com/', className: 'facebook', username: 'Naseeb Chapati', description: 'Follow our page for restaurant news, promotions, and daily updates.', ctaLabel: 'Like page' },
-  { label: 'Instagram', href: 'https://www.instagram.com/', className: 'instagram', username: 'Naseeb Chapati', description: 'Explore fresh dishes, restaurant moments, and food photography.', ctaLabel: 'Follow us' },
-  { label: 'TikTok', href: 'https://www.tiktok.com/', className: 'tiktok', username: 'Naseeb Chapati', description: 'Watch our latest food videos, kitchen moments, and behind-the-scenes stories.', ctaLabel: 'Watch now' },
-  { label: 'Google Business', href: 'https://www.google.com/maps/search/?api=1&query=Naseeb+Capati+Nan+Malaysia', className: 'google', username: 'Google Reviews', description: 'Read guest feedback and leave your own review for Naseeb Chapati.', ctaLabel: 'Write a review' },
+  { label: 'Instagram', title: 'Instagram', platform: 'instagram', href: 'https://www.instagram.com/', className: 'instagram', username: 'Naseeb Chapati', description: 'Explore fresh dishes, restaurant moments, and food photography.', ctaLabel: 'Follow us', displayOrder: 1 },
+  { label: 'TikTok', title: 'TikTok', platform: 'tiktok', href: 'https://www.tiktok.com/', className: 'tiktok', username: 'Naseeb Chapati', description: 'Watch our latest food videos, kitchen moments, and behind-the-scenes stories.', ctaLabel: 'Watch now', displayOrder: 2 },
+  { label: 'Threads', title: 'Threads', platform: 'threads', href: 'https://www.threads.net/', className: 'threads', username: 'Naseeb Chapati', description: 'Join our conversations, quick updates, and fresh stories from the restaurant.', ctaLabel: 'Follow us', displayOrder: 3 },
+  { label: 'Google Reviews', title: 'Google Reviews', platform: 'google', href: 'https://www.google.com/maps/search/?api=1&query=Naseeb+Capati+Nan+Malaysia', className: 'google', username: 'Google Reviews', description: 'Read guest feedback and leave your own review for Naseeb Chapati.', ctaLabel: 'Write a review', displayOrder: 4 },
+  { label: 'Facebook', title: 'Facebook', platform: 'facebook', href: 'https://www.facebook.com/', className: 'facebook', username: 'Naseeb Chapati', description: 'Follow our page for restaurant news, promotions, and daily updates.', ctaLabel: 'Like page', displayOrder: 5 },
 ];
 
 export const servicesContent = normalizeServicesContent(
