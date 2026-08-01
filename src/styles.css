@@ -1901,9 +1901,29 @@ body {
 }
 .home-team-section { background: var(--soft-white); }
 .home-team-grid { gap: 22px; max-width: 1040px; }
-.home-team-card { border-radius: 18px; }
-.home-team-photo { height: 320px; }
-.home-team-card-copy { padding: 24px; }
+.home-team-card {
+  display: flex;
+  min-height: 610px;
+  border-radius: 18px;
+  flex-direction: column;
+}
+.home-team-photo {
+  height: 410px;
+  flex: 0 0 410px;
+  background: #edf2ef;
+}
+.home-team-photo img {
+  object-fit: cover;
+  object-position: center top;
+}
+.home-team-card-copy {
+  display: flex;
+  min-height: 180px;
+  padding: 26px;
+  flex: 1;
+  flex-direction: column;
+}
+.home-team-card-copy strong { margin-top: auto; }
 
 .promotions-section { background: var(--white); }
 .promotion-card { border-radius: 18px; overflow: hidden; }
@@ -2062,7 +2082,8 @@ body {
   .review-wrap,
   .contact-grid { gap: 48px; }
   .about-band-image { aspect-ratio: 4 / 3; }
-  .home-team-photo { height: 300px; }
+  .home-team-card { min-height: 560px; }
+  .home-team-photo { height: 360px; flex-basis: 360px; }
 
   .page-hero { min-height: 480px; }
   .page-hero-image {
@@ -2125,7 +2146,8 @@ body {
   .about-band-image { width: calc(100% - 12px); }
   .about-band-image::before { inset: 10px -8px -8px 10px; }
   .home-team-grid { grid-template-columns: 1fr; }
-  .home-team-photo { height: min(92vw, 390px); }
+  .home-team-card { min-height: 570px; }
+  .home-team-photo { height: min(105vw, 410px); flex-basis: min(105vw, 410px); }
   .promotion-card .promotion-image { height: 210px; }
   .reservation-panel { padding: 22px 16px; }
 
