@@ -1,4 +1,5 @@
 import { createDefaultServicesContent, normalizeServicesContent } from '../services/servicesSeed';
+import { defaultSocialAccounts, normalizeSocialAccounts, SOCIAL_ACCOUNT_SCHEMA_VERSION } from './socialAccounts';
 
 function readPersistedAdminState() {
   if (typeof window === 'undefined') return null;
@@ -266,13 +267,13 @@ export const galleryItems = persistedGalleryItems.length ? persistedGalleryItems
   { id: 'gallery-dessert', title: 'A sweet finish', category: 'Food', image: imageUrls.dessert, alt: 'Dessert in a white bowl' },
 ];
 
-export const socialLinks = persistedAdminState?.social?.length ? persistedAdminState.social.filter((item) => item.status !== 'Inactive' && item.status !== 'Archived') : [
-  { label: 'Instagram', title: 'Instagram', platform: 'instagram', href: 'https://www.instagram.com/', className: 'instagram', username: 'Naseeb Chapati', description: 'Explore fresh dishes, restaurant moments, and food photography.', ctaLabel: 'Follow us', displayOrder: 1 },
-  { label: 'TikTok', title: 'TikTok', platform: 'tiktok', href: 'https://www.tiktok.com/', className: 'tiktok', username: 'Naseeb Chapati', description: 'Watch our latest food videos, kitchen moments, and behind-the-scenes stories.', ctaLabel: 'Watch now', displayOrder: 2 },
-  { label: 'Threads', title: 'Threads', platform: 'threads', href: 'https://www.threads.net/', className: 'threads', username: 'Naseeb Chapati', description: 'Join our conversations, quick updates, and fresh stories from the restaurant.', ctaLabel: 'Follow us', displayOrder: 3 },
-  { label: 'Google Reviews', title: 'Google Reviews', platform: 'google', href: 'https://www.google.com/maps/search/?api=1&query=Naseeb+Capati+Nan+Malaysia', className: 'google', username: 'Google Reviews', description: 'Read guest feedback and leave your own review for Naseeb Chapati.', ctaLabel: 'Write a review', displayOrder: 4 },
-  { label: 'Facebook', title: 'Facebook', platform: 'facebook', href: 'https://www.facebook.com/', className: 'facebook', username: 'Naseeb Chapati', description: 'Follow our page for restaurant news, promotions, and daily updates.', ctaLabel: 'Like page', displayOrder: 5 },
-];
+const normalizedSocialAccounts = persistedAdminState?.social
+  ? normalizeSocialAccounts(persistedAdminState.social, {
+    migrateLegacy: Number(persistedAdminState.socialSchemaVersion || 0) < SOCIAL_ACCOUNT_SCHEMA_VERSION,
+  })
+  : defaultSocialAccounts;
+
+export const socialLinks = normalizedSocialAccounts.filter((item) => ['Active', 'Published', undefined].includes(item.status));
 
 export const servicesContent = normalizeServicesContent(
   persistedAdminState?.servicesContent || createDefaultServicesContent(),

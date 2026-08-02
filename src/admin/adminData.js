@@ -9,15 +9,15 @@ import {
   normalizeHeroTypography,
   promotions as publicPromotions,
   reviews as publicReviews,
-  socialLinks as publicSocial,
 } from '../data/content';
+import { defaultSocialAccounts, normalizeSocialAccounts, SOCIAL_ACCOUNT_SCHEMA_VERSION } from '../data/socialAccounts';
 import { CONTENT_ROW_ID, isSupabaseConfigured, supabase } from '../lib/supabase';
 import { createDefaultServicesContent, normalizeServicesContent } from '../services/servicesSeed';
 
 const STORAGE_KEY = 'naseeb-admin-state-v1';
 const SESSION_KEY = 'naseeb-admin-session-v1';
 const OPERATIONS_ROW_ID = 'default';
-const publicStateKeys = ['menuItems', 'categories', 'branches', 'promotions', 'gallery', 'reviews', 'social', 'homepage', 'servicesContent', 'seo', 'settings'];
+const publicStateKeys = ['menuItems', 'categories', 'branches', 'promotions', 'gallery', 'reviews', 'social', 'socialSchemaVersion', 'homepage', 'servicesContent', 'seo', 'settings'];
 const operationsStateKeys = ['reservations', 'enquiries', 'eventEnquiries', 'financeTransactions', 'staff', 'attendance', 'leaveRequests', 'adminUsers', 'activity', 'notifications'];
 
 export const roleCatalog = [
@@ -129,7 +129,8 @@ const makeSeedState = () => ({
     { id: 'd1111111-1111-4111-8111-111111111111', staffId: 'b3333333-3333-4333-8333-333333333333', staffName: 'Kumar Raj', employeeCode: 'NC-EMP-003', branch: 'Angsana JB Mall', leaveType: 'Annual leave', startDate: '2026-07-13', endDate: '2026-07-15', reason: 'Family commitment', status: 'Pending' },
     { id: 'd2222222-2222-4222-8222-222222222222', staffId: 'b2222222-2222-4222-8222-222222222222', staffName: 'Siti Nur', employeeCode: 'NC-EMP-002', branch: 'Ayer Hitam', leaveType: 'Medical leave', startDate: '2026-07-06', endDate: '2026-07-06', reason: 'Medical appointment', status: 'Approved' },
   ],
-  social: publicSocial.map((item, index) => ({ ...item, title: item.label, username: index === 0 ? '@naseebchapati' : '', status: 'Active', displayOrder: index + 1, branches: ['All branches'] })),
+  socialSchemaVersion: SOCIAL_ACCOUNT_SCHEMA_VERSION,
+  social: defaultSocialAccounts.map((item) => ({ ...item })),
   homepage: {
     heroHeading: 'Authentic Flavours, Freshly Served',
     heroText: 'Enjoy freshly prepared Pakistani favourites, delicious chapati, flavourful curries, biryani, grills, drinks, and family meals at Naseeb Chapati.',
@@ -225,6 +226,10 @@ function normalizeAdminState(state) {
       ? value.filter((item) => item && typeof item === 'object' && !Array.isArray(item))
       : seed[key];
   });
+  normalized.social = normalizeSocialAccounts(normalized.social, {
+    migrateLegacy: Number(incoming.socialSchemaVersion || 0) < SOCIAL_ACCOUNT_SCHEMA_VERSION,
+  });
+  normalized.socialSchemaVersion = SOCIAL_ACCOUNT_SCHEMA_VERSION;
   normalized.categories = normalized.categories.map((category, index) => ({
     ...category,
     image: typeof category.image === 'string' ? category.image.trim() : '',

@@ -600,8 +600,6 @@ const socialPlatformDetails = {
   google: { label: 'Google Reviews', icon: GoogleBrandIcon, href: 'https://www.google.com/maps/search/?api=1&query=Naseeb+Capati+Nan+Malaysia', description: 'Read guest feedback and leave your own review for Naseeb Chapati.', cta: 'Write a review' },
 };
 
-const socialPlatformOrder = ['facebook', 'instagram', 'tiktok', 'threads', 'google'];
-
 function inferSocialPlatform(social) {
   const explicitPlatform = String(social.platform || '').toLowerCase().trim();
   if (socialPlatformDetails[explicitPlatform]) return explicitPlatform;
@@ -617,30 +615,15 @@ function inferSocialPlatform(social) {
 }
 
 function prepareSocialCards(items, limit = 5) {
-  const sorted = items.slice().sort((a, b) => (Number(a.displayOrder) || 999) - (Number(b.displayOrder) || 999)).slice(0, limit);
-  const detectedPlatforms = sorted.map(inferSocialPlatform);
-  const validPlatforms = detectedPlatforms.filter(Boolean);
-  const hasRepeatedPlatform = new Set(validPlatforms).size < validPlatforms.length;
-  const usedPlatforms = new Set();
-  const cards = sorted.map((social, index) => {
-    const detected = detectedPlatforms[index];
-    const platform = hasRepeatedPlatform
-      ? socialPlatformOrder[index % socialPlatformOrder.length]
-      : detected && !usedPlatforms.has(detected)
-        ? detected
-        : socialPlatformOrder.find((candidate) => !usedPlatforms.has(candidate)) || 'instagram';
-    usedPlatforms.add(platform);
-    const details = socialPlatformDetails[platform];
-    const usesMatchingSavedPlatform = detected === platform;
-    return { social, platform, details, href: usesMatchingSavedPlatform && social.href ? social.href : details.href };
-  });
-  socialPlatformOrder.forEach((platform) => {
-    if (cards.length >= limit || usedPlatforms.has(platform)) return;
-    const details = socialPlatformDetails[platform];
-    cards.push({ social: { id: `social-fallback-${platform}`, platform }, platform, details, href: details.href });
-    usedPlatforms.add(platform);
-  });
-  return cards;
+  return items
+    .slice()
+    .sort((a, b) => (Number(a.displayOrder) || 999) - (Number(b.displayOrder) || 999))
+    .slice(0, limit)
+    .map((social) => {
+      const platform = inferSocialPlatform(social) || 'instagram';
+      return { social, platform, details: socialPlatformDetails[platform], href: social.href };
+    })
+    .filter(({ href }) => Boolean(href));
 }
 
 function SocialSection() {

@@ -231,6 +231,11 @@
 .admin-feature-toggle.active { border-color: rgba(31,77,58,.28); background: rgba(31,77,58,.1); color: var(--admin-green); box-shadow: 0 0 0 2px rgba(31,77,58,.04); }
 .admin-feature-toggle:focus-visible { outline: 3px solid rgba(31,77,58,.16); outline-offset: 2px; }
 .admin-social-icon { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 8px; background: rgba(31,77,58,.1); color: var(--admin-green); }
+.admin-social-icon.facebook { background: #1877f2; color: #fff; }
+.admin-social-icon.instagram { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045); color: #fff; }
+.admin-social-icon.tiktok { background: #111; color: #fff; }
+.admin-social-icon.threads { background: #111; color: #fff; }
+.admin-social-icon.google { background: #fff; color: #4285f4; border: 1px solid #dfe5e2; }
 .admin-truncate { display: block; max-width: 230px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .admin-table code { padding: 4px 6px; border-radius: 5px; background: var(--admin-soft); color: var(--admin-green-dark); font-size: 9px; }
 .admin-pagination { border-top: 1px solid var(--admin-border); }
