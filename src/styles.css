@@ -1872,8 +1872,16 @@ body {
 .category-card-overlay { right: 14px; bottom: 14px; left: 14px; }
 
 .about-band { padding: 104px 0; background: var(--white); }
-.about-band-grid { gap: clamp(50px, 8vw, 110px); }
-.about-band-image { width: min(100%, 475px); }
+.about-band-grid {
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr);
+  gap: clamp(36px, 4.5vw, 70px);
+}
+.about-band-image {
+  width: min(100%, 540px);
+  aspect-ratio: 11 / 12;
+  justify-self: end;
+}
+.about-band-copy { justify-self: start; }
 .about-band-image::before {
   inset: 16px -14px -14px 16px;
   border: 0;
@@ -2086,8 +2094,9 @@ body {
   .commitment-grid,
   .reservation-grid,
   .review-wrap,
-  .contact-grid { gap: 48px; }
-  .about-band-image { aspect-ratio: 4 / 3; }
+  .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+  .about-band-image { aspect-ratio: 4 / 3; justify-self: center; }
+  .about-band-copy { justify-self: stretch; }
   .home-team-card { min-height: 560px; }
   .home-team-photo { height: 360px; flex-basis: 360px; }
 
