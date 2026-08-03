@@ -573,6 +573,17 @@
 .admin-about-upload-button { position: relative; justify-content: center; min-height: 38px; overflow: hidden; }
 .admin-about-upload-button input { position: absolute; inset: 0; width: 100%; height: 100%; cursor: pointer; opacity: 0; }
 .admin-about-upload-button:has(input:disabled) { opacity: .55; cursor: wait; }
+.admin-history-editor > .admin-panel-heading { align-items: center; }
+.admin-history-editor > .admin-panel-heading p { max-width: 610px; margin: 6px 0 0; color: var(--admin-muted); font-size: 10px; line-height: 1.5; }
+.admin-history-intro { margin-bottom: 16px; padding: 15px; border: 1px solid var(--admin-border); border-radius: 12px; background: var(--admin-soft); }
+.admin-history-list { display: grid; gap: 12px; }
+.admin-history-card { overflow: hidden; border: 1px solid var(--admin-border); border-radius: 13px; background: var(--admin-white); }
+.admin-history-card-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 13px 15px; border-bottom: 1px solid var(--admin-border); background: #fbfcfb; }
+.admin-history-card-head > div:first-child { display: grid; gap: 3px; min-width: 0; }
+.admin-history-card-head strong { overflow: hidden; color: var(--admin-black); font-size: 12px; text-overflow: ellipsis; white-space: nowrap; }
+.admin-history-fields { padding: 15px; }
+.admin-history-meta { display: grid; grid-template-columns: minmax(0, 1fr) 120px 150px; gap: 10px; }
+.admin-history-empty { padding: 28px 20px; border: 1px dashed var(--admin-border); border-radius: 12px; background: var(--admin-soft); color: var(--admin-muted); font-size: 11px; text-align: center; }
 
 @media (max-width: 760px) {
   .admin-typography-fields { grid-template-columns: 1fr; }
@@ -582,11 +593,15 @@
   .admin-hero-slide-layout { grid-template-columns: 1fr; }
   .admin-homepage-stat-row { grid-template-columns: 1fr; }
   .admin-about-editor-layout { grid-template-columns: 1fr; }
+  .admin-history-editor > .admin-panel-heading { align-items: flex-start; flex-direction: column; }
+  .admin-history-editor > .admin-panel-heading > button { width: 100%; justify-content: center; }
+  .admin-history-meta { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 480px) {
   .admin-hero-slide-card-head { align-items: flex-start; flex-direction: column; }
   .admin-hero-slide-actions { width: 100%; justify-content: flex-end; }
+  .admin-history-card-head { align-items: flex-start; flex-direction: column; }
 }
 
 .admin-fatal-error { display: grid; place-items: center; min-height: 100vh; padding: 32px; background: #f7f8f6; color: var(--admin-black); text-align: center; }

@@ -569,6 +569,13 @@ function ReservationSection() {
   return <section className="reservation-section"><div className="container reservation-grid"><MotionReveal className="reservation-copy" y={18}><p className="eyebrow">Make a plan</p><h2>Good food tastes even better together.</h2><p>Reserve a table, order ahead, or get directions to the branch that suits you best.</p><div className="reservation-actions"><Button href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} variant="outline" icon={Phone}>Call restaurant</Button><Button href={`https://wa.me/${contactInfo.whatsapp}`} variant="outline" icon={MessageCircle}>Order on WhatsApp</Button><Button href={branches[0].mapUrl} variant="outline" icon={Navigation}>Get directions</Button></div></MotionReveal><MotionReveal className="reservation-panel" y={22} delay={.08}><div className="panel-heading"><div><span className="eyebrow">Reservation request</span><h3>Save your table</h3></div><CalendarGlyph /></div><ReservationForm /></MotionReveal></div></section>;
 }
 
+function HistorySection() {
+  const milestones = (Array.isArray(homepageContent.historyMilestones) ? homepageContent.historyMilestones : [])
+    .filter((item) => item.status === 'Published' && item.period?.trim() && item.title?.trim() && item.description?.trim());
+  if (homepageContent.showHistory === false || milestones.length === 0) return null;
+  return <section className="history-section" id="our-history" aria-labelledby="history-heading"><div className="container history-inner"><MotionReveal className="history-heading" y={16}><p className="eyebrow">{homepageContent.historyEyebrow}</p><h2 id="history-heading">{homepageContent.historyHeading}</h2>{homepageContent.historyText ? <p>{homepageContent.historyText}</p> : null}</MotionReveal><div className="history-flow-scroll"><MotionGroup className="history-flow" amount={.1} role="list" style={{ '--history-count': milestones.length }}>{milestones.map((item, index) => <MotionCard as="article" className="history-milestone" role="listitem" key={item.id} index={index}><span className="history-node" aria-hidden="true"><i>{String(index + 1).padStart(2, '0')}</i></span><div className="history-card-body"><span className="history-period">{item.period}</span><h3>{item.title}</h3><p>{item.description}</p></div></MotionCard>)}</MotionGroup></div></div></section>;
+}
+
 function CalendarGlyph() { return <div className="calendar-glyph"><span>OPEN</span><strong>24</strong></div>; }
 
 function FacebookBrandIcon({ size = 34, ...props }) {
@@ -632,7 +639,7 @@ function SocialSection() {
 }
 
 function HomePage() {
-  return <div className="home-page"><Hero /><QuickInfo /><HomepageStats /><FoodCoverflow /><BestSellers /><CategoryGrid /><AboutBand /><PromotionsSection /><HomeTeamSection /><ReviewSection /><GalleryStrip /><ReservationSection /><SocialSection /><BranchSection /></div>;
+  return <div className="home-page"><Hero /><QuickInfo /><HomepageStats /><FoodCoverflow /><BestSellers /><CategoryGrid /><AboutBand /><PromotionsSection /><HomeTeamSection /><ReviewSection /><GalleryStrip /><ReservationSection /><HistorySection /><SocialSection /><BranchSection /></div>;
 }
 
 function DishModal({ item, onClose }) {

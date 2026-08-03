@@ -1,12 +1,14 @@
 import {
   branches as publicBranches,
   contactInfo,
+  defaultHistoryMilestones,
   defaultHomepageStats,
   galleryItems as publicGallery,
   menuCategories as publicCategories,
   menuItems as publicMenuItems,
   normalizeHeroSlides,
   normalizeHeroTypography,
+  normalizeHistoryMilestones,
   promotions as publicPromotions,
   reviews as publicReviews,
 } from '../data/content';
@@ -171,9 +173,14 @@ const makeSeedState = () => ({
     branchTitle: 'Find your nearest branch',
     promotionTitle: 'Made for sharing',
     reviewTitle: 'A table worth coming back to.',
+    historyEyebrow: 'Our journey',
+    historyHeading: 'History of Naseeb Chapati',
+    historyText: 'From our first chapter to the table we serve today, follow the moments that continue to shape Naseeb Chapati.',
+    historyMilestones: defaultHistoryMilestones.map((item) => ({ ...item })),
     showAbout: true,
     showPromotions: true,
     showReviews: true,
+    showHistory: true,
   },
   servicesContent: createDefaultServicesContent(),
   seo: [
@@ -274,6 +281,11 @@ function normalizeAdminState(state) {
       label: String(item.label ?? ''),
     }))
     : seed.homepage.stats;
+  normalized.homepage.historyMilestones = normalizeHistoryMilestones(
+    Array.isArray(incomingHomepage.historyMilestones)
+      ? incomingHomepage.historyMilestones
+      : seed.homepage.historyMilestones,
+  );
   return normalized;
 }
 

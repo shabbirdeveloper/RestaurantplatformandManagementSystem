@@ -28,6 +28,56 @@ export const defaultHomepageStats = [
   { id: 'services', value: '4+', label: 'Event Services' },
 ];
 
+export const defaultHistoryMilestones = [
+  {
+    id: 'history-1999',
+    period: '1999',
+    title: 'The journey begins',
+    description: 'Naseeb Chapati begins its story with authentic Pakistani flavour and a warm welcome at the heart of every meal.',
+    order: 1,
+    status: 'Published',
+  },
+  {
+    id: 'history-tradition',
+    period: 'Our roots',
+    title: 'Recipes carried forward',
+    description: 'Traditional recipes, familiar spices, and freshly prepared breads become the foundation of the Naseeb Chapati table.',
+    order: 2,
+    status: 'Published',
+  },
+  {
+    id: 'history-community',
+    period: 'Growing together',
+    title: 'A table for the community',
+    description: 'The restaurant grows around family dining, generous portions, and the communities that continue to gather with us.',
+    order: 3,
+    status: 'Published',
+  },
+  {
+    id: 'history-today',
+    period: 'Today',
+    title: 'The story continues',
+    description: 'Every branch carries the same commitment to freshness, hospitality, and authentic flavour into the next chapter.',
+    order: 4,
+    status: 'Published',
+  },
+];
+
+export function normalizeHistoryMilestones(value) {
+  if (!Array.isArray(value)) return [];
+  return value
+    .filter((item) => item && typeof item === 'object' && !Array.isArray(item))
+    .map((item, index) => ({
+      id: typeof item.id === 'string' && item.id.trim() ? item.id : `history-${index + 1}`,
+      period: String(item.period ?? ''),
+      title: String(item.title ?? ''),
+      description: String(item.description ?? ''),
+      order: Number.isFinite(Number(item.order)) ? Math.max(1, Number(item.order)) : index + 1,
+      status: ['Published', 'Draft', 'Archived'].includes(item.status) ? item.status : 'Published',
+    }))
+    .sort((a, b) => a.order - b.order);
+}
+
 export const heroTitleFontOptions = [
   { value: 'montserrat', label: 'Montserrat', family: 'Montserrat, system-ui, sans-serif' },
   { value: 'playfair-display', label: 'Playfair Display', family: '"Playfair Display", Georgia, serif' },
@@ -95,9 +145,14 @@ const defaultHomepageContent = {
   branchTitle: 'Find your nearest branch',
   promotionTitle: 'Made for sharing',
   reviewTitle: 'A table worth coming back to.',
+  historyEyebrow: 'Our journey',
+  historyHeading: 'History of Naseeb Chapati',
+  historyText: 'From our first chapter to the table we serve today, follow the moments that continue to shape Naseeb Chapati.',
+  historyMilestones: defaultHistoryMilestones,
   showAbout: true,
   showPromotions: true,
   showReviews: true,
+  showHistory: true,
 };
 
 const persistedHomepageContent = persistedAdminState?.homepage || {};
@@ -105,6 +160,11 @@ export const homepageContent = {
   ...defaultHomepageContent,
   ...persistedHomepageContent,
   ...normalizeHeroTypography({ ...defaultHomepageContent, ...persistedHomepageContent }),
+  historyMilestones: normalizeHistoryMilestones(
+    Array.isArray(persistedHomepageContent.historyMilestones)
+      ? persistedHomepageContent.historyMilestones
+      : defaultHomepageContent.historyMilestones,
+  ),
   trendingTitle: persistedHomepageContent.trendingTitle === 'Trending now'
     ? defaultHomepageContent.signatureLabel
     : persistedHomepageContent.trendingTitle || persistedHomepageContent.signatureLabel || defaultHomepageContent.signatureLabel,
