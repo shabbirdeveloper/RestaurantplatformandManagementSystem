@@ -20,6 +20,8 @@ const navItems = [
 ];
 
 const tickerRepeatSlots = [0, 1, 2, 3, 4, 5];
+const pasirGudangBranch = branches.find((branch) => branch.slug === 'pasir-gudang' || String(branch.name || '').trim().toLowerCase() === 'pasir gudang');
+const homepageBranches = pasirGudangBranch ? [pasirGudangBranch, ...branches.filter((branch) => branch !== pasirGudangBranch)] : branches;
 
 const routeMeta = {
   '/': ['Naseeb Chapati Restaurant | Authentic Flavours, Freshly Served', 'Authentic Pakistani favourites, fresh chapati, naan, biryani, grills, and family meals across Johor.'],
@@ -540,6 +542,7 @@ function BranchCard({ branch, compact = false, index = 0 }) {
 }
 
 function BranchSection() {
+  const branches = homepageBranches;
   const [selectedSlug, setSelectedSlug] = useState(branches[0].slug);
   const selected = branches.find((branch) => branch.slug === selectedSlug) || branches[0];
   const reduceMotion = useReducedMotion();
