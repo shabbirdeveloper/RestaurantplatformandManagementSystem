@@ -7,7 +7,7 @@ import { branches, contactInfo, galleryItems, getHeroTitleFontFamily, heroSlides
 import { CategoryIcon } from './categoryIcons';
 import AdminApp from './admin/AdminApp';
 import { listPublishedTeamMembers, submitEnquiry, submitReservation } from './lib/supabase';
-import { MotionCard, MotionGroup, MotionImage, MotionPage, MotionReveal, buttonTransition, drawerTransition, headerVariants, itemVariants, motionSpring, staggerVariants } from './motion';
+import { MotionCard, MotionGroup, MotionImage, MotionPage, MotionReplayProvider, MotionReveal, MotionScrollScene, buttonTransition, drawerTransition, headerVariants, itemVariants, motionSpring, staggerVariants } from './motion';
 
 const TeamPage = lazy(() => import('./team/TeamPages').then((module) => ({ default: module.TeamPage })));
 const TeamProfilePage = lazy(() => import('./team/TeamPages').then((module) => ({ default: module.TeamProfilePage })));
@@ -662,7 +662,7 @@ function SocialSection() {
 }
 
 function HomePage() {
-  return <div className="home-page"><Hero /><QuickInfo /><WelcomeTicker /><HomepageStats /><FoodCoverflow /><BestSellers /><CategoryGrid /><AboutBand /><PromotionsSection /><HomeTeamSection /><ReviewSection /><GalleryStrip /><ReservationSection /><HistorySection /><SocialSection /><BranchSection /></div>;
+  return <MotionReplayProvider><div className="home-page"><Hero /><QuickInfo /><WelcomeTicker /><HomepageStats /><MotionScrollScene><FoodCoverflow /></MotionScrollScene><MotionScrollScene><BestSellers /></MotionScrollScene><MotionScrollScene><CategoryGrid /></MotionScrollScene><MotionScrollScene><AboutBand /></MotionScrollScene><MotionScrollScene><PromotionsSection /></MotionScrollScene><MotionScrollScene><HomeTeamSection /></MotionScrollScene><MotionScrollScene><ReviewSection /></MotionScrollScene><MotionScrollScene><GalleryStrip /></MotionScrollScene><MotionScrollScene><ReservationSection /></MotionScrollScene><MotionScrollScene><HistorySection /></MotionScrollScene><MotionScrollScene><SocialSection /></MotionScrollScene><MotionScrollScene><BranchSection /></MotionScrollScene></div></MotionReplayProvider>;
 }
 
 function DishModal({ item, onClose }) {

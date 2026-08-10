@@ -1480,6 +1480,7 @@ body { overflow-x: hidden; background: var(--white); }
 .site-header-home.is-scrolled { border-bottom-color: rgba(184, 215, 130, .28); background: rgba(8, 43, 32, .94); }
 .motion-image-reveal { will-change: clip-path, opacity; }
 .motion-image-reveal img { display: block; }
+.home-scroll-scene { position: relative; transform-origin: 50% 18%; }
 .page-transition { min-height: 1px; will-change: opacity, transform; }
 .mobile-nav { transform: none; transition: none; will-change: transform, opacity; }
 .dish-card, .category-card, .branch-card, .promotion-card, .promotion-feature, .value-card, .gallery-tile, .social-link, .quick-info-item { will-change: transform, opacity; }

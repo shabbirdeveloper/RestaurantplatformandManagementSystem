@@ -4,6 +4,7 @@ import {
   ArrowLeft, ArrowRight, BriefcaseBusiness, CheckCircle2, ExternalLink, Lightbulb, Mail,
   MessageCircle, Phone, Share2, ShieldCheck, Sparkles, Target, UsersRound,
 } from 'lucide-react';
+import { imageUrls } from '../data/content';
 import { getTeamMemberBySlug, listPublishedTeamMembers } from '../lib/supabase';
 import { motionEase, motionSpring } from '../motion';
 import './team.css';
@@ -135,7 +136,7 @@ export function TeamPage() {
   }, [retry]);
 
   const heroMember = members.find((member) => member.featured) || members[0];
-  const heroImage = heroMember?.cover_image || heroMember?.profile_image || '';
+  const heroImage = heroMember?.cover_image || heroMember?.profile_image || imageUrls.interior;
 
   return <div className="team-page">
     <section className={`team-hero ${heroImage ? 'has-image' : ''}`}>

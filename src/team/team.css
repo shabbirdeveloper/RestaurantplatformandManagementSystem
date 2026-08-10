@@ -485,6 +485,49 @@
   .team-profile-portrait { height: 390px; }
 }
 
+/* Full-width leadership hero using the featured admin-managed team image. */
+.team-hero.has-image { background: var(--team-dark); }
+.team-hero-image {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.team-hero.has-image::before {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(7, 28, 22, .96) 0%, rgba(18, 56, 43, .78) 40%, rgba(18, 56, 43, .32) 68%, rgba(7, 28, 22, .12) 100%),
+    linear-gradient(180deg, transparent 55%, rgba(7, 28, 22, .34));
+  content: '';
+}
+.team-hero.has-image::after { display: none; }
+.team-hero.has-image .team-hero-pattern { z-index: 2; opacity: .08; }
+.team-hero.has-image .team-hero-inner {
+  z-index: 3;
+  align-items: flex-start;
+  text-align: left;
+}
+.team-hero.has-image h1 { max-width: 780px; }
+.team-hero.has-image p { max-width: 650px; }
+
+@media (max-width: 780px) {
+  .team-hero.has-image { min-height: 500px; }
+  .team-hero.has-image::before {
+    background:
+      linear-gradient(180deg, rgba(7, 28, 22, .12) 0%, rgba(7, 28, 22, .35) 42%, rgba(7, 28, 22, .96) 100%),
+      linear-gradient(90deg, rgba(7, 28, 22, .36), transparent 72%);
+  }
+  .team-hero.has-image .team-hero-inner {
+    justify-content: flex-end;
+    padding-block: 72px 52px;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .team-page *,
   .team-profile-page *,
