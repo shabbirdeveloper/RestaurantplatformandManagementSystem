@@ -267,7 +267,8 @@ function Header() {
 }
 
 function MobileActionBar() {
-  return <div className="mobile-action-bar"><a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}><Phone size={17} /><span>Call</span></a><a href={homepageWhatsAppUrl()} target="_blank" rel="noreferrer"><MessageCircle size={17} /><span>WhatsApp</span></a><a href={branches[0].mapUrl} target="_blank" rel="noreferrer"><Navigation size={17} /><span>Directions</span></a><a href={contactInfo.orderUrl} target="_blank" rel="noreferrer"><ShoppingBag size={17} /><span>{homepageContent.secondaryButtonLabel || 'Order Now'}</span></a></div>;
+  const directionsUrl = pasirGudangBranch?.mapUrl || branches[0]?.mapUrl || '/branches';
+  return <div className="mobile-action-bar"><a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}><Phone size={17} /><span>Call</span></a><a href={homepageWhatsAppUrl()} target="_blank" rel="noreferrer"><MessageCircle size={17} /><span>WhatsApp</span></a><a href={directionsUrl} target="_blank" rel="noreferrer"><Navigation size={17} /><span>Directions</span></a><a href={contactInfo.orderUrl} target="_blank" rel="noreferrer"><ShoppingBag size={17} /><span>{homepageContent.secondaryButtonLabel || 'Order Now'}</span></a></div>;
 }
 
 function WhatsAppBrandIcon() {

@@ -2551,7 +2551,94 @@ body {
   .page-hero-inner > p:last-child { font-size: 13px; }
 }
 
+/* Premium mobile action dock. */
+@keyframes mobile-dock-enter {
+  from { opacity: 0; transform: translateY(18px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 580px) {
+  body { padding-bottom: calc(94px + env(safe-area-inset-bottom)); }
+
+  .mobile-action-bar {
+    right: 12px;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    left: 12px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    height: 72px;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, .16);
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(18, 56, 43, .98), rgba(7, 35, 27, .98));
+    box-shadow: 0 16px 40px rgba(7, 28, 22, .3), 0 3px 12px rgba(7, 28, 22, .2), inset 0 1px 0 rgba(255, 255, 255, .09);
+    backdrop-filter: blur(18px) saturate(1.15);
+    -webkit-backdrop-filter: blur(18px) saturate(1.15);
+    animation: mobile-dock-enter .55s cubic-bezier(.22, 1, .36, 1) both;
+  }
+
+  .mobile-action-bar a {
+    position: relative;
+    min-width: 0;
+    min-height: 58px;
+    gap: 3px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    color: rgba(255, 255, 255, .76);
+    font-size: 8.5px;
+    font-weight: 750;
+    line-height: 1;
+    letter-spacing: -.01em;
+    transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+  }
+
+  .mobile-action-bar a:not(:last-child)::after {
+    position: absolute;
+    top: 14px;
+    right: -1px;
+    bottom: 14px;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, rgba(255, 255, 255, .12), transparent);
+    content: '';
+  }
+
+  .mobile-action-bar a svg {
+    box-sizing: content-box;
+    width: 17px;
+    height: 17px;
+    padding: 4px;
+    border-radius: 9px;
+    background: rgba(255, 255, 255, .07);
+    color: rgba(255, 255, 255, .94);
+  }
+
+  .mobile-action-bar a:last-child {
+    border-color: rgba(184, 215, 130, .34);
+    background: linear-gradient(145deg, #2a664d, #1f4d3a);
+    color: var(--white);
+    box-shadow: 0 7px 18px rgba(4, 24, 18, .26), inset 0 1px 0 rgba(255, 255, 255, .13);
+  }
+
+  .mobile-action-bar a:last-child svg {
+    background: rgba(184, 215, 130, .12);
+    color: #c4e58c;
+  }
+
+  .mobile-action-bar a:active { transform: translateY(1px) scale(.98); }
+  .mobile-action-bar a:focus-visible {
+    outline: 2px solid #c4e58c;
+    outline-offset: -2px;
+  }
+
+  .floating-whatsapp { bottom: calc(94px + env(safe-area-inset-bottom)); }
+}
+
+@media (max-width: 360px) {
+  .mobile-action-bar { right: 8px; left: 8px; }
+  .mobile-action-bar a { font-size: 8px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .floating-whatsapp,
-  .floating-whatsapp::before { animation: none; }
+  .floating-whatsapp::before,
+  .mobile-action-bar { animation: none; }
 }
