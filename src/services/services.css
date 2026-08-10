@@ -307,6 +307,103 @@
   .service-detail-summary ul { grid-template-columns:1fr; }
 }
 
+/* Full-width services landing hero, using the admin-managed hero photograph. */
+.services-hero {
+  min-height: min(720px, calc(100svh - 88px));
+  padding: 0;
+  overflow: hidden;
+  background: #071f18;
+}
+.services-hero::after {
+  z-index: 1;
+  opacity: 1;
+  background:
+    linear-gradient(90deg, rgba(5, 27, 20, .95) 0%, rgba(8, 40, 30, .8) 38%, rgba(18, 56, 43, .38) 64%, rgba(5, 27, 20, .12) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, .03), transparent 56%, rgba(0, 0, 0, .4));
+  background-image:
+    linear-gradient(90deg, rgba(5, 27, 20, .95) 0%, rgba(8, 40, 30, .8) 38%, rgba(18, 56, 43, .38) 64%, rgba(5, 27, 20, .12) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, .03), transparent 56%, rgba(0, 0, 0, .4));
+  mask-image: none;
+  pointer-events: none;
+}
+.services-hero-glow { display: none; }
+.services-hero-grid {
+  position: relative;
+  z-index: 2;
+  display: block;
+  min-height: min(720px, calc(100svh - 88px));
+}
+.services-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: min(640px, 58%);
+  min-height: min(720px, calc(100svh - 88px));
+  padding: 84px 0 120px;
+  text-shadow: 0 3px 22px rgba(0, 0, 0, .26);
+}
+.services-hero-actions,
+.services-contact-actions { text-shadow: none; }
+.services-hero-visual {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  min-height: 0;
+  height: auto;
+  border-radius: 0;
+  box-shadow: none;
+}
+.services-hero-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: cover;
+  object-position: center;
+}
+.services-hero-visual::after { display: none; }
+.services-capacity-badge {
+  top: 28px;
+  right: max(24px, calc((100vw - 1180px) / 2));
+  left: auto;
+}
+.services-hero-service-tabs {
+  right: max(24px, calc((100vw - 1180px) / 2));
+  left: auto;
+  width: min(520px, calc(100% - 48px));
+}
+
+@media (max-width: 780px) {
+  .services-hero,
+  .services-hero-grid { min-height: 740px; padding: 0; }
+  .services-hero::after {
+    background-image:
+      linear-gradient(180deg, rgba(5, 27, 20, .15) 0%, rgba(5, 27, 20, .42) 38%, rgba(5, 27, 20, .96) 100%),
+      linear-gradient(90deg, rgba(5, 27, 20, .42), transparent 72%);
+  }
+  .services-hero-copy {
+    justify-content: flex-end;
+    width: min(100%, 620px);
+    min-height: 740px;
+    padding: 72px 0 158px;
+  }
+  .services-hero-visual,
+  .services-hero-visual > img { height: auto; min-height: 0; }
+  .services-capacity-badge { top: 18px; right: 15px; }
+  .services-hero-service-tabs { right: 15px; bottom: 18px; width: calc(100% - 30px); }
+}
+
+@media (max-width: 540px) {
+  .services-hero,
+  .services-hero-grid,
+  .services-hero-copy { min-height: 800px; }
+  .services-hero-copy { padding: 80px 0 136px; }
+  .services-hero-copy h1 { font-size: 2.35rem; }
+  .services-hero-service-tabs { grid-template-columns: 1fr; }
+  .services-hero-service-tabs a:nth-child(2) { display: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .services-page *, .services-page *::before, .services-page *::after { scroll-behavior:auto!important; animation-duration:.01ms!important; animation-iteration-count:1!important; transition-duration:.01ms!important; }
 }

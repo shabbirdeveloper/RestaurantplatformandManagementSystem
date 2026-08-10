@@ -103,6 +103,12 @@ function formatPrice(price) {
   return Number.isFinite(numeric) ? `RM ${numeric.toFixed(2).replace('.00', '')}` : 'Ask in branch';
 }
 
+function homepageWhatsAppUrl(message = '') {
+  const number = String(homepageContent.whatsappNumber || contactInfo.whatsapp || '').replace(/\D/g, '');
+  const query = message ? `?text=${encodeURIComponent(message)}` : '';
+  return number ? `https://wa.me/${number}${query}` : '#';
+}
+
 function toMinutes(time) {
   const [hour, minute] = time.split(':').map(Number);
   return hour * 60 + minute;
@@ -223,7 +229,7 @@ function CartDrawer() {
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
   }, [isOpen, closeCart]);
-  const orderUrl = `https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent(orderText)}`;
+  const orderUrl = homepageWhatsAppUrl(orderText);
   return <AnimatePresence>{isOpen && <><motion.div className="cart-backdrop" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} onMouseDown={(event) => event.target === event.currentTarget && closeCart()} /><motion.aside className="cart-drawer" role="dialog" aria-modal="true" aria-label="Your order" initial={{ x: reduceMotion ? 0 : '100%' }} animate={{ x: 0 }} exit={{ x: reduceMotion ? 0 : '100%' }} transition={reduceMotion ? { duration: 0 } : drawerTransition}><div className="cart-drawer-header"><div><span className="eyebrow">Your order</span><h2>Cart <span>({itemCount})</span></h2></div><button className="icon-button" onClick={closeCart} aria-label="Close cart"><X size={20} /></button></div>{items.length ? <><div className="cart-items">{items.map((item) => <div className="cart-item" key={item.id}><img src={item.image} alt="" /><div className="cart-item-copy"><strong>{item.name}</strong><span>{formatPrice(item.price)}</span><div className="cart-quantity"><button onClick={() => updateQuantity(item.id, item.quantity - 1)} aria-label={`Decrease ${item.name}`}>−</button><span>{item.quantity}</span><button onClick={() => updateQuantity(item.id, item.quantity + 1)} aria-label={`Increase ${item.name}`}>+</button></div></div><strong className="cart-item-total">{formatPrice((Number(item.price) || 0) * item.quantity)}</strong></div>)}</div><div className="cart-summary"><div><span>Estimated total</span><strong>{formatPrice(subtotal)}</strong></div><a className="button button-accent cart-order-button" href={orderUrl} target="_blank" rel="noreferrer"><MessageCircle size={17} />Order on WhatsApp</a><button className="cart-clear" onClick={clearCart}>Clear cart</button><p>Final availability and total will be confirmed by the restaurant team.</p></div></> : <div className="cart-empty"><ShoppingCart size={34} /><h3>Your cart is empty</h3><p>Add dishes from the menu and they’ll appear here for one easy order.</p><Button href="/menu" variant="primary" icon={BookOpen}>Browse menu</Button></div>}</motion.aside></>}</AnimatePresence>;
 }
 
@@ -261,7 +267,7 @@ function Header() {
 }
 
 function MobileActionBar() {
-  return <div className="mobile-action-bar"><a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}><Phone size={17} /><span>Call</span></a><a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noreferrer"><MessageCircle size={17} /><span>WhatsApp</span></a><a href={branches[0].mapUrl} target="_blank" rel="noreferrer"><Navigation size={17} /><span>Directions</span></a><a href={contactInfo.orderUrl} target="_blank" rel="noreferrer"><ShoppingBag size={17} /><span>{homepageContent.secondaryButtonLabel || 'Order Now'}</span></a></div>;
+  return <div className="mobile-action-bar"><a href={`tel:${contactInfo.phone.replace(/\s/g, '')}`}><Phone size={17} /><span>Call</span></a><a href={homepageWhatsAppUrl()} target="_blank" rel="noreferrer"><MessageCircle size={17} /><span>WhatsApp</span></a><a href={branches[0].mapUrl} target="_blank" rel="noreferrer"><Navigation size={17} /><span>Directions</span></a><a href={contactInfo.orderUrl} target="_blank" rel="noreferrer"><ShoppingBag size={17} /><span>{homepageContent.secondaryButtonLabel || 'Order Now'}</span></a></div>;
 }
 
 function WhatsAppBrandIcon() {
@@ -269,7 +275,7 @@ function WhatsAppBrandIcon() {
 }
 
 function FloatingWhatsApp() {
-  return <a className="floating-whatsapp" href={`https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent('Hi Naseeb Chapati, I would like to place an order.')}`} target="_blank" rel="noreferrer" aria-label="Chat with Naseeb Chapati on WhatsApp" title="Chat with us on WhatsApp"><WhatsAppBrandIcon /></a>;
+  return <a className="floating-whatsapp" href={homepageWhatsAppUrl('Hi Naseeb Chapati, I would like to place an order.')} target="_blank" rel="noreferrer" aria-label="Chat with Naseeb Chapati on WhatsApp" title="Chat with us on WhatsApp"><WhatsAppBrandIcon /></a>;
 }
 
 function Footer() {
@@ -323,7 +329,11 @@ function Hero() {
   const currentHeading = current?.heading?.trim() || homepageContent.heroHeading || 'Authentic Flavours, Freshly Served';
   const currentText = current?.text?.trim() || homepageContent.heroText || '';
   const secondaryButtonLabel = current?.secondaryButtonLabel || 'Order Now';
-  const secondaryButtonUrl = current?.secondaryButtonUrl || contactInfo.orderUrl;
+  const configuredSecondaryButtonUrl = current?.secondaryButtonUrl || contactInfo.orderUrl;
+  const secondaryButtonUrl = /order|whatsapp/i.test(secondaryButtonLabel)
+    ? homepageWhatsAppUrl('Hi Naseeb Chapati, I would like to place an order.')
+    : configuredSecondaryButtonUrl;
+  const SecondaryButtonIcon = secondaryButtonUrl.includes('wa.me/') ? MessageCircle : ShoppingBag;
   const alreadyHasBranchAction = secondaryButtonUrl === '/branches' || /branch/i.test(secondaryButtonLabel);
   const step = (direction) => setActive((value) => (value + direction + slides.length) % slides.length);
   useEffect(() => {
@@ -349,7 +359,7 @@ function Hero() {
         <motion.p className="hero-description" variants={heroItemVariants}>{currentText}</motion.p>
         <motion.div className="hero-actions" variants={heroActionsVariants}>
           <Button animationProps={{ variants: heroButtonVariants }} href={current.primaryButtonUrl || '/menu'} icon={BookOpen}>{current.primaryButtonLabel || 'View Menu'}</Button>
-          <Button animationProps={{ variants: heroButtonVariants }} href={secondaryButtonUrl} variant="accent" icon={ShoppingBag}>{secondaryButtonLabel}</Button>
+          <Button animationProps={{ variants: heroButtonVariants }} href={secondaryButtonUrl} variant="accent" icon={SecondaryButtonIcon}>{secondaryButtonLabel}</Button>
           {!alreadyHasBranchAction && <Button animationProps={{ variants: heroButtonVariants }} href="/branches" variant="outline" icon={MapPin}>Find Nearest Branch</Button>}
         </motion.div>
         <motion.div className="hero-note" variants={heroItemVariants}><span className="hero-note-dot"><Check size={13} /></span><span>Halal food · Dine-in, takeaway and delivery</span></motion.div>
@@ -574,12 +584,12 @@ function ReservationForm() {
   const update = (event) => setForm((current) => ({ ...current, [event.target.name]: event.target.value }));
   const submit = async (event) => { event.preventDefault(); setError(''); setStatus('submitting'); const result = await submitReservation(form); if (result.error) { setStatus('idle'); setError('We could not save your request right now. Please call or WhatsApp the restaurant.'); return; } setStatus('success'); };
   if (status === 'submitting') return <div className="success-card" role="status"><div className="success-icon"><Send size={22} /></div><h3>Sending your request…</h3><p>Please wait while we send your reservation to the restaurant team.</p></div>;
-  if (status === 'success') return <div className="success-card"><div className="success-icon"><Check size={22} /></div><h3>Request received</h3><p>Thank you, {form.name || 'guest'}. The restaurant team can confirm your reservation by phone or WhatsApp.</p><div className="hero-actions"><Button href={`https://wa.me/${contactInfo.whatsapp}?text=${encodeURIComponent(`Reservation request for ${form.name} on ${form.date} at ${form.time}`)}`} variant="accent" icon={MessageCircle}>Send to WhatsApp</Button><button className="link-button" onClick={() => setStatus('idle')}>Make another request</button></div></div>;
+  if (status === 'success') return <div className="success-card"><div className="success-icon"><Check size={22} /></div><h3>Request received</h3><p>Thank you, {form.name || 'guest'}. The restaurant team can confirm your reservation by phone or WhatsApp.</p><div className="hero-actions"><Button href={homepageWhatsAppUrl(`Reservation request for ${form.name} on ${form.date} at ${form.time}`)} variant="accent" icon={MessageCircle}>Send to WhatsApp</Button><button className="link-button" onClick={() => setStatus('idle')}>Make another request</button></div></div>;
   return <form className="reservation-form" onSubmit={submit}><div className="form-grid"><label>Full name<input name="name" value={form.name} onChange={update} required placeholder="Your name" /></label><label>Phone number<input name="phone" type="tel" value={form.phone} onChange={update} required placeholder="e.g. 01x xxx xxxx" /></label><label>Branch<select name="branch" value={form.branch} onChange={update}>{branches.map((branch) => <option key={branch.slug} value={branch.slug}>{branch.name}</option>)}</select></label><label>Date<input name="date" type="date" value={form.date} onChange={update} required /></label><label>Time<input name="time" type="time" value={form.time} onChange={update} required /></label><label>Guests<select name="guests" value={form.guests} onChange={update}>{[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((value) => <option key={value}>{value}</option>)}</select></label></div><label>Special request<textarea name="request" value={form.request} onChange={update} placeholder="Birthday, high chair, or anything we should know?" rows="3" /></label>{error && <p className="form-error" role="alert"><CircleAlert size={15} />{error}</p>}<div className="form-footer"><span><CircleAlert size={15} />Your request is sent securely to the restaurant team.</span><Button type="submit" variant="primary" icon={Send}>Reserve a table</Button></div></form>;
 }
 
 function ReservationSection() {
-  return <section className="reservation-section"><div className="container reservation-grid"><MotionReveal className="reservation-copy" y={18}><p className="eyebrow">Make a plan</p><h2>Good food tastes even better together.</h2><p>Reserve a table, order ahead, or get directions to the branch that suits you best.</p><div className="reservation-actions"><Button href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} variant="outline" icon={Phone}>Call restaurant</Button><Button href={`https://wa.me/${contactInfo.whatsapp}`} variant="outline" icon={MessageCircle}>Order on WhatsApp</Button><Button href={branches[0].mapUrl} variant="outline" icon={Navigation}>Get directions</Button></div></MotionReveal><MotionReveal className="reservation-panel" y={22} delay={.08}><div className="panel-heading"><div><span className="eyebrow">Reservation request</span><h3>Save your table</h3></div><CalendarGlyph /></div><ReservationForm /></MotionReveal></div></section>;
+  return <section className="reservation-section"><div className="container reservation-grid"><MotionReveal className="reservation-copy" y={18}><p className="eyebrow">Make a plan</p><h2>Good food tastes even better together.</h2><p>Reserve a table, order ahead, or get directions to the branch that suits you best.</p><div className="reservation-actions"><Button href={`tel:${contactInfo.phone.replace(/\s/g, '')}`} variant="outline" icon={Phone}>Call restaurant</Button><Button href={homepageWhatsAppUrl()} variant="outline" icon={MessageCircle}>Order on WhatsApp</Button><Button href={branches[0].mapUrl} variant="outline" icon={Navigation}>Get directions</Button></div></MotionReveal><MotionReveal className="reservation-panel" y={22} delay={.08}><div className="panel-heading"><div><span className="eyebrow">Reservation request</span><h3>Save your table</h3></div><CalendarGlyph /></div><ReservationForm /></MotionReveal></div></section>;
 }
 
 function HistorySection() {

@@ -57,6 +57,11 @@ function Hero({ onPlan }) {
   const activeServices = SortableActive(servicesContent.services);
   return <section className="services-hero">
     <div className="services-hero-glow" aria-hidden="true" />
+    <motion.div className="services-hero-visual" initial={reduceMotion ? false : { opacity: 0, scale: 1.025 }} animate={{ opacity: 1, scale: 1 }} transition={{ ...spring, delay: .12 }}>
+      <img src={settings.heroImage} alt={settings.heroAlt} fetchPriority="high" />
+      <div className="services-capacity-badge"><Users size={20} /><span>{settings.capacityBadgeLabel.replace('{capacity}', settings.eventCapacity)}</span></div>
+      <div className="services-hero-service-tabs">{activeServices.slice(0, 2).map((service) => <a href={`/services/${service.slug}`} key={service.id} onClick={(event) => { event.preventDefault(); goTo(`/services/${service.slug}`); }}><strong>{service.name}</strong><small>{service.availability}</small><ChevronRight size={15} /></a>)}</div>
+    </motion.div>
     <div className="services-container services-hero-grid">
       <motion.div className="services-hero-copy" initial={reduceMotion ? false : 'hidden'} animate="show" variants={{ show: { transition: { staggerChildren: .09 } } }}>
         <motion.span className="services-kicker" variants={reveal}>{settings.heroEyebrow}</motion.span>
@@ -70,11 +75,6 @@ function Hero({ onPlan }) {
           <a href={`https://wa.me/${whatsappNumber(settings.defaultWhatsapp || contactInfo.whatsapp)}`} target="_blank" rel="noreferrer"><MessageCircle size={16} />{settings.whatsappButtonLabel}</a>
           <a href={`tel:${String(contactInfo.phone).replace(/\s/g, '')}`}><Phone size={16} />{settings.callButtonLabel}</a>
         </motion.div>
-      </motion.div>
-      <motion.div className="services-hero-visual" initial={reduceMotion ? false : { opacity: 0, scale: .97, x: 24 }} animate={{ opacity: 1, scale: 1, x: 0 }} transition={{ ...spring, delay: .12 }}>
-        <img src={settings.heroImage} alt={settings.heroAlt} fetchPriority="high" />
-        <div className="services-capacity-badge"><Users size={20} /><span>{settings.capacityBadgeLabel.replace('{capacity}', settings.eventCapacity)}</span></div>
-        <div className="services-hero-service-tabs">{activeServices.slice(0, 2).map((service) => <a href={`/services/${service.slug}`} key={service.id} onClick={(event) => { event.preventDefault(); goTo(`/services/${service.slug}`); }}><strong>{service.name}</strong><small>{service.availability}</small><ChevronRight size={15} /></a>)}</div>
       </motion.div>
     </div>
   </section>;

@@ -134,8 +134,12 @@ export function TeamPage() {
     return () => { active = false; };
   }, [retry]);
 
+  const heroMember = members.find((member) => member.featured) || members[0];
+  const heroImage = heroMember?.cover_image || heroMember?.profile_image || '';
+
   return <div className="team-page">
-    <section className="team-hero">
+    <section className={`team-hero ${heroImage ? 'has-image' : ''}`}>
+      {heroImage ? <img className="team-hero-image" src={heroImage} alt="" aria-hidden="true" fetchPriority="high" /> : null}
       <div className="team-hero-pattern" aria-hidden="true"><i /><i /><i /></div>
       <motion.div className="container team-hero-inner" initial={reduceMotion ? false : 'hidden'} animate={reduceMotion ? undefined : 'show'} variants={cardGroup}>
         <motion.span className="team-eyebrow" variants={cardItem}>Our Leadership</motion.span>

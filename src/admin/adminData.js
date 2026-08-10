@@ -143,6 +143,7 @@ const makeSeedState = () => ({
     primaryButtonUrl: '/menu',
     secondaryButtonLabel: 'Order Now',
     secondaryButtonUrl: 'https://www.foodpanda.my/chain/cx8vw/naseeb-capati-nan',
+    whatsappNumber: '+601164111947',
     heroSlides: [],
     heroAutoplay: true,
     heroSpeed: 6000,
