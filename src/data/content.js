@@ -127,7 +127,7 @@ const defaultHomepageContent = {
     { icon: 'order', title: 'Online ordering', description: 'Order ahead with ease' },
   ],
   tickerText: 'Welcome to Naseeb Capati Nan Pasir Gudang',
-  tickerSpeed: 18,
+  tickerSpeed: 32,
   tickerDirection: 'left',
   showTicker: true,
   stats: defaultHomepageStats,

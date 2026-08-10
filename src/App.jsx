@@ -366,7 +366,7 @@ function QuickInfo() {
 function WelcomeTicker() {
   const text = String(homepageContent.tickerText || '').trim();
   if (homepageContent.showTicker === false || !text) return null;
-  const duration = Math.min(60, Math.max(8, Number(homepageContent.tickerSpeed) || 18));
+  const duration = Math.min(90, Math.max(28, Number(homepageContent.tickerSpeed) || 32));
   const direction = homepageContent.tickerDirection === 'right' ? 'right' : 'left';
   return <section className={`welcome-ticker moves-${direction}`} aria-label={`Restaurant announcement: ${text}`}><div className="container welcome-ticker-window"><div className="welcome-ticker-track" aria-hidden="true" style={{ '--ticker-duration': `${duration}s` }}>{[0, 1].map((group) => <div className="welcome-ticker-group" key={group}>{tickerRepeatSlots.map((slot) => <span className="welcome-ticker-message" key={`${group}-${slot}`}><i />{text}</span>)}</div>)}</div></div></section>;
 }
