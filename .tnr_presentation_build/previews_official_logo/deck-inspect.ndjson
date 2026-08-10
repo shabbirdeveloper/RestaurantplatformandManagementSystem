@@ -1,0 +1,334 @@
+{"kind":"slide","id":"sl/j0vfab","slide":1,"title":"TNR • DIGITAL TRANSFORMATION","textShapes":8}
+{"kind":"shape","id":"sh/1k3m1kzq","slide":1,"name":"cover-right-panel","bbox":[898,0,382,720]}
+{"kind":"shape","id":"sh/ehs36p0z","slide":1,"name":"cover-logo-halo","bbox":[919,117,340,340]}
+{"kind":"shape","id":"sh/o7ulczy1","slide":1,"name":"cover-tag-line","bbox":[72,66,74,5]}
+{"kind":"textbox","id":"sh/p83m54zm","slide":1,"textChars":28,"textLines":1}
+{"kind":"textbox","id":"sh/2lc3apgb","slide":1,"textChars":20,"textLines":1}
+{"kind":"shape","id":"sh/n6l43uhg","slide":1,"name":"cover-title-rule","bbox":[72,292,168,0]}
+{"kind":"textbox","id":"sh/cbu5gzyd","slide":1,"textChars":67,"textLines":2}
+{"kind":"textbox","id":"sh/xcnm94zy","slide":1,"textChars":15,"textLines":1}
+{"kind":"textbox","id":"sh/lwb690nq","slide":1,"textChars":27,"textLines":1}
+{"kind":"textbox","id":"sh/0vi5gv65","slide":1,"textChars":26,"textLines":1}
+{"kind":"shape","id":"sh/zu9o7q5k","slide":1,"name":"cover-logo-rule","bbox":[986,494,206,0]}
+{"kind":"textbox","id":"sh/yt0neloz","slide":1,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/90b6dknm","slide":1,"textChars":23,"textLines":1}
+{"kind":"image","id":"im/atkvm54b","slide":1,"name":"","alt":"Official TNR community logo","bbox":[927,125,324,324]}
+{"kind":"notes","id":"nt/j0vfab","slide":1,"text":"Open by framing the platform as community infrastructure, not simply a websit..."}
+{"kind":"slide","id":"sl/5sa6ez","slide":2,"title":"TNR DIGITAL PLATFORM","textShapes":20}
+{"kind":"shape","id":"sh/qh8jutkf","slide":2,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/dkji5836","slide":2,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/sjq1w32l","slide":2,"textChars":33,"textLines":1}
+{"kind":"textbox","id":"sh/fm107ilc","slide":2,"textChars":81,"textLines":1}
+{"kind":"shape","id":"sh/elsjydkr","slide":2,"name":"why-left-band","bbox":[0,202,380,430]}
+{"kind":"textbox","id":"sh/18ji9832","slide":2,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/0na1032h","slide":2,"textChars":51,"textLines":3}
+{"kind":"textbox","id":"sh/na10bi18","slide":2,"textChars":111,"textLines":1}
+{"kind":"shape","id":"sh/29sj2dkn","slide":2,"name":"why-gold-rule","bbox":[72,585,88,0]}
+{"kind":"shape","id":"sh/o7uls7al","slide":2,"name":"why-item-0-disc","bbox":[438,222,50,50]}
+{"kind":"textbox","id":"sh/m5s3qxsv","slide":2,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/n614j290","slide":2,"textChars":24,"textLines":1}
+{"kind":"shape","id":"sh/wvulw7ax","slide":2,"name":"why-link-0","bbox":[765,247,105,0]}
+{"kind":"shape","id":"sh/xw3mpcri","slide":2,"name":"why-item-1-disc","bbox":[438,300,50,50]}
+{"kind":"textbox","id":"sh/bul4n29c","slide":2,"textChars":7,"textLines":1}
+{"kind":"textbox","id":"sh/kzel0rat","slide":2,"textChars":21,"textLines":1}
+{"kind":"shape","id":"sh/l0nmtwre","slide":2,"name":"why-link-1","bbox":[765,325,105,0]}
+{"kind":"shape","id":"sh/tgjmdcji","slide":2,"name":"why-item-2-disc","bbox":[438,378,50,50]}
+{"kind":"textbox","id":"sh/7u1kbm1c","slide":2,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/6ts3ihk7","slide":2,"textChars":24,"textLines":1}
+{"kind":"shape","id":"sh/hkjmhwju","slide":2,"name":"why-link-2","bbox":[765,403,105,0]}
+{"kind":"shape","id":"sh/gjalor29","slide":2,"name":"why-item-3-disc","bbox":[438,456,50,50]}
+{"kind":"textbox","id":"sh/uhs3mhk3","slide":2,"textChars":13,"textLines":1}
+{"kind":"textbox","id":"sh/xoz25sja","slide":2,"textChars":20,"textLines":1}
+{"kind":"shape","id":"sh/wnqlc72p","slide":2,"name":"why-link-3","bbox":[765,481,105,0]}
+{"kind":"shape","id":"sh/mt4j6t0n","slide":2,"name":"why-item-4-disc","bbox":[438,534,50,50]}
+{"kind":"textbox","id":"sh/8v6183it","slide":2,"textChars":12,"textLines":1}
+{"kind":"textbox","id":"sh/9wfih8ze","slide":2,"textChars":28,"textLines":1}
+{"kind":"shape","id":"sh/axojad0z","slide":2,"name":"why-link-4","bbox":[765,559,105,0]}
+{"kind":"shape","id":"sh/vyx0jih4","slide":2,"name":"why-core-shadow","bbox":[884,254,278,278]}
+{"kind":"shape","id":"sh/wz61cnip","slide":2,"name":"why-core-outer","bbox":[870,240,278,278]}
+{"kind":"shape","id":"sh/x0filsza","slide":2,"name":"why-core-inner","bbox":[912,282,194,194]}
+{"kind":"textbox","id":"sh/r2d07eh0","slide":2,"textChars":10,"textLines":2}
+{"kind":"textbox","id":"sh/7mlof6ps","slide":2,"textChars":33,"textLines":1}
+{"kind":"shape","id":"sh/6lc7mlo7","slide":2,"name":"footer-rule-2","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/t836hg7i","slide":2,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/s7upob6x","slide":2,"textChars":2,"textLines":1}
+{"kind":"image","id":"im/i1g72l8b","slide":2,"name":"","alt":"why-item-0 line icon","bbox":[450.5,234.5,25,25]}
+{"kind":"image","id":"im/t87qh0ry","slide":2,"name":"","alt":"why-item-1 line icon","bbox":[450.5,312.5,25,25]}
+{"kind":"image","id":"im/rqtsbetc","slide":2,"name":"","alt":"why-item-2 line icon","bbox":[450.5,390.5,25,25]}
+{"kind":"image","id":"im/4n290zal","slide":2,"name":"","alt":"why-item-3 line icon","bbox":[450.5,468.5,25,25]}
+{"kind":"image","id":"im/wrqd0nu1","slide":2,"name":"","alt":"why-item-4 line icon","bbox":[450.5,546.5,25,25]}
+{"kind":"image","id":"im/lkfu18ve","slide":2,"name":"","alt":"why-core-icon line icon","bbox":[978,319,62,62]}
+{"kind":"notes","id":"nt/5sa6ez","slide":2,"text":"[Sources] | - Platform content and presenter details: user-provided TNR Digit..."}
+{"kind":"slide","id":"sl/2udutf","slide":3,"title":"TNR DIGITAL PLATFORM","textShapes":23}
+{"kind":"shape","id":"sh/exsn2p8z","slide":3,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/10j6x47a","slide":3,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/gza54zqp","slide":3,"textChars":41,"textLines":1}
+{"kind":"textbox","id":"sh/321ozepg","slide":3,"textChars":78,"textLines":1}
+{"kind":"textbox","id":"sh/21sn69ov","slide":3,"textChars":3,"textLines":1}
+{"kind":"textbox","id":"sh/po361o7m","slide":3,"textChars":50,"textLines":2}
+{"kind":"shape","id":"sh/onup8j61","slide":3,"name":"vision-rule","bbox":[80,492,170,0]}
+{"kind":"textbox","id":"sh/bqlo3epc","slide":3,"textChars":81,"textLines":1}
+{"kind":"shape","id":"sh/qpc7a9o7","slide":3,"name":"vision-spine","bbox":[503,244,0,330]}
+{"kind":"shape","id":"sh/gjexonql","slide":3,"name":"vision-node-0","bbox":[484,238,38,38]}
+{"kind":"textbox","id":"sh/hknyh8r6","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/fi5gfi90","slide":3,"textChars":10,"textLines":1}
+{"kind":"textbox","id":"sh/4nyxsnqh","slide":3,"textChars":27,"textLines":1}
+{"kind":"shape","id":"sh/po7ylsr2","slide":3,"name":"vision-node-1","bbox":[484,321,38,38]}
+{"kind":"textbox","id":"sh/2lwfqd8b","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/cbyxw7qt","slide":3,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/dc7ypsry","slide":3,"textChars":28,"textLines":1}
+{"kind":"shape","id":"sh/1w36t8f6","slide":3,"name":"vision-node-2","bbox":[484,404,38,38]}
+{"kind":"textbox","id":"sh/0vupk3el","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/ets7itwf","slide":3,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/9k36x8v2","slide":3,"textChars":30,"textLines":1}
+{"kind":"shape","id":"sh/ojupo3eh","slide":3,"name":"vision-node-3","bbox":[484,487,38,38]}
+{"kind":"textbox","id":"sh/nylovixc","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/poj6lofy","slide":3,"textChars":24,"textLines":1}
+{"kind":"textbox","id":"sh/43q5cjed","slide":3,"textChars":24,"textLines":1}
+{"kind":"shape","id":"sh/u9o3mpcb","slide":3,"name":"vision-node-4","bbox":[484,570,38,38]}
+{"kind":"textbox","id":"sh/fux4vudw","slide":3,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/hwzmxkvm","slide":3,"textChars":23,"textLines":1}
+{"kind":"textbox","id":"sh/2x83qpc7","slide":3,"textChars":32,"textLines":1}
+{"kind":"shape","id":"sh/3yh4zuds","slide":3,"name":"footer-rule-3","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/4zqlszud","slide":3,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/p0zm14vy","slide":3,"textChars":2,"textLines":1}
+{"kind":"image","id":"im/d87u5wbq","slide":3,"name":"","alt":"vision-icon-0 line icon","bbox":[613,223,32,32]}
+{"kind":"image","id":"im/0bydgruh","slide":3,"name":"","alt":"vision-icon-1 line icon","bbox":[613,306,32,32]}
+{"kind":"image","id":"im/47mpszix","slide":3,"name":"","alt":"vision-icon-2 line icon","bbox":[613,389,32,32]}
+{"kind":"image","id":"im/h4v6x4z6","slide":3,"name":"","alt":"vision-icon-3 line icon","bbox":[613,472,32,32]}
+{"kind":"image","id":"im/36h8vi1g","slide":3,"name":"","alt":"vision-icon-4 line icon","bbox":[613,555,32,32]}
+{"kind":"notes","id":"nt/2udutf","slide":3,"text":"[Sources] | - Platform content and presenter details: user-provided TNR Digit..."}
+{"kind":"slide","id":"sl/8c3in4","slide":4,"title":"TNR DIGITAL PLATFORM","textShapes":20}
+{"kind":"shape","id":"sh/3mh8z61w","slide":4,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/onqp8b2h","slide":4,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/pozq1gj2","slide":4,"textChars":46,"textLines":1}
+{"kind":"textbox","id":"sh/qp8ralk7","slide":4,"textChars":83,"textLines":1}
+{"kind":"shape","id":"sh/bq183q1s","slide":4,"name":"modules-stat-band","bbox":[0,201,330,431]}
+{"kind":"textbox","id":"sh/cra9cv2d","slide":4,"textChars":2,"textLines":1}
+{"kind":"textbox","id":"sh/dsjq5gjy","slide":4,"textChars":17,"textLines":2}
+{"kind":"shape","id":"sh/6to7yhk3","slide":4,"name":"modules-stat-rule","bbox":[110,475,110,0]}
+{"kind":"textbox","id":"sh/rux8rm1o","slide":4,"textChars":51,"textLines":1}
+{"kind":"textbox","id":"sh/3mlkz2dg","slide":4,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/2lc36xcv","slide":4,"textChars":18,"textLines":1}
+{"kind":"shape","id":"sh/po321cv6","slide":4,"name":"modules-divider","bbox":[760,220,0,354]}
+{"kind":"shape","id":"sh/4nul87ul","slide":4,"name":"module-left-0-disc","bbox":[382,258,42,42]}
+{"kind":"textbox","id":"sh/uxsj2xcj","slide":4,"textChars":17,"textLines":1}
+{"kind":"shape","id":"sh/hk32xsva","slide":4,"name":"module-left-1-disc","bbox":[382,326,42,42]}
+{"kind":"textbox","id":"sh/7u1krid8","slide":4,"textChars":23,"textLines":1}
+{"kind":"shape","id":"sh/6tsjydcn","slide":4,"name":"module-left-2-disc","bbox":[382,394,42,42]}
+{"kind":"textbox","id":"sh/vqh43ix0","slide":4,"textChars":15,"textLines":1}
+{"kind":"shape","id":"sh/wralcnyl","slide":4,"name":"module-left-3-disc","bbox":[382,462,42,42]}
+{"kind":"textbox","id":"sh/its3exgr","slide":4,"textChars":24,"textLines":1}
+{"kind":"shape","id":"sh/ju147ixw","slide":4,"name":"module-left-4-disc","bbox":[382,530,42,42]}
+{"kind":"textbox","id":"sh/5wjm9sf2","slide":4,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/6xs3ixgn","slide":4,"name":"module-right-0-disc","bbox":[798,258,42,42]}
+{"kind":"textbox","id":"sh/hcn61wza","slide":4,"textChars":12,"textLines":1}
+{"kind":"shape","id":"sh/gre58rip","slide":4,"name":"module-right-1-disc","bbox":[798,326,42,42]}
+{"kind":"textbox","id":"sh/upcn6h0z","slide":4,"textChars":26,"textLines":1}
+{"kind":"shape","id":"sh/pgn65gzm","slide":4,"name":"module-right-2-disc","bbox":[798,394,42,42]}
+{"kind":"textbox","id":"sh/3e5o36hg","slide":4,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/2dw7a10v","slide":4,"name":"module-right-3-disc","bbox":[798,462,42,42]}
+{"kind":"textbox","id":"sh/cjypgbyx","slide":4,"textChars":23,"textLines":1}
+{"kind":"shape","id":"sh/8fi98f25","slide":4,"name":"module-right-4-disc","bbox":[798,530,42,42]}
+{"kind":"textbox","id":"sh/md0r65kz","slide":4,"textChars":30,"textLines":1}
+{"kind":"shape","id":"sh/ne98fa1k","slide":4,"name":"footer-rule-4","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/0bi94f29","slide":4,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/lcrqdkju","slide":4,"textChars":2,"textLines":1}
+{"kind":"image","id":"im/gnydkz6t","slide":4,"name":"","alt":"module-left-0 line icon","bbox":[392.5,268.5,21,21]}
+{"kind":"image","id":"im/fmpwrup8","slide":4,"name":"","alt":"module-left-1 line icon","bbox":[392.5,336.5,21,21]}
+{"kind":"image","id":"im/9gzutgz6","slide":4,"name":"","alt":"module-left-2 line icon","bbox":[392.5,404.5,21,21]}
+{"kind":"image","id":"im/mdobilgf","slide":4,"name":"","alt":"module-left-3 line icon","bbox":[392.5,472.5,21,21]}
+{"kind":"image","id":"im/zaxcn6h4","slide":4,"name":"","alt":"module-left-4 line icon","bbox":[392.5,540.5,21,21]}
+{"kind":"image","id":"im/47atsfyt","slide":4,"name":"","alt":"module-right-0 line icon","bbox":[808.5,268.5,21,21]}
+{"kind":"image","id":"im/4j2h8na5","slide":4,"name":"","alt":"module-right-1 line icon","bbox":[808.5,336.5,21,21]}
+{"kind":"image","id":"im/fe90vyt8","slide":4,"name":"","alt":"module-right-2 line icon","bbox":[808.5,404.5,21,21]}
+{"kind":"image","id":"im/e94jexs7","slide":4,"name":"","alt":"module-right-3 line icon","bbox":[808.5,472.5,21,21]}
+{"kind":"image","id":"im/y10vapwn","slide":4,"name":"","alt":"module-right-4 line icon","bbox":[808.5,540.5,21,21]}
+{"kind":"notes","id":"nt/8c3in4","slide":4,"text":"[Sources] | - Platform content and presenter details: user-provided TNR Digit..."}
+{"kind":"slide","id":"sl/ww85im","slide":5,"title":"TNR DIGITAL PLATFORM","textShapes":24}
+{"kind":"shape","id":"sh/vydojmh0","slide":5,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/wzm5sryl","slide":5,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/h0v6lwz6","slide":5,"textChars":44,"textLines":1}
+{"kind":"textbox","id":"sh/m9knmhgj","slide":5,"textChars":54,"textLines":1}
+{"kind":"shape","id":"sh/7atofmho","slide":5,"name":"journey-track","bbox":[112,365,1056,0]}
+{"kind":"shape","id":"sh/8b25ory9","slide":5,"name":"journey-arrow-0","bbox":[252,355,20,20]}
+{"kind":"shape","id":"sh/9cb6hwzu","slide":5,"name":"journey-arrow-1","bbox":[450,355,20,20]}
+{"kind":"shape","id":"sh/y50nihg7","slide":5,"name":"journey-arrow-2","bbox":[648,355,20,20]}
+{"kind":"shape","id":"sh/z694b2hs","slide":5,"name":"journey-arrow-3","bbox":[846,355,20,20]}
+{"kind":"shape","id":"sh/zqpg76dc","slide":5,"name":"journey-arrow-4","bbox":[1044,355,20,20]}
+{"kind":"textbox","id":"sh/epgzy1cr","slide":5,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/1s7y9wvi","slide":5,"name":"journey-node-0","bbox":[103,318,70,70]}
+{"kind":"textbox","id":"sh/nu9gb6d8","slide":5,"textChars":12,"textLines":1}
+{"kind":"textbox","id":"sh/mt0z21cn","slide":5,"textChars":14,"textLines":1}
+{"kind":"textbox","id":"sh/9wridgve","slide":5,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/ovih4but","slide":5,"name":"journey-node-1","bbox":[301,318,70,70]}
+{"kind":"textbox","id":"sh/2xwzqhwj","slide":5,"textChars":18,"textLines":2}
+{"kind":"textbox","id":"sh/6d4jypw7","slide":5,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/7edk7axs","slide":5,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/sfm10fed","slide":5,"name":"journey-node-2","bbox":[499,318,70,70]}
+{"kind":"textbox","id":"sh/ipkja5wb","slide":5,"textChars":12,"textLines":1}
+{"kind":"textbox","id":"sh/jqtk3axg","slide":5,"textChars":15,"textLines":1}
+{"kind":"textbox","id":"sh/kr21cfe1","slide":5,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/5sb25kfm","slide":5,"name":"journey-node-3","bbox":[697,318,70,70]}
+{"kind":"textbox","id":"sh/vmtkzqxk","slide":5,"textChars":8,"textLines":1}
+{"kind":"textbox","id":"sh/dsjels3e","slide":5,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/cradsn2t","slide":5,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/bq1wjil8","slide":5,"name":"journey-node-4","bbox":[895,318,70,70]}
+{"kind":"textbox","id":"sh/pozehs32","slide":5,"textChars":23,"textLines":2}
+{"kind":"textbox","id":"sh/onqdon2h","slide":5,"textChars":17,"textLines":1}
+{"kind":"textbox","id":"sh/3mhwfilc","slide":5,"textChars":2,"textLines":1}
+{"kind":"shape","id":"sh/2l8vmdkr","slide":5,"name":"journey-node-5","bbox":[1093,318,70,70]}
+{"kind":"textbox","id":"sh/gjqdk32l","slide":5,"textChars":16,"textLines":2}
+{"kind":"textbox","id":"sh/gbyd4nyl","slide":5,"textChars":17,"textLines":1}
+{"kind":"shape","id":"sh/hc7edszq","slide":5,"name":"journey-outcome","bbox":[350,555,580,54]}
+{"kind":"textbox","id":"sh/upgv2dgf","slide":5,"textChars":51,"textLines":1}
+{"kind":"shape","id":"sh/vapcbih0","slide":5,"name":"footer-rule-5","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/4fid8nyh","slide":5,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/5grehsz2","slide":5,"textChars":2,"textLines":1}
+{"kind":"image","id":"im/v29wjidw","slide":5,"name":"","alt":"journey-icon-0 line icon","bbox":[125,340,27,27]}
+{"kind":"image","id":"im/kvyd43e9","slide":5,"name":"","alt":"journey-icon-1 line icon","bbox":[323,340,27,27]}
+{"kind":"image","id":"im/edo3q5kv","slide":5,"name":"","alt":"journey-icon-2 line icon","bbox":[521,340,27,27]}
+{"kind":"image","id":"im/x8z2tkje","slide":5,"name":"","alt":"journey-icon-3 line icon","bbox":[719,340,27,27]}
+{"kind":"image","id":"im/hgbipwz2","slide":5,"name":"","alt":"journey-icon-4 line icon","bbox":[917,340,27,27]}
+{"kind":"image","id":"im/ql4z210j","slide":5,"name":"","alt":"journey-icon-5 line icon","bbox":[1115,340,27,27]}
+{"kind":"notes","id":"nt/ww85im","slide":5,"text":"[Sources] | - Platform content and presenter details: user-provided TNR Digit..."}
+{"kind":"slide","id":"sl/ktffhk","slide":6,"title":"TNR DIGITAL PLATFORM","textShapes":19}
+{"kind":"shape","id":"sh/ofm9gb25","slide":6,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/ned8761k","slide":6,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/md4re1kz","slide":6,"textChars":39,"textLines":1}
+{"kind":"textbox","id":"sh/1cvq5wje","slide":6,"textChars":70,"textLines":1}
+{"kind":"shape","id":"sh/0bm9cr2t","slide":6,"name":"identity-card-shadow","bbox":[82,232,576,352]}
+{"kind":"shape","id":"sh/zad836l8","slide":6,"name":"identity-card","bbox":[72,220,576,352]}
+{"kind":"shape","id":"sh/e94ra1k3","slide":6,"name":"identity-card-gold-band","bbox":[72,220,16,352]}
+{"kind":"textbox","id":"sh/l8zah0jy","slide":6,"textChars":32,"textLines":1}
+{"kind":"textbox","id":"sh/k769ov2d","slide":6,"textChars":3,"textLines":1}
+{"kind":"textbox","id":"sh/65kbul0r","slide":6,"textChars":18,"textLines":1}
+{"kind":"shape","id":"sh/76tsn61c","slide":6,"name":"identity-photo","bbox":[112,393,94,112]}
+{"kind":"textbox","id":"sh/t8bapgji","slide":6,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/yh0rq10v","slide":6,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/ji9sj61g","slide":6,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/k3itsbi1","slide":6,"name":"identity-qr-frame","bbox":[482,372,126,126]}
+{"kind":"textbox","id":"sh/id4b250z","slide":6,"textChars":11,"textLines":1}
+{"kind":"textbox","id":"sh/3edsvq1k","slide":6,"textChars":18,"textLines":1}
+{"kind":"shape","id":"sh/zi58n2hw","slide":6,"name":"identity-item-0-disc","bbox":[720,272,42,42]}
+{"kind":"textbox","id":"sh/1knqpsz2","slide":6,"textChars":20,"textLines":1}
+{"kind":"shape","id":"sh/0jepgnyh","slide":6,"name":"identity-item-1-disc","bbox":[720,334,42,42]}
+{"kind":"textbox","id":"sh/mlg7ixgn","slide":6,"textChars":24,"textLines":1}
+{"kind":"shape","id":"sh/9o7qtcze","slide":6,"name":"identity-item-2-disc","bbox":[720,396,42,42]}
+{"kind":"textbox","id":"sh/bap8vmh4","slide":6,"textChars":24,"textLines":1}
+{"kind":"shape","id":"sh/apg7mhgj","slide":6,"name":"identity-item-3-disc","bbox":[720,458,42,42]}
+{"kind":"textbox","id":"sh/tgr6lcvi","slide":6,"textChars":29,"textLines":1}
+{"kind":"shape","id":"sh/6d07ahwr","slide":6,"name":"identity-item-4-disc","bbox":[720,520,42,42]}
+{"kind":"textbox","id":"sh/kbyp87el","slide":6,"textChars":21,"textLines":1}
+{"kind":"textbox","id":"sh/lc76hcv6","slide":6,"textChars":27,"textLines":1}
+{"kind":"shape","id":"sh/ypg76xwv","slide":6,"name":"footer-rule-6","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/jqpof2dg","slide":6,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/wny547ep","slide":6,"textChars":2,"textLines":1}
+{"kind":"image","id":"im/r69gby18","slide":6,"name":"","alt":"identity-photo-icon line icon","bbox":[138,418,42,42]}
+{"kind":"image","id":"im/e90fmd0j","slide":6,"name":"","alt":"identity-qr line icon","bbox":[506,395,78,78]}
+{"kind":"image","id":"im/9kjixwri","slide":6,"name":"","alt":"identity-item-0 line icon","bbox":[730.5,282.5,21,21]}
+{"kind":"image","id":"im/w7uhsbqt","slide":6,"name":"","alt":"identity-item-1 line icon","bbox":[730.5,344.5,21,21]}
+{"kind":"image","id":"im/v6l0z69o","slide":6,"name":"","alt":"identity-item-2 line icon","bbox":[730.5,406.5,21,21]}
+{"kind":"image","id":"im/fi9cbex4","slide":6,"name":"","alt":"identity-item-3 line icon","bbox":[730.5,468.5,21,21]}
+{"kind":"image","id":"im/0jitkjep","slide":6,"name":"","alt":"identity-item-4 line icon","bbox":[730.5,530.5,21,21]}
+{"kind":"notes","id":"nt/ktffhk","slide":6,"text":"[Sources] | - Platform content and presenter details: user-provided TNR Digit..."}
+{"kind":"slide","id":"sl/c99fsh","slide":7,"title":"TNR DIGITAL PLATFORM","textShapes":18}
+{"kind":"shape","id":"sh/6h8b25gb","slide":7,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/tkzud0zm","slide":7,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/sjqt4fyh","slide":7,"textChars":50,"textLines":1}
+{"kind":"textbox","id":"sh/juhc7qhk","slide":7,"textChars":71,"textLines":1}
+{"kind":"shape","id":"sh/itobylgz","slide":7,"name":"ai-left-panel","bbox":[0,196,640,440]}
+{"kind":"textbox","id":"sh/5gzu90zq","slide":7,"textChars":12,"textLines":1}
+{"kind":"shape","id":"sh/kfqt0vy5","slide":7,"name":"ai-browser-shadow","bbox":[80,268,476,260]}
+{"kind":"shape","id":"sh/3q1cjux4","slide":7,"name":"ai-browser-frame","bbox":[72,258,476,260]}
+{"kind":"shape","id":"sh/2psbapgj","slide":7,"name":"ai-browser-chrome","bbox":[72,258,476,42]}
+{"kind":"shape","id":"sh/kbmhsn2x","slide":7,"name":"ai-browser-chrome-cover","bbox":[72,283,476,17]}
+{"kind":"shape","id":"sh/5cvyls3i","slide":7,"name":"ai-browser-dot-0","bbox":[90,274,7,7]}
+{"kind":"shape","id":"sh/i94zqx4r","slide":7,"name":"ai-browser-dot-1","bbox":[105,274,7,7]}
+{"kind":"shape","id":"sh/jadgj2lc","slide":7,"name":"ai-browser-dot-2","bbox":[120,274,7,7]}
+{"kind":"textbox","id":"sh/w72honml","slide":7,"textChars":37,"textLines":1}
+{"kind":"shape","id":"sh/x8byhs36","slide":7,"name":"ai-avatar","bbox":[100,326,42,42]}
+{"kind":"shape","id":"sh/v6tgfil0","slide":7,"name":"ai-bubble-1","bbox":[158,322,330,56]}
+{"kind":"textbox","id":"sh/8j2xk3mp","slide":7,"textChars":40,"textLines":1}
+{"kind":"shape","id":"sh/94byd83a","slide":7,"name":"ai-bubble-2","bbox":[238,399,250,48]}
+{"kind":"textbox","id":"sh/p03eh4vy","slide":7,"textChars":28,"textLines":1}
+{"kind":"shape","id":"sh/ozudozed","slide":7,"name":"ai-input","bbox":[100,466,388,28]}
+{"kind":"shape","id":"sh/nylwfuds","slide":7,"name":"ai-check-1-dot","bbox":[72,544,32,32]}
+{"kind":"textbox","id":"sh/1cjedkv2","slide":7,"textChars":20,"textLines":1}
+{"kind":"shape","id":"sh/0badkzeh","slide":7,"name":"ai-check-2-dot","bbox":[340,544,32,32]}
+{"kind":"textbox","id":"sh/e9svipwb","slide":7,"textChars":23,"textLines":1}
+{"kind":"shape","id":"sh/l8nepov6","slide":7,"name":"ai-check-3-dot","bbox":[72,588,32,32]}
+{"kind":"textbox","id":"sh/i1o3uh8r","slide":7,"textChars":16,"textLines":1}
+{"kind":"textbox","id":"sh/j2xk3mpc","slide":7,"textChars":10,"textLines":1}
+{"kind":"shape","id":"sh/k36lwrqx","slide":7,"name":"cv-browser-shadow","bbox":[716,268,500,260]}
+{"kind":"shape","id":"sh/54f25w7i","slide":7,"name":"cv-browser-frame","bbox":[708,258,500,260]}
+{"kind":"shape","id":"sh/ax4jqh8v","slide":7,"name":"cv-browser-chrome","bbox":[708,258,500,42]}
+{"kind":"shape","id":"sh/vydkzmpg","slide":7,"name":"cv-browser-chrome-cover","bbox":[708,283,500,17]}
+{"kind":"shape","id":"sh/wzm1srq1","slide":7,"name":"cv-browser-dot-0","bbox":[726,274,7,7]}
+{"kind":"shape","id":"sh/x0v21w76","slide":7,"name":"cv-browser-dot-1","bbox":[741,274,7,7]}
+{"kind":"shape","id":"sh/ut83218z","slide":7,"name":"cv-browser-dot-2","bbox":[756,274,7,7]}
+{"kind":"textbox","id":"sh/fuhkb6pk","slide":7,"textChars":35,"textLines":1}
+{"kind":"shape","id":"sh/zmdgrit0","slide":7,"name":"cv-page","bbox":[752,310,152,172]}
+{"kind":"shape","id":"sh/el4zydcf","slide":7,"name":"cv-photo","bbox":[770,328,38,38]}
+{"kind":"shape","id":"sh/0n6h0nul","slide":7,"name":"cv-name-line","bbox":[824,330,54,6]}
+{"kind":"shape","id":"sh/rydgnyto","slide":7,"name":"cv-sub-line","bbox":[824,345,43,4]}
+{"kind":"shape","id":"sh/qx4zutcj","slide":7,"name":"cv-line-0","bbox":[770,386,108,4]}
+{"kind":"shape","id":"sh/dkvyp8bu","slide":7,"name":"cv-line-1","bbox":[770,401,90,4]}
+{"kind":"shape","id":"sh/czmhw3u9","slide":7,"name":"cv-line-2","bbox":[770,416,108,4]}
+{"kind":"shape","id":"sh/buhgz2t8","slide":7,"name":"cv-line-3","bbox":[770,431,90,4]}
+{"kind":"shape","id":"sh/atoz6xcn","slide":7,"name":"cv-line-4","bbox":[770,446,108,4]}
+{"kind":"textbox","id":"sh/szid0za5","slide":7,"textChars":14,"textLines":1}
+{"kind":"textbox","id":"sh/6x0vypsz","slide":7,"textChars":15,"textLines":1}
+{"kind":"shape","id":"sh/7y9wru9k","slide":7,"name":"cv-check-1-dot","bbox":[708,544,32,32]}
+{"kind":"textbox","id":"sh/h4bex4rm","slide":7,"textChars":43,"textLines":1}
+{"kind":"shape","id":"sh/u10v2psb","slide":7,"name":"cv-check-2-dot","bbox":[708,588,32,32]}
+{"kind":"textbox","id":"sh/4r2d8jad","slide":7,"textChars":28,"textLines":1}
+{"kind":"shape","id":"sh/psbe1ory","slide":7,"name":"footer-rule-7","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/do7el4j2","slide":7,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/cnydsz2h","slide":7,"textChars":2,"textLines":1}
+{"kind":"image","id":"im/p0je9onq","slide":7,"name":"","alt":"ai-avatar-icon line icon","bbox":[110,336,22,22]}
+{"kind":"image","id":"im/5szyx47m","slide":7,"name":"","alt":"ai-check-1-check line icon","bbox":[80,552,16,16]}
+{"kind":"image","id":"im/svqhsjqd","slide":7,"name":"","alt":"ai-check-2-check line icon","bbox":[348,552,16,16]}
+{"kind":"image","id":"im/fyhg3epo","slide":7,"name":"","alt":"ai-check-3-check line icon","bbox":[80,596,16,16]}
+{"kind":"image","id":"im/adg3i1cv","slide":7,"name":"","alt":"cv-photo-icon line icon","bbox":[780,338,18,18]}
+{"kind":"image","id":"im/2147ypwb","slide":7,"name":"","alt":"cv-arrow line icon","bbox":[1008,365,46,46]}
+{"kind":"image","id":"im/b6dovuds","slide":7,"name":"","alt":"cv-check-1-check line icon","bbox":[716,552,16,16]}
+{"kind":"image","id":"im/c7mp4zud","slide":7,"name":"","alt":"cv-check-2-check line icon","bbox":[716,596,16,16]}
+{"kind":"notes","id":"nt/c99fsh","slide":7,"text":"[Sources] | - Platform content and presenter details: user-provided TNR Digit..."}
+{"kind":"slide","id":"sl/mpy64x","slide":8,"title":"TNR DIGITAL PLATFORM","textShapes":19}
+{"kind":"shape","id":"sh/0vidory1","slide":8,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/zu9cvmxw","slide":8,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/yt0vm1gb","slide":8,"textChars":43,"textLines":1}
+{"kind":"textbox","id":"sh/dsrutwfq","slide":8,"textChars":86,"textLines":1}
+{"kind":"shape","id":"sh/cridkry5","slide":8,"name":"election-divider-band","bbox":[618,202,2,418]}
+{"kind":"textbox","id":"sh/bq9crmxk","slide":8,"textChars":20,"textLines":1}
+{"kind":"textbox","id":"sh/qpgvihgz","slide":8,"textChars":30,"textLines":2}
+{"kind":"shape","id":"sh/po7upcfe","slide":8,"name":"vote-item-0-disc","bbox":[72,390,52,52]}
+{"kind":"textbox","id":"sh/yls3mlw7","slide":8,"textChars":20,"textLines":1}
+{"kind":"shape","id":"sh/zm14vqxs","slide":8,"name":"vote-item-1-disc","bbox":[332,390,52,52]}
+{"kind":"textbox","id":"sh/lojmx0fi","slide":8,"textChars":16,"textLines":1}
+{"kind":"shape","id":"sh/qx83i1wv","slide":8,"name":"vote-item-2-disc","bbox":[72,492,52,52]}
+{"kind":"textbox","id":"sh/czqlkbe1","slide":8,"textChars":25,"textLines":1}
+{"kind":"shape","id":"sh/dkzmtgfm","slide":8,"name":"vote-item-3-disc","bbox":[332,492,52,52]}
+{"kind":"textbox","id":"sh/3uh4n6xk","slide":8,"textChars":12,"textLines":1}
+{"kind":"textbox","id":"sh/7yd0v2dc","slide":8,"textChars":25,"textLines":1}
+{"kind":"textbox","id":"sh/6x4jmxcr","slide":8,"textChars":40,"textLines":2}
+{"kind":"shape","id":"sh/t0v2xcv2","slide":8,"name":"org-item-0-disc","bbox":[690,383,48,48]}
+{"kind":"textbox","id":"sh/f2xkz2d8","slide":8,"textChars":18,"textLines":1}
+{"kind":"textbox","id":"sh/u1ojqhcn","slide":8,"textChars":21,"textLines":1}
+{"kind":"shape","id":"sh/h4f21cve","slide":8,"name":"org-item-1-disc","bbox":[690,457,48,48]}
+{"kind":"textbox","id":"sh/v6t0nid4","slide":8,"textChars":14,"textLines":1}
+{"kind":"textbox","id":"sh/a5kjedcj","slide":8,"textChars":30,"textLines":1}
+{"kind":"shape","id":"sh/0bixojah","slide":8,"name":"org-item-2-disc","bbox":[690,531,48,48]}
+{"kind":"textbox","id":"sh/y9gfm9sb","slide":8,"textChars":27,"textLines":1}
+{"kind":"textbox","id":"sh/zapgfetw","slide":8,"textChars":19,"textLines":1}
+{"kind":"shape","id":"sh/c7yxkza5","slide":8,"name":"footer-rule-8","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/d87yd4bq","slide":8,"textChars":38,"textLines":1}
+{"kind":"textbox","id":"sh/q5gfi9sz","slide":8,"textChars":2,"textLines":1}
+{"kind":"image","id":"im/9wv2d8vy","slide":8,"name":"","alt":"vote-item-0 line icon","bbox":[85,403,26,26]}
+{"kind":"image","id":"im/zyx4ridg","slide":8,"name":"","alt":"vote-item-1 line icon","bbox":[345,403,26,26]}
+{"kind":"image","id":"im/cv6lgnep","slide":8,"name":"","alt":"vote-item-2 line icon","bbox":[85,505,26,26]}
+{"kind":"image","id":"im/xszm1cve","slide":8,"name":"","alt":"vote-item-3 line icon","bbox":[345,505,26,26]}
+{"kind":"image","id":"im/vupovqlk","slide":8,"name":"","alt":"org-item-0 line icon","bbox":[702,395,24,24]}
+{"kind":"image","id":"im/76por6lo","slide":8,"name":"","alt":"org-item-1 line icon","bbox":[702,469,24,24]}
+{"kind":"notice","message":"Truncated: omitted 62 lines. Increase maxChars or narrow target."}

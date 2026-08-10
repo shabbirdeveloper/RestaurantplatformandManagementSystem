@@ -1,0 +1,400 @@
+{"kind":"deck","id":"pr/skleu5","name":"Deck"}
+{"kind":"layout","layoutId":"10f20d36-b6db-4ebf-852e-984115d72d52","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"6341fd42-2477-487e-9413-52f1f1f2479b","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/hacttq","slide":1,"title":"TNR • DIGITAL TRANSFORMATION","textShapes":8}
+{"kind":"shape","id":"sh/7qp0zelk","slide":1,"name":"cover-right-panel","bbox":[898,0,382,720]}
+{"kind":"shape","id":"sh/8ry18jm5","slide":1,"name":"cover-mountain-back","bbox":[900,240,380,364]}
+{"kind":"shape","id":"sh/ts7i1o3q","slide":1,"name":"cover-mountain-front","bbox":[1000,342,280,262]}
+{"kind":"shape","id":"sh/ylwj2943","slide":1,"name":"cover-gold-peak","bbox":[1055,421,170,183]}
+{"kind":"shape","id":"sh/jm50velo","slide":1,"name":"cover-mask-bottom","bbox":[875,604,405,116]}
+{"kind":"shape","id":"sh/kne14jm9","slide":1,"name":"cover-tag-line","bbox":[72,66,74,5]}
+{"kind":"textbox","id":"sh/lonixo3e","slide":1,"name":"cover-eyebrow","text":"TNR • DIGITAL TRANSFORMATION","textPreview":"TNR • DIGITAL TRANSFORMATION","textChars":28,"textLines":1,"bbox":[72,88,440,24]}
+{"kind":"textbox","id":"sh/axcjy94r","slide":1,"name":"cover-title","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[72,190,820,82]}
+{"kind":"shape","id":"sh/by50ru5c","slide":1,"name":"cover-title-rule","bbox":[72,292,168,0]}
+{"kind":"textbox","id":"sh/b2pkzep4","slide":1,"name":"cover-subtitle","text":"Building a Connected, Transparent and\nFuture-Ready Roundu Community","textPreview":"Building a Connected, Transparent and | Future-Ready Roundu Community","textChars":67,"textLines":2,"bbox":[72,324,700,98]}
+{"kind":"textbox","id":"sh/a1gjq98j","slide":1,"name":"cover-presenter","text":"SHABBIR HUSSAIN","textPreview":"SHABBIR HUSSAIN","textChars":15,"textLines":1,"bbox":[72,566,370,30]}
+{"kind":"textbox","id":"sh/x4721o7a","slide":1,"name":"cover-role","text":"Technical Coordinator – TNR","textPreview":"Technical Coordinator – TNR","textChars":27,"textLines":1,"bbox":[72,602,370,26]}
+{"kind":"textbox","id":"sh/w3y1sjqp","slide":1,"name":"cover-date","text":"OFFICIAL PLATFORM OVERVIEW","textPreview":"OFFICIAL PLATFORM OVERVIEW","textChars":26,"textLines":1,"bbox":[72,666,380,18]}
+{"kind":"textbox","id":"sh/jqpk3ypg","slide":1,"name":"cover-tnr-mark","text":"TNR","textPreview":"TNR","textChars":3,"textLines":1,"bbox":[1000,80,210,80]}
+{"kind":"textbox","id":"sh/ypgjut8v","slide":1,"name":"cover-platform-mark","text":"DIGITAL PLATFORM","textPreview":"DIGITAL PLATFORM","textChars":16,"textLines":1,"bbox":[1000,157,210,22]}
+{"kind":"notes","id":"nt/hacttq","slide":1,"text":"Open by framing the platform as community infrastructure, not simply a website.\n[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/nr4s34","slide":2,"title":"TNR DIGITAL PLATFORM","textShapes":20}
+{"kind":"shape","id":"sh/wva10nmp","slide":2,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/vu1k7ilk","slide":2,"name":"brand-tag","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[94,36,260,22]}
+{"kind":"textbox","id":"sh/at8jyx4z","slide":2,"name":"slide-title","text":"One platform brings TNR into view","textPreview":"One platform brings TNR into view","textChars":33,"textLines":1,"bbox":[72,82,1136,54]}
+{"kind":"textbox","id":"sh/9szi5sne","slide":2,"name":"slide-subtitle","text":"A shared digital foundation replaces fragmented records, tools and communication.","textPreview":"A shared digital foundation replaces fragmented records, tools and communication.","textChars":81,"textLines":1,"bbox":[72,141,1030,32]}
+{"kind":"shape","id":"sh/8rq1wnmt","slide":2,"name":"why-left-band","bbox":[0,202,380,430]}
+{"kind":"textbox","id":"sh/nqh03i58","slide":2,"name":"why-kicker","text":"WHY NOW","textPreview":"WHY NOW","textChars":7,"textLines":1,"bbox":[72,242,220,22]}
+{"kind":"textbox","id":"sh/mp8jud4n","slide":2,"name":"why-statement","text":"Community trust\nneeds one reliable\nsource of truth.","textPreview":"Community trust | needs one reliable | source of truth.","textChars":51,"textLines":3,"bbox":[72,282,255,142]}
+{"kind":"textbox","id":"sh/to32hc3i","slide":2,"name":"why-support","text":"Centralization makes information easier to find, services easier to access, and decisions easier to understand.","textPreview":"Centralization makes information easier to find, services easier to access, and decisions easier to understand.","textChars":111,"textLines":1,"bbox":[72,460,250,96]}
+{"kind":"shape","id":"sh/snu187mx","slide":2,"name":"why-gold-rule","bbox":[72,585,88,0]}
+{"kind":"shape","id":"sh/ypkvudo3","slide":2,"name":"why-item-0-disc","bbox":[438,222,50,50]}
+{"kind":"textbox","id":"sh/kr2dwn69","slide":2,"name":"why-label-0","text":"Members","textPreview":"Members","textChars":7,"textLines":1,"bbox":[506,221,190,26]}
+{"kind":"textbox","id":"sh/lsvepsnu","slide":2,"name":"why-desc-0","text":"One recognized community","textPreview":"One recognized community","textChars":24,"textLines":1,"bbox":[506,251,250,20]}
+{"kind":"shape","id":"sh/alkvqdo7","slide":2,"name":"why-link-0","bbox":[765,247,105,0]}
+{"kind":"shape","id":"sh/bmtwji5s","slide":2,"name":"why-item-1-disc","bbox":[438,300,50,50]}
+{"kind":"textbox","id":"sh/xobelsni","slide":2,"name":"why-label-1","text":"Records","textPreview":"Records","textChars":7,"textLines":1,"bbox":[506,299,190,26]}
+{"kind":"textbox","id":"sh/uh4f2xob","slide":2,"name":"why-desc-1","text":"Structured and secure","textPreview":"Structured and secure","textChars":21,"textLines":1,"bbox":[506,329,250,20]}
+{"kind":"shape","id":"sh/vidwv25w","slide":2,"name":"why-link-1","bbox":[765,325,105,0]}
+{"kind":"shape","id":"sh/r2psnul8","slide":2,"name":"why-item-2-disc","bbox":[438,378,50,50]}
+{"kind":"textbox","id":"sh/d47ap43e","slide":2,"name":"why-label-2","text":"Services","textPreview":"Services","textChars":8,"textLines":1,"bbox":[506,377,190,26]}
+{"kind":"textbox","id":"sh/c3ytwzmt","slide":2,"name":"why-desc-2","text":"Available from one place","textPreview":"Available from one place","textChars":24,"textLines":1,"bbox":[506,407,250,20]}
+{"kind":"shape","id":"sh/zqpcrelk","slide":2,"name":"why-link-2","bbox":[765,403,105,0]}
+{"kind":"shape","id":"sh/epgby94z","slide":2,"name":"why-item-3-disc","bbox":[438,456,50,50]}
+{"kind":"textbox","id":"sh/0ryt0jmp","slide":2,"name":"why-label-3","text":"Communication","textPreview":"Communication","textChars":13,"textLines":1,"bbox":[506,455,190,26]}
+{"kind":"textbox","id":"sh/nu9cvelg","slide":2,"name":"why-desc-3","text":"Clear and consistent","textPreview":"Clear and consistent","textChars":20,"textLines":1,"bbox":[506,485,250,20]}
+{"kind":"shape","id":"sh/mt0b2t4v","slide":2,"name":"why-link-3","bbox":[765,481,105,0]}
+{"kind":"shape","id":"sh/kzitsji9","slide":2,"name":"why-item-4-disc","bbox":[438,534,50,50]}
+{"kind":"textbox","id":"sh/yx0rqt03","slide":2,"name":"why-label-4","text":"Transparency","textPreview":"Transparency","textChars":12,"textLines":1,"bbox":[506,533,190,26]}
+{"kind":"textbox","id":"sh/jy9sjy1o","slide":2,"name":"why-desc-4","text":"Visible processes and status","textPreview":"Visible processes and status","textChars":28,"textLines":1,"bbox":[506,563,250,20]}
+{"kind":"shape","id":"sh/wvi9ojix","slide":2,"name":"why-link-4","bbox":[765,559,105,0]}
+{"kind":"shape","id":"sh/xwrahoji","slide":2,"name":"why-core-shadow","bbox":[884,254,278,278]}
+{"kind":"shape","id":"sh/at0rm90r","slide":2,"name":"why-core-outer","bbox":[870,240,278,278]}
+{"kind":"shape","id":"sh/bu9sfe1c","slide":2,"name":"why-core-inner","bbox":[912,282,194,194]}
+{"kind":"textbox","id":"sh/9s7ad4jm","slide":2,"name":"why-core-title","text":"ONE\nSYSTEM","textPreview":"ONE | SYSTEM","textChars":10,"textLines":2,"bbox":[946,390,126,64]}
+{"kind":"textbox","id":"sh/dcnql0ze","slide":2,"name":"why-core-caption","text":"Connected • Trusted • Accountable","textPreview":"Connected • Trusted • Accountable","textChars":33,"textLines":1,"bbox":[870,550,278,26]}
+{"kind":"shape","id":"sh/cbepcvyt","slide":2,"name":"footer-rule-2","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/ra5ojah8","slide":2,"name":"footer-label-2","text":"CONNECTED • TRANSPARENT • FUTURE-READY","textPreview":"CONNECTED • TRANSPARENT • FUTURE-READY","textChars":38,"textLines":1,"bbox":[72,680,420,16]}
+{"kind":"textbox","id":"sh/q9w7a5gn","slide":2,"name":"footer-page-2","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1160,678,48,18]}
+{"kind":"image","id":"im/c7qlc7mt","slide":2,"name":"","alt":"why-item-0 line icon","bbox":[450.5,234.5,25,25]}
+{"kind":"image","id":"im/zuh47254","slide":2,"name":"","alt":"why-item-1 line icon","bbox":[450.5,312.5,25,25]}
+{"kind":"image","id":"im/tkjmtsvm","slide":2,"name":"","alt":"why-item-2 line icon","bbox":[450.5,390.5,25,25]}
+{"kind":"image","id":"im/els3mxw7","slide":2,"name":"","alt":"why-item-3 line icon","bbox":[450.5,468.5,25,25]}
+{"kind":"image","id":"im/yhgfe5kn","slide":2,"name":"","alt":"why-item-4 line icon","bbox":[450.5,546.5,25,25]}
+{"kind":"image","id":"im/vq9gfu1g","slide":2,"name":"","alt":"why-core-icon line icon","bbox":[978,319,62,62]}
+{"kind":"notes","id":"nt/nr4s34","slide":2,"text":"[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/qhl0vp","slide":3,"title":"TNR DIGITAL PLATFORM","textShapes":23}
+{"kind":"shape","id":"sh/zqlojyxk","slide":3,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/0ru5s3y5","slide":3,"name":"brand-tag","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[94,36,260,22]}
+{"kind":"textbox","id":"sh/1s36l8fq","slide":3,"name":"slide-title","text":"One identity connects the whole community","textPreview":"One identity connects the whole community","textChars":41,"textLines":1,"bbox":[72,82,1136,54]}
+{"kind":"textbox","id":"sh/qlsnmtg3","slide":3,"name":"slide-subtitle","text":"Every step builds on the one before it—ending in a connected Roundu community.","textPreview":"Every step builds on the one before it—ending in a connected Roundu community.","textChars":78,"textLines":1,"bbox":[72,141,1030,32]}
+{"kind":"textbox","id":"sh/rm1ofyxo","slide":3,"name":"vision-one","text":"ONE","textPreview":"ONE","textChars":3,"textLines":1,"bbox":[72,210,355,162]}
+{"kind":"textbox","id":"sh/cna5o3y9","slide":3,"name":"vision-caption","text":"A SIMPLE PRINCIPLE.\nA COMPLETE DIGITAL FOUNDATION.","textPreview":"A SIMPLE PRINCIPLE. | A COMPLETE DIGITAL FOUNDATION.","textChars":50,"textLines":2,"bbox":[80,390,310,72]}
+{"kind":"shape","id":"sh/do36hofu","slide":3,"name":"vision-rule","bbox":[80,492,170,0]}
+{"kind":"textbox","id":"sh/ahw7ydg7","slide":3,"name":"vision-promise","text":"Identity becomes the bridge between people, services, governance and opportunity.","textPreview":"Identity becomes the bridge between people, services, governance and opportunity.","textChars":81,"textLines":1,"bbox":[80,520,310,74]}
+{"kind":"shape","id":"sh/bi5orixs","slide":3,"name":"vision-spine","bbox":[503,244,0,330]}
+{"kind":"shape","id":"sh/v6hgfedw","slide":3,"name":"vision-node-0","bbox":[484,238,38,38]}
+{"kind":"textbox","id":"sh/u58fm9cb","slide":3,"name":"vision-num-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[552,218,46,24]}
+{"kind":"textbox","id":"sh/g7qhojuh","slide":3,"name":"vision-label-0","text":"One Member","textPreview":"One Member","textChars":10,"textLines":1,"bbox":[670,217,470,34]}
+{"kind":"textbox","id":"sh/3ahgjyds","slide":3,"name":"vision-desc-0","text":"Recognized in the community","textPreview":"Recognized in the community","textChars":27,"textLines":1,"bbox":[670,256,430,24]}
+{"kind":"shape","id":"sh/i98zqtc7","slide":3,"name":"vision-node-1","bbox":[484,321,38,38]}
+{"kind":"textbox","id":"sh/5cjylovy","slide":3,"name":"vision-num-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[552,301,46,24]}
+{"kind":"textbox","id":"sh/re1gnyd4","slide":3,"name":"vision-label-1","text":"One Profile","textPreview":"One Profile","textChars":11,"textLines":1,"bbox":[670,300,470,34]}
+{"kind":"textbox","id":"sh/qdszutcj","slide":3,"name":"vision-desc-1","text":"Always-current member record","textPreview":"Always-current member record","textChars":28,"textLines":1,"bbox":[670,339,430,24]}
+{"kind":"shape","id":"sh/29cjmxwr","slide":3,"name":"vision-node-2","bbox":[484,404,38,38]}
+{"kind":"textbox","id":"sh/nalkf2xc","slide":3,"name":"vision-num-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[552,384,46,24]}
+{"kind":"textbox","id":"sh/pwn2hcfi","slide":3,"name":"vision-label-2","text":"One Digital Identity","textPreview":"One Digital Identity","textChars":20,"textLines":1,"bbox":[670,383,470,34]}
+{"kind":"textbox","id":"sh/e5cjixwf","slide":3,"name":"vision-desc-2","text":"Trusted credentials and access","textPreview":"Trusted credentials and access","textChars":30,"textLines":1,"bbox":[670,422,430,24]}
+{"kind":"shape","id":"sh/f6l0bix0","slide":3,"name":"vision-node-3","bbox":[484,487,38,38]}
+{"kind":"textbox","id":"sh/07u1knel","slide":3,"name":"vision-num-3","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[552,467,46,24]}
+{"kind":"textbox","id":"sh/y1wjuhwz","slide":3,"name":"vision-label-3","text":"One Centralized Database","textPreview":"One Centralized Database","textChars":24,"textLines":1,"bbox":[670,466,470,34]}
+{"kind":"textbox","id":"sh/z2pknmxk","slide":3,"name":"vision-desc-3","text":"A shared source of truth","textPreview":"A shared source of truth","textChars":24,"textLines":1,"bbox":[670,505,430,24]}
+{"kind":"shape","id":"sh/9wrmtgzm","slide":3,"name":"vision-node-4","bbox":[484,570,38,38]}
+{"kind":"textbox","id":"sh/8vilkby1","slide":3,"name":"vision-num-4","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[552,550,46,24]}
+{"kind":"textbox","id":"sh/mtg3i1gv","slide":3,"name":"vision-label-4","text":"One Connected Community","textPreview":"One Connected Community","textChars":23,"textLines":1,"bbox":[670,549,470,34]}
+{"kind":"textbox","id":"sh/ls7mpgzq","slide":3,"name":"vision-desc-4","text":"People, services and opportunity","textPreview":"People, services and opportunity","textChars":32,"textLines":1,"bbox":[670,588,430,24]}
+{"kind":"shape","id":"sh/krylgby5","slide":3,"name":"footer-rule-3","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/zqp4n6hk","slide":3,"name":"footer-label-3","text":"CONNECTED • TRANSPARENT • FUTURE-READY","textPreview":"CONNECTED • TRANSPARENT • FUTURE-READY","textChars":38,"textLines":1,"bbox":[72,680,420,16]}
+{"kind":"textbox","id":"sh/ypg3e1gz","slide":3,"name":"footer-page-3","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1160,678,48,18]}
+{"kind":"image","id":"im/mhk3qhoj","slide":3,"name":"","alt":"vision-icon-0 line icon","bbox":[613,223,32,32]}
+{"kind":"image","id":"im/zetkv25s","slide":3,"name":"","alt":"vision-icon-1 line icon","bbox":[613,306,32,32]}
+{"kind":"image","id":"im/r610vexk","slide":3,"name":"","alt":"vision-icon-2 line icon","bbox":[613,389,32,32]}
+{"kind":"image","id":"im/ih8ji9g3","slide":3,"name":"","alt":"vision-icon-3 line icon","bbox":[613,472,32,32]}
+{"kind":"image","id":"im/8n6xsfel","slide":3,"name":"","alt":"vision-icon-4 line icon","bbox":[613,555,32,32]}
+{"kind":"notes","id":"nt/qhl0vp","slide":3,"text":"[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/xpd6i5","slide":4,"title":"TNR DIGITAL PLATFORM","textShapes":20}
+{"kind":"shape","id":"sh/etcrelkj","slide":4,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/1g3qpg3u","slide":4,"name":"brand-tag","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[94,36,260,22]}
+{"kind":"textbox","id":"sh/gfu9gv2p","slide":4,"name":"slide-title","text":"Ten completed modules form one operating layer","textPreview":"Ten completed modules form one operating layer","textChars":46,"textLines":1,"bbox":[72,82,1136,54]}
+{"kind":"textbox","id":"sh/3i58rql0","slide":4,"name":"slide-subtitle","text":"Member experience, trusted verification, organizational management and shared data.","textPreview":"Member experience, trusted verification, organizational management and shared data.","textChars":83,"textLines":1,"bbox":[72,141,1030,32]}
+{"kind":"shape","id":"sh/2hwrilkf","slide":4,"name":"modules-stat-band","bbox":[0,201,330,431]}
+{"kind":"textbox","id":"sh/pknqt036","slide":4,"name":"modules-big-number","text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[66,238,220,122]}
+{"kind":"textbox","id":"sh/oje9kv2l","slide":4,"name":"modules-stat-title","text":"COMPLETED\nMODULES","textPreview":"COMPLETED | MODULES","textChars":17,"textLines":2,"bbox":[70,371,210,76]}
+{"kind":"shape","id":"sh/jm18f6lw","slide":4,"name":"modules-stat-rule","bbox":[110,475,110,0]}
+{"kind":"textbox","id":"sh/ils761kb","slide":4,"name":"modules-stat-copy","text":"Designed to work together as one digital ecosystem.","textPreview":"Designed to work together as one digital ecosystem.","textChars":51,"textLines":1,"bbox":[66,506,220,68]}
+{"kind":"textbox","id":"sh/0fitkjep","slide":4,"name":"modules-left-header","text":"CONNECTED EXPERIENCE","textPreview":"CONNECTED EXPERIENCE","textChars":20,"textLines":1,"bbox":[382,218,330,22]}
+{"kind":"textbox","id":"sh/1grud4va","slide":4,"name":"modules-right-header","text":"TRUSTED OPERATIONS","textPreview":"TRUSTED OPERATIONS","textChars":18,"textLines":1,"bbox":[798,218,330,22]}
+{"kind":"shape","id":"sh/etgbi9wj","slide":4,"name":"modules-divider","bbox":[760,220,0,354]}
+{"kind":"shape","id":"sh/zu9cbed4","slide":4,"name":"module-left-0-disc","bbox":[382,258,42,42]}
+{"kind":"textbox","id":"sh/9kruhov6","slide":4,"name":"module-left-0-label","text":"Membership Portal","textPreview":"Membership Portal","textChars":17,"textLines":1,"bbox":[440,257,272,44]}
+{"kind":"shape","id":"sh/mh0bm9wf","slide":4,"name":"module-left-1-disc","bbox":[382,326,42,42]}
+{"kind":"textbox","id":"sh/4nytczeh","slide":4,"name":"module-left-1-label","text":"Digital Membership Card","textPreview":"Digital Membership Card","textChars":23,"textLines":1,"bbox":[440,325,272,44]}
+{"kind":"shape","id":"sh/5o7a5kv2","slide":4,"name":"module-left-2-disc","bbox":[382,394,42,42]}
+{"kind":"textbox","id":"sh/kjq9gb65","slide":4,"name":"module-left-2-label","text":"QR Verification","textPreview":"QR Verification","textChars":15,"textLines":1,"bbox":[440,393,272,44]}
+{"kind":"shape","id":"sh/jix876pk","slide":4,"name":"module-left-3-disc","bbox":[382,462,42,42]}
+{"kind":"textbox","id":"sh/t8zad0nm","slide":4,"name":"module-left-3-label","text":"Certificate Verification","textPreview":"Certificate Verification","textChars":24,"textLines":1,"bbox":[440,461,272,44]}
+{"kind":"shape","id":"sh/snq9kv6h","slide":4,"name":"module-left-4-disc","bbox":[382,530,42,42]}
+{"kind":"textbox","id":"sh/6l8rilob","slide":4,"name":"module-left-4-label","text":"CV Builder","textPreview":"CV Builder","textChars":10,"textLines":1,"bbox":[440,529,272,44]}
+{"kind":"shape","id":"sh/hcjah0ny","slide":4,"name":"module-right-0-disc","bbox":[798,258,42,42]}
+{"kind":"textbox","id":"sh/yxknix4v","slide":4,"name":"module-right-0-label","text":"AI Assistant","textPreview":"AI Assistant","textChars":12,"textLines":1,"bbox":[856,257,322,44]}
+{"kind":"shape","id":"sh/zitob25g","slide":4,"name":"module-right-1-disc","bbox":[798,326,42,42]}
+{"kind":"textbox","id":"sh/lkv6dcnm","slide":4,"name":"module-right-1-label","text":"Election Management System","textPreview":"Election Management System","textChars":26,"textLines":1,"bbox":[856,325,322,44]}
+{"kind":"shape","id":"sh/ml476h4r","slide":4,"name":"module-right-2-disc","bbox":[798,394,42,42]}
+{"kind":"textbox","id":"sh/8nmp87mx","slide":4,"name":"module-right-2-label","text":"CEC Portal","textPreview":"CEC Portal","textChars":10,"textLines":1,"bbox":[856,393,322,44]}
+{"kind":"shape","id":"sh/9ov6hc3i","slide":4,"name":"module-right-3-disc","bbox":[798,462,42,42]}
+{"kind":"textbox","id":"sh/vqdojmlo","slide":4,"name":"module-right-3-label","text":"Advisory Council Portal","textPreview":"Advisory Council Portal","textChars":23,"textLines":1,"bbox":[856,461,322,44]}
+{"kind":"shape","id":"sh/ju9w7i9g","slide":4,"name":"module-right-4-disc","bbox":[798,530,42,42]}
+{"kind":"textbox","id":"sh/5wry9srm","slide":4,"name":"module-right-4-label","text":"Centralized Community Database","textPreview":"Centralized Community Database","textChars":30,"textLines":1,"bbox":[856,529,322,44]}
+{"kind":"shape","id":"sh/kvixgna1","slide":4,"name":"footer-rule-4","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/7y9gb29c","slide":4,"name":"footer-label-4","text":"CONNECTED • TRANSPARENT • FUTURE-READY","textPreview":"CONNECTED • TRANSPARENT • FUTURE-READY","textChars":38,"textLines":1,"bbox":[72,680,420,16]}
+{"kind":"textbox","id":"sh/6x0fixs7","slide":4,"name":"footer-page-4","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1160,678,48,18]}
+{"kind":"image","id":"im/zeds3ip4","slide":4,"name":"","alt":"module-left-0 line icon","bbox":[392.5,268.5,21,21]}
+{"kind":"image","id":"im/kfm9cnqp","slide":4,"name":"","alt":"module-left-1 line icon","bbox":[392.5,336.5,21,21]}
+{"kind":"image","id":"im/id8v61s3","slide":4,"name":"","alt":"module-left-2 line icon","bbox":[392.5,404.5,21,21]}
+{"kind":"image","id":"im/50ju1gru","slide":4,"name":"","alt":"module-left-3 line icon","bbox":[392.5,472.5,21,21]}
+{"kind":"image","id":"im/gbqd4rax","slide":4,"name":"","alt":"module-left-4 line icon","bbox":[392.5,540.5,21,21]}
+{"kind":"image","id":"im/76xcrmtg","slide":4,"name":"","alt":"module-right-0 line icon","bbox":[808.5,268.5,21,21]}
+{"kind":"image","id":"im/nylgvats","slide":4,"name":"","alt":"module-right-1 line icon","bbox":[808.5,336.5,21,21]}
+{"kind":"image","id":"im/0vux0fuh","slide":4,"name":"","alt":"module-right-2 line icon","bbox":[808.5,404.5,21,21]}
+{"kind":"image","id":"im/d83ep0bq","slide":4,"name":"","alt":"module-right-3 line icon","bbox":[808.5,472.5,21,21]}
+{"kind":"image","id":"im/tcv654bm","slide":4,"name":"","alt":"module-right-4 line icon","bbox":[808.5,540.5,21,21]}
+{"kind":"notes","id":"nt/xpd6i5","slide":4,"text":"[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/hvhien","slide":5,"title":"TNR DIGITAL PLATFORM","textShapes":24}
+{"kind":"shape","id":"sh/07a1krq5","slide":5,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/z610rmpk","slide":5,"name":"brand-tag","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[94,36,260,22]}
+{"kind":"textbox","id":"sh/e5sjih8z","slide":5,"name":"slide-title","text":"Membership becomes one clear digital journey","textPreview":"Membership becomes one clear digital journey","textChars":44,"textLines":1,"bbox":[72,82,1136,54]}
+{"kind":"textbox","id":"sh/d4jipc7e","slide":5,"name":"slide-subtitle","text":"A visible path from first registration to full access.","textPreview":"A visible path from first registration to full access.","textChars":54,"textLines":1,"bbox":[72,141,1030,32]}
+{"kind":"shape","id":"sh/cjq1g7q9","slide":5,"name":"journey-track","bbox":[112,365,1056,0]}
+{"kind":"shape","id":"sh/rih0n2po","slide":5,"name":"journey-arrow-0","bbox":[252,355,20,20]}
+{"kind":"shape","id":"sh/qh8jex83","slide":5,"name":"journey-arrow-1","bbox":[450,355,20,20]}
+{"kind":"shape","id":"sh/x0321g7y","slide":5,"name":"journey-arrow-2","bbox":[648,355,20,20]}
+{"kind":"shape","id":"sh/wfu1sbqd","slide":5,"name":"journey-arrow-3","bbox":[846,355,20,20]}
+{"kind":"shape","id":"sh/6l0jql03","slide":5,"name":"journey-arrow-4","bbox":[1044,355,20,20]}
+{"kind":"textbox","id":"sh/rm9kjqho","slide":5,"name":"journey-step-0","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[100,234,78,28]}
+{"kind":"shape","id":"sh/s7i1svi9","slide":5,"name":"journey-node-0","bbox":[103,318,70,70]}
+{"kind":"textbox","id":"sh/ih0jml07","slide":5,"name":"journey-label-0","text":"Registration","textPreview":"Registration","textChars":12,"textLines":1,"bbox":[58,414,160,58]}
+{"kind":"textbox","id":"sh/ji9kfqhs","slide":5,"name":"journey-desc-0","text":"Create account","textPreview":"Create account","textChars":14,"textLines":1,"bbox":[58,486,160,24]}
+{"kind":"textbox","id":"sh/4ji1ovid","slide":5,"name":"journey-step-1","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[298,234,78,28]}
+{"kind":"shape","id":"sh/5kr2hgzi","slide":5,"name":"journey-node-1","bbox":[301,318,70,70]}
+{"kind":"textbox","id":"sh/3etkrahw","slide":5,"name":"journey-label-1","text":"Profile\nCompletion","textPreview":"Profile | Completion","textChars":18,"textLines":2,"bbox":[256,414,160,58]}
+{"kind":"textbox","id":"sh/z6l83itc","slide":5,"name":"journey-desc-1","text":"Complete details","textPreview":"Complete details","textChars":16,"textLines":1,"bbox":[256,486,160,24]}
+{"kind":"textbox","id":"sh/ylc7udcr","slide":5,"name":"journey-step-2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[496,234,78,28]}
+{"kind":"shape","id":"sh/l83q58b2","slide":5,"name":"journey-node-2","bbox":[499,318,70,70]}
+{"kind":"textbox","id":"sh/nal87it8","slide":5,"name":"journey-label-2","text":"Admin Review","textPreview":"Admin Review","textChars":12,"textLines":1,"bbox":[454,414,160,58]}
+{"kind":"textbox","id":"sh/m9crydcn","slide":5,"name":"journey-desc-2","text":"Records checked","textPreview":"Records checked","textChars":15,"textLines":1,"bbox":[454,486,160,24]}
+{"kind":"textbox","id":"sh/9cnq9sbe","slide":5,"name":"journey-step-3","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[694,234,78,28]}
+{"kind":"shape","id":"sh/8bu90nut","slide":5,"name":"journey-node-3","bbox":[697,318,70,70]}
+{"kind":"textbox","id":"sh/adwr2xcz","slide":5,"name":"journey-label-3","text":"Approval","textPreview":"Approval","textChars":8,"textLines":1,"bbox":[652,414,160,58]}
+{"kind":"textbox","id":"sh/sjyps7qx","slide":5,"name":"journey-desc-3","text":"Membership confirmed","textPreview":"Membership confirmed","textChars":20,"textLines":1,"bbox":[652,486,160,24]}
+{"kind":"textbox","id":"sh/t47qlcri","slide":5,"name":"journey-step-4","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[892,234,78,28]}
+{"kind":"shape","id":"sh/6hw7qxsr","slide":5,"name":"journey-node-4","bbox":[895,318,70,70]}
+{"kind":"textbox","id":"sh/kfepona1","slide":5,"name":"journey-label-4","text":"Digital Membership\nCard","textPreview":"Digital Membership | Card","textChars":23,"textLines":2,"bbox":[850,414,160,58]}
+{"kind":"textbox","id":"sh/5gn6hsr6","slide":5,"name":"journey-desc-4","text":"Verified identity","textPreview":"Verified identity","textChars":17,"textLines":1,"bbox":[850,486,160,24]}
+{"kind":"textbox","id":"sh/idw7mdsv","slide":5,"name":"journey-step-5","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1090,234,78,28]}
+{"kind":"shape","id":"sh/je5ofi9g","slide":5,"name":"journey-node-5","bbox":[1093,318,70,70]}
+{"kind":"textbox","id":"sh/xcn6dsra","slide":5,"name":"journey-label-5","text":"Member\nDashboard","textPreview":"Member | Dashboard","textChars":16,"textLines":2,"bbox":[1048,414,160,58]}
+{"kind":"textbox","id":"sh/lgjmlo72","slide":5,"name":"journey-desc-5","text":"Services unlocked","textPreview":"Services unlocked","textChars":17,"textLines":1,"bbox":[1048,486,160,24]}
+{"kind":"shape","id":"sh/0fa5sjqh","slide":5,"name":"journey-outcome","bbox":[350,555,580,54]}
+{"kind":"textbox","id":"sh/ze14jepw","slide":5,"name":"journey-outcome-text","text":"Every stage is trackable, reviewable and connected.","textPreview":"Every stage is trackable, reviewable and connected.","textChars":51,"textLines":1,"bbox":[380,568,520,28]}
+{"kind":"shape","id":"sh/yts3q98b","slide":5,"name":"footer-rule-5","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/9k3mpo7y","slide":5,"name":"footer-label-5","text":"CONNECTED • TRANSPARENT • FUTURE-READY","textPreview":"CONNECTED • TRANSPARENT • FUTURE-READY","textChars":38,"textLines":1,"bbox":[72,680,420,16]}
+{"kind":"textbox","id":"sh/8ja5wjqt","slide":5,"name":"footer-page-5","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1160,678,48,18]}
+{"kind":"image","id":"im/m10ny5sj","slide":5,"name":"","alt":"journey-icon-0 line icon","bbox":[125,340,27,27]}
+{"kind":"image","id":"im/5wv6hkri","slide":5,"name":"","alt":"journey-icon-1 line icon","bbox":[323,340,27,27]}
+{"kind":"image","id":"im/3yl8byho","slide":5,"name":"","alt":"journey-icon-2 line icon","bbox":[521,340,27,27]}
+{"kind":"image","id":"im/s7apwjy1","slide":5,"name":"","alt":"journey-icon-3 line icon","bbox":[719,340,27,27]}
+{"kind":"image","id":"im/w3ytkrip","slide":5,"name":"","alt":"journey-icon-4 line icon","bbox":[917,340,27,27]}
+{"kind":"image","id":"im/zu5s321w","slide":5,"name":"","alt":"journey-icon-5 line icon","bbox":[1115,340,27,27]}
+{"kind":"notes","id":"nt/hvhien","slide":5,"text":"[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/ayfknv","slide":6,"title":"TNR DIGITAL PLATFORM","textShapes":19}
+{"kind":"shape","id":"sh/x8nax0je","slide":6,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/alcbmlkn","slide":6,"name":"brand-tag","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[94,36,260,22]}
+{"kind":"textbox","id":"sh/vm5svq18","slide":6,"name":"slide-title","text":"Every credential is built to be trusted","textPreview":"Every credential is built to be trusted","textChars":39,"textLines":1,"bbox":[72,82,1136,54]}
+{"kind":"textbox","id":"sh/8jutkb2x","slide":6,"name":"slide-subtitle","text":"Fast verification for members, administrators and the wider community.","textPreview":"Fast verification for members, administrators and the wider community.","textChars":70,"textLines":1,"bbox":[72,141,1030,32]}
+{"kind":"shape","id":"sh/9k3atgj2","slide":6,"name":"identity-card-shadow","bbox":[82,232,576,352]}
+{"kind":"shape","id":"sh/mhcbi1kr","slide":6,"name":"identity-card","bbox":[72,220,576,352]}
+{"kind":"shape","id":"sh/nilsr61c","slide":6,"name":"identity-card-gold-band","bbox":[72,220,16,352]}
+{"kind":"textbox","id":"sh/sfytwfi1","slide":6,"name":"identity-card-placeholder","text":"ILLUSTRATIVE DIGITAL CARD LAYOUT","textPreview":"ILLUSTRATIVE DIGITAL CARD LAYOUT","textChars":32,"textLines":1,"bbox":[112,242,340,20]}
+{"kind":"textbox","id":"sh/tg7u5kjm","slide":6,"name":"identity-card-tnr","text":"TNR","textPreview":"TNR","textChars":3,"textLines":1,"bbox":[112,282,120,58]}
+{"kind":"textbox","id":"sh/1sjq1c7y","slide":6,"name":"identity-card-platform","text":"DIGITAL MEMBERSHIP","textPreview":"DIGITAL MEMBERSHIP","textChars":18,"textLines":1,"bbox":[112,339,250,22]}
+{"kind":"shape","id":"sh/graps76t","slide":6,"name":"identity-photo","bbox":[112,393,94,112]}
+{"kind":"textbox","id":"sh/eps7qhon","slide":6,"name":"identity-member-name","text":"MEMBER NAME","textPreview":"MEMBER NAME","textChars":11,"textLines":1,"bbox":[230,393,210,28]}
+{"kind":"textbox","id":"sh/tozqxc72","slide":6,"name":"identity-member-id-label","text":"UNIQUE MEMBERSHIP ID","textPreview":"UNIQUE MEMBERSHIP ID","textChars":20,"textLines":1,"bbox":[230,438,220,18]}
+{"kind":"textbox","id":"sh/snqpo76h","slide":6,"name":"identity-member-id","text":"TNR-XXXXXX","textPreview":"TNR-XXXXXX","textChars":10,"textLines":1,"bbox":[230,462,230,28]}
+{"kind":"shape","id":"sh/rmhov2pw","slide":6,"name":"identity-qr-frame","bbox":[482,372,126,126]}
+{"kind":"textbox","id":"sh/dk3q9w76","slide":6,"name":"identity-verified","text":"QR VERIFIED","textPreview":"QR VERIFIED","textChars":11,"textLines":1,"bbox":[482,515,126,18]}
+{"kind":"textbox","id":"sh/cjup0r6l","slide":6,"name":"identity-list-header","text":"VERIFICATION LAYER","textPreview":"VERIFICATION LAYER","textChars":18,"textLines":1,"bbox":[720,228,350,22]}
+{"kind":"shape","id":"sh/wzm1szi9","slide":6,"name":"identity-item-0-disc","bbox":[720,272,42,42]}
+{"kind":"textbox","id":"sh/uxkjqp03","slide":6,"name":"identity-item-label-0","text":"Unique Membership ID","textPreview":"Unique Membership ID","textChars":20,"textLines":1,"bbox":[779,271,388,44]}
+{"kind":"shape","id":"sh/vyd0ju1o","slide":6,"name":"identity-item-1-disc","bbox":[720,334,42,42]}
+{"kind":"textbox","id":"sh/9wbih4ji","slide":6,"name":"identity-item-label-1","text":"QR-verified Digital Card","textPreview":"QR-verified Digital Card","textChars":24,"textLines":1,"bbox":[779,333,388,44]}
+{"kind":"shape","id":"sh/m9kjmp07","slide":6,"name":"identity-item-2-disc","bbox":[720,396,42,42]}
+{"kind":"textbox","id":"sh/0721kfi1","slide":6,"name":"identity-item-label-2","text":"Certificate Verification","textPreview":"Certificate Verification","textChars":24,"textLines":1,"bbox":[779,395,388,44]}
+{"kind":"shape","id":"sh/l8bidkjm","slide":6,"name":"identity-item-3-disc","bbox":[720,458,42,42]}
+{"kind":"textbox","id":"sh/210ju5kn","slide":6,"name":"identity-item-label-3","text":"Reference Number Verification","textPreview":"Reference Number Verification","textChars":29,"textLines":1,"bbox":[779,457,388,44]}
+{"kind":"shape","id":"sh/p4r25k3e","slide":6,"name":"identity-item-4-disc","bbox":[720,520,42,42]}
+{"kind":"textbox","id":"sh/b69k7ulk","slide":6,"name":"identity-item-label-4","text":"Secure Member Records","textPreview":"Secure Member Records","textChars":21,"textLines":1,"bbox":[779,519,388,44]}
+{"kind":"textbox","id":"sh/q50jypkz","slide":6,"name":"identity-trust","text":"TRUST, CONFIRMED IN SECONDS","textPreview":"TRUST, CONFIRMED IN SECONDS","textChars":27,"textLines":1,"bbox":[720,594,420,24]}
+{"kind":"shape","id":"sh/d8b29k3q","slide":6,"name":"footer-rule-6","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/c7210z25","slide":6,"name":"footer-label-6","text":"CONNECTED • TRANSPARENT • FUTURE-READY","textPreview":"CONNECTED • TRANSPARENT • FUTURE-READY","textChars":38,"textLines":1,"bbox":[72,680,420,16]}
+{"kind":"textbox","id":"sh/zutkbulg","slide":6,"name":"footer-page-6","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1160,678,48,18]}
+{"kind":"image","id":"im/87qx43mt","slide":6,"name":"","alt":"identity-photo-icon line icon","bbox":[138,418,42,42]}
+{"kind":"image","id":"im/hwjy1s3q","slide":6,"name":"","alt":"identity-qr line icon","bbox":[506,395,78,78]}
+{"kind":"image","id":"im/e1cfix03","slide":6,"name":"","alt":"identity-item-0 line icon","bbox":[730.5,282.5,21,21]}
+{"kind":"image","id":"im/ry1wni1s","slide":6,"name":"","alt":"identity-item-1 line icon","bbox":[730.5,344.5,21,21]}
+{"kind":"image","id":"im/szadgnid","slide":6,"name":"","alt":"identity-item-2 line icon","bbox":[730.5,406.5,21,21]}
+{"kind":"image","id":"im/8f6tkjyt","slide":6,"name":"","alt":"identity-item-3 line icon","bbox":[730.5,468.5,21,21]}
+{"kind":"image","id":"im/7excreh8","slide":6,"name":"","alt":"identity-item-4 line icon","bbox":[730.5,530.5,21,21]}
+{"kind":"notes","id":"nt/ayfknv","slide":6,"text":"[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/lt5hp6","slide":7,"title":"TNR DIGITAL PLATFORM","textShapes":18}
+{"kind":"shape","id":"sh/r2tofi5k","slide":7,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/s32p8nm5","slide":7,"name":"brand-tag","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[94,36,260,22]}
+{"kind":"textbox","id":"sh/tob6hsnq","slide":7,"name":"slide-title","text":"AI turns member data into guidance and opportunity","textPreview":"AI turns member data into guidance and opportunity","textChars":50,"textLines":1,"bbox":[72,82,1136,54]}
+{"kind":"textbox","id":"sh/ix072d43","slide":7,"name":"slide-subtitle","text":"Two practical tools extend the value of every completed member profile.","textPreview":"Two practical tools extend the value of every completed member profile.","textChars":71,"textLines":1,"bbox":[72,141,1030,32]}
+{"kind":"shape","id":"sh/jy9oby5o","slide":7,"name":"ai-left-panel","bbox":[0,196,640,440]}
+{"kind":"textbox","id":"sh/4zip43m9","slide":7,"name":"ai-left-label","text":"AI ASSISTANT","textPreview":"AI ASSISTANT","textChars":12,"textLines":1,"bbox":[72,218,260,24]}
+{"kind":"shape","id":"sh/50r6d8nu","slide":7,"name":"ai-browser-shadow","bbox":[80,268,476,260]}
+{"kind":"shape","id":"sh/2t47ex47","slide":7,"name":"ai-browser-frame","bbox":[72,258,476,260]}
+{"kind":"shape","id":"sh/3ud8n2ls","slide":7,"name":"ai-browser-chrome","bbox":[72,258,476,42]}
+{"kind":"shape","id":"sh/fe98j6tk","slide":7,"name":"ai-browser-chrome-cover","bbox":[72,283,476,17]}
+{"kind":"shape","id":"sh/ud0ra1cz","slide":7,"name":"ai-browser-dot-0","bbox":[90,274,7,7]}
+{"kind":"shape","id":"sh/1gbqlgbq","slide":7,"name":"ai-browser-dot-1","bbox":[105,274,7,7]}
+{"kind":"shape","id":"sh/gfi9cbu5","slide":7,"name":"ai-browser-dot-2","bbox":[120,274,7,7]}
+{"kind":"textbox","id":"sh/32t8nqtw","slide":7,"name":"ai-browser-label","text":"SCREENSHOT PLACEHOLDER • AI ASSISTANT","textPreview":"SCREENSHOT PLACEHOLDER • AI ASSISTANT","textChars":37,"textLines":1,"bbox":[148,266,382,26]}
+{"kind":"shape","id":"sh/2hkrelcb","slide":7,"name":"ai-avatar","bbox":[100,326,42,42]}
+{"kind":"shape","id":"sh/o329gbuh","slide":7,"name":"ai-bubble-1","bbox":[158,322,330,56]}
+{"kind":"textbox","id":"sh/b6t8rqts","slide":7,"name":"ai-bubble-1-text","text":"How can I help with your TNR membership?","textPreview":"How can I help with your TNR membership?","textChars":40,"textLines":1,"bbox":[176,337,294,24]}
+{"kind":"shape","id":"sh/q5krilc7","slide":7,"name":"ai-bubble-2","bbox":[238,399,250,48]}
+{"kind":"textbox","id":"sh/m1obapwf","slide":7,"name":"ai-bubble-2-text","text":"Guide me to member services.","textPreview":"Guide me to member services.","textChars":28,"textLines":1,"bbox":[254,412,218,22]}
+{"kind":"shape","id":"sh/n2xcjud0","slide":7,"name":"ai-input","bbox":[100,466,388,28]}
+{"kind":"shape","id":"sh/836tczel","slide":7,"name":"ai-check-1-dot","bbox":[72,544,32,32]}
+{"kind":"textbox","id":"sh/yx4b6pwj","slide":7,"name":"ai-check-1-text","text":"24/7 member guidance","textPreview":"24/7 member guidance","textChars":20,"textLines":1,"bbox":[118,542,214,36]}
+{"kind":"shape","id":"sh/zydcfud4","slide":7,"name":"ai-check-2-dot","bbox":[340,544,32,32]}
+{"kind":"textbox","id":"sh/l0fuhkvu","slide":7,"name":"ai-check-2-text","text":"TNR-related information","textPreview":"TNR-related information","textChars":23,"textLines":1,"bbox":[386,542,204,36]}
+{"kind":"shape","id":"sh/it8bi9wn","slide":7,"name":"ai-check-3-dot","bbox":[72,588,32,32]}
+{"kind":"textbox","id":"sh/tojeh8fa","slide":7,"name":"ai-check-3-text","text":"Smart assistance","textPreview":"Smart assistance","textChars":16,"textLines":1,"bbox":[118,586,214,36]}
+{"kind":"textbox","id":"sh/snaxo3yp","slide":7,"name":"cv-right-label","text":"CV BUILDER","textPreview":"CV BUILDER","textChars":10,"textLines":1,"bbox":[708,218,260,24]}
+{"kind":"shape","id":"sh/7m1wfyxk","slide":7,"name":"cv-browser-shadow","bbox":[716,268,500,260]}
+{"kind":"shape","id":"sh/6lsfmdgz","slide":7,"name":"cv-browser-frame","bbox":[708,258,500,260]}
+{"kind":"shape","id":"sh/50jed8fe","slide":7,"name":"cv-browser-chrome","bbox":[708,258,500,42]}
+{"kind":"shape","id":"sh/kzadk3yt","slide":7,"name":"cv-browser-chrome-cover","bbox":[708,283,500,17]}
+{"kind":"shape","id":"sh/jy1wbyx8","slide":7,"name":"cv-browser-dot-0","bbox":[726,274,7,7]}
+{"kind":"shape","id":"sh/ix8vitgn","slide":7,"name":"cv-browser-dot-1","bbox":[741,274,7,7]}
+{"kind":"shape","id":"sh/pw3epsfi","slide":7,"name":"cv-browser-dot-2","bbox":[756,274,7,7]}
+{"kind":"textbox","id":"sh/4vuxwnyx","slide":7,"name":"cv-browser-label","text":"SCREENSHOT PLACEHOLDER • CV BUILDER","textPreview":"SCREENSHOT PLACEHOLDER • CV BUILDER","textChars":35,"textLines":1,"bbox":[784,266,406,26]}
+{"kind":"shape","id":"sh/wzi5gnyt","slide":7,"name":"cv-page","bbox":[752,310,152,172]}
+{"kind":"shape","id":"sh/x0rmpsfe","slide":7,"name":"cv-photo","bbox":[770,328,38,38]}
+{"kind":"shape","id":"sh/by94n2x8","slide":7,"name":"cv-name-line","bbox":[824,330,54,6]}
+{"kind":"shape","id":"sh/k325k7yp","slide":7,"name":"cv-sub-line","bbox":[824,345,43,4]}
+{"kind":"shape","id":"sh/l4bmtcfa","slide":7,"name":"cv-line-0","bbox":[770,386,108,4]}
+{"kind":"shape","id":"sh/y10nixgz","slide":7,"name":"cv-line-1","bbox":[770,401,90,4]}
+{"kind":"shape","id":"sh/j2t4r2x4","slide":7,"name":"cv-line-2","bbox":[770,416,108,4]}
+{"kind":"shape","id":"sh/8r25o7y1","slide":7,"name":"cv-line-3","bbox":[770,431,90,4]}
+{"kind":"shape","id":"sh/tsb6xcfm","slide":7,"name":"cv-line-4","bbox":[770,446,108,4]}
+{"kind":"textbox","id":"sh/3mx8n6ho","slide":7,"name":"cv-arrow-copy","text":"MEMBER PROFILE","textPreview":"MEMBER PROFILE","textChars":14,"textLines":1,"bbox":[944,330,210,20]}
+{"kind":"textbox","id":"sh/pofqpgzu","slide":7,"name":"cv-output-copy","text":"PROFESSIONAL CV","textPreview":"PROFESSIONAL CV","textChars":15,"textLines":1,"bbox":[944,425,210,22]}
+{"kind":"shape","id":"sh/4n6pgbi9","slide":7,"name":"cv-check-1-dot","bbox":[708,544,32,32]}
+{"kind":"textbox","id":"sh/ux47a107","slide":7,"name":"cv-check-1-text","text":"Automatic CV generation from member profile","textPreview":"Automatic CV generation from member profile","textChars":43,"textLines":1,"bbox":[754,542,454,36]}
+{"kind":"shape","id":"sh/hkvqlgzi","slide":7,"name":"cv-check-2-dot","bbox":[708,588,32,32]}
+{"kind":"textbox","id":"sh/zuh8vqhw","slide":7,"name":"cv-check-2-text","text":"Downloadable professional CV","textPreview":"Downloadable professional CV","textChars":28,"textLines":1,"bbox":[754,586,454,36]}
+{"kind":"shape","id":"sh/et8rm50b","slide":7,"name":"footer-rule-7","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/a9sbepkj","slide":7,"name":"footer-label-7","text":"CONNECTED • TRANSPARENT • FUTURE-READY","textPreview":"CONNECTED • TRANSPARENT • FUTURE-READY","textChars":38,"textLines":1,"bbox":[72,680,420,16]}
+{"kind":"textbox","id":"sh/ba1snu14","slide":7,"name":"footer-page-7","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1160,678,48,18]}
+{"kind":"image","id":"im/el0vq1k7","slide":7,"name":"","alt":"ai-avatar-icon line icon","bbox":[110,336,22,22]}
+{"kind":"image","id":"im/a94j2psf","slide":7,"name":"","alt":"ai-check-1-check line icon","bbox":[80,552,16,16]}
+{"kind":"image","id":"im/zexkze9w","slide":7,"name":"","alt":"ai-check-2-check line icon","bbox":[348,552,16,16]}
+{"kind":"image","id":"im/83qlcjqd","slide":7,"name":"","alt":"ai-check-3-check line icon","bbox":[80,596,16,16]}
+{"kind":"image","id":"im/x0rit0zy","slide":7,"name":"","alt":"cv-photo-icon line icon","bbox":[780,338,18,18]}
+{"kind":"image","id":"im/5c3etcfi","slide":7,"name":"","alt":"cv-arrow line icon","bbox":[1008,365,46,46]}
+{"kind":"image","id":"im/g7adg7y1","slide":7,"name":"","alt":"cv-check-1-check line icon","bbox":[716,552,16,16]}
+{"kind":"image","id":"im/v61wn2xg","slide":7,"name":"","alt":"cv-check-2-check line icon","bbox":[716,596,16,16]}
+{"kind":"notes","id":"nt/lt5hp6","slide":7,"text":"[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/cew8uq","slide":8,"title":"TNR DIGITAL PLATFORM","textShapes":19}
+{"kind":"shape","id":"sh/x0b2d4zq","slide":8,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/adkj290f","slide":8,"name":"brand-tag","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[94,36,260,22]}
+{"kind":"textbox","id":"sh/betkbeh0","slide":8,"name":"slide-title","text":"Secure participation strengthens governance","textPreview":"Secure participation strengthens governance","textChars":43,"textLines":1,"bbox":[72,82,1136,54]}
+{"kind":"textbox","id":"sh/obi10zi9","slide":8,"name":"slide-subtitle","text":"Verified voting and structured organizational workflows support transparent decisions.","textPreview":"Verified voting and structured organizational workflows support transparent decisions.","textChars":86,"textLines":1,"bbox":[72,141,1030,32]}
+{"kind":"shape","id":"sh/pcb294zu","slide":8,"name":"election-divider-band","bbox":[618,202,2,418]}
+{"kind":"textbox","id":"sh/290jyp03","slide":8,"name":"election-left-header","text":"SECURE ONLINE VOTING","textPreview":"SECURE ONLINE VOTING","textChars":20,"textLines":1,"bbox":[72,218,440,24]}
+{"kind":"textbox","id":"sh/na9k7uho","slide":8,"name":"election-left-big","text":"ONE MEMBER.\nONE VERIFIED VOTE.","textPreview":"ONE MEMBER. | ONE VERIFIED VOTE.","textChars":30,"textLines":2,"bbox":[72,264,470,92]}
+{"kind":"shape","id":"sh/87mlcjyt","slide":8,"name":"vote-item-0-disc","bbox":[72,390,52,52]}
+{"kind":"textbox","id":"sh/lwfil8re","slide":8,"name":"vote-label-0","text":"Secure Online Voting","textPreview":"Secure Online Voting","textChars":20,"textLines":1,"bbox":[140,389,185,52]}
+{"kind":"shape","id":"sh/kv6hs3qt","slide":8,"name":"vote-item-1-disc","bbox":[332,390,52,52]}
+{"kind":"textbox","id":"sh/yt4zqdsn","slide":8,"name":"vote-label-1","text":"OTP Verification","textPreview":"OTP Verification","textChars":16,"textLines":1,"bbox":[400,389,185,52]}
+{"kind":"shape","id":"sh/xsvih8r2","slide":8,"name":"vote-item-2-disc","bbox":[72,492,52,52]}
+{"kind":"textbox","id":"sh/bqdgfy9w","slide":8,"name":"vote-label-2","text":"Duplicate Vote Prevention","textPreview":"Duplicate Vote Prevention","textChars":25,"textLines":1,"bbox":[140,491,185,52]}
+{"kind":"shape","id":"sh/ap4zmtsr","slide":8,"name":"vote-item-3-disc","bbox":[332,492,52,52]}
+{"kind":"textbox","id":"sh/gnqh0nq1","slide":8,"name":"vote-label-3","text":"Live Results","textPreview":"Live Results","textChars":12,"textLines":1,"bbox":[400,491,185,52]}
+{"kind":"textbox","id":"sh/03ytcv29","slide":8,"name":"org-right-header","text":"ORGANIZATIONAL MANAGEMENT","textPreview":"ORGANIZATIONAL MANAGEMENT","textChars":25,"textLines":1,"bbox":[690,218,460,24]}
+{"kind":"textbox","id":"sh/14ral03u","slide":8,"name":"org-right-big","text":"Clear workflows.\nVisible responsibility.","textPreview":"Clear workflows. | Visible responsibility.","textChars":40,"textLines":2,"bbox":[690,264,470,92]}
+{"kind":"shape","id":"sh/ehgbalk3","slide":8,"name":"org-item-0-disc","bbox":[690,383,48,48]}
+{"kind":"textbox","id":"sh/cfyt8v2d","slide":8,"name":"org-label-0","text":"Application Review","textPreview":"Application Review","textChars":18,"textLines":1,"bbox":[754,382,405,28]}
+{"kind":"textbox","id":"sh/dg7ah03i","slide":8,"name":"org-desc-0","text":"Structured evaluation","textPreview":"Structured evaluation","textChars":21,"textLines":1,"bbox":[754,414,380,20]}
+{"kind":"shape","id":"sh/qdgb6lk7","slide":8,"name":"org-item-1-disc","bbox":[690,457,48,48]}
+{"kind":"textbox","id":"sh/4bet4b21","slide":8,"name":"org-label-1","text":"CEC Management","textPreview":"CEC Management","textChars":14,"textLines":1,"bbox":[754,456,405,28]}
+{"kind":"textbox","id":"sh/pc7adg3m","slide":8,"name":"org-desc-1","text":"Central executive coordination","textPreview":"Central executive coordination","textChars":30,"textLines":1,"bbox":[754,488,380,20]}
+{"kind":"shape","id":"sh/765cn65o","slide":8,"name":"org-item-2-disc","bbox":[690,531,48,48]}
+{"kind":"textbox","id":"sh/t8nupgne","slide":8,"name":"org-label-2","text":"Advisory Council Management","textPreview":"Advisory Council Management","textChars":27,"textLines":1,"bbox":[754,530,405,28]}
+{"kind":"textbox","id":"sh/s7etwb6t","slide":8,"name":"org-desc-2","text":"Connected oversight","textPreview":"Connected oversight","textChars":19,"textLines":1,"bbox":[754,562,380,20]}
+{"kind":"shape","id":"sh/fa5crq5k","slide":8,"name":"footer-rule-8","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/u9wbyloz","slide":8,"name":"footer-label-8","text":"CONNECTED • TRANSPARENT • FUTURE-READY","textPreview":"CONNECTED • TRANSPARENT • FUTURE-READY","textChars":38,"textLines":1,"bbox":[72,680,420,16]}
+{"kind":"textbox","id":"sh/hcnutgnq","slide":8,"name":"footer-page-8","text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1160,678,48,18]}
+{"kind":"image","id":"im/8fi9g7yp","slide":8,"name":"","alt":"vote-item-0 line icon","bbox":[85,403,26,26]}
+{"kind":"image","id":"im/4v2psfm9","slide":8,"name":"","alt":"vote-item-1 line icon","bbox":[345,403,26,26]}
+{"kind":"image","id":"im/ryd8nu50","slide":8,"name":"","alt":"vote-item-2 line icon","bbox":[85,505,26,26]}
+{"kind":"image","id":"im/m107i54v","slide":8,"name":"","alt":"vote-item-3 line icon","bbox":[345,505,26,26]}
+{"kind":"image","id":"im/c7y5sb2t","slide":8,"name":"","alt":"org-item-0 line icon","bbox":[702,395,24,24]}
+{"kind":"image","id":"im/o3elor2x","slide":8,"name":"","alt":"org-item-1 line icon","bbox":[702,469,24,24]}
+{"kind":"image","id":"im/58za5ofm","slide":8,"name":"","alt":"org-item-2 line icon","bbox":[702,543,24,24]}
+{"kind":"notes","id":"nt/cew8uq","slide":8,"text":"[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/6q4kb7","slide":9,"title":"TNR DIGITAL PLATFORM","textShapes":15}
+{"kind":"shape","id":"sh/3mlgfe5o","slide":9,"name":"brand-gold-square","bbox":[72,42,10,10]}
+{"kind":"textbox","id":"sh/onuhojm9","slide":9,"name":"brand-tag","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[94,36,260,22]}
+{"kind":"textbox","id":"sh/po3yh4nu","slide":9,"name":"slide-title","text":"Member value grows with every interaction","textPreview":"Member value grows with every interaction","textChars":41,"textLines":1,"bbox":[72,82,1136,54]}
+{"kind":"textbox","id":"sh/qpczq94z","slide":9,"name":"slide-subtitle","text":"Identity, services, communication and opportunity come together in one place.","textPreview":"Identity, services, communication and opportunity come together in one place.","textChars":77,"textLines":1,"bbox":[72,141,1030,32]}
+{"kind":"shape","id":"sh/balgje5k","slide":9,"name":"benefit-left-link-0","bbox":[372,264,126,0]}
+{"kind":"shape","id":"sh/cbehsjm5","slide":9,"name":"benefit-left-link-1","bbox":[372,358,126,0]}
+{"kind":"shape","id":"sh/dcnylonq","slide":9,"name":"benefit-left-link-2","bbox":[372,452,126,0]}
+{"kind":"shape","id":"sh/6tsfep4v","slide":9,"name":"benefit-left-link-3","bbox":[372,546,126,0]}
+{"kind":"shape","id":"sh/ru1g7u5g","slide":9,"name":"benefit-right-link-0","bbox":[768,264,140,0]}
+{"kind":"shape","id":"sh/ruhgfe54","slide":9,"name":"benefit-right-link-1","bbox":[768,358,140,0]}
+{"kind":"shape","id":"sh/qt8f69oj","slide":9,"name":"benefit-right-link-2","bbox":[768,452,140,0]}
+{"kind":"shape","id":"sh/dgjyh4nu","slide":9,"name":"benefit-right-link-3","bbox":[768,546,140,0]}
+{"kind":"shape","id":"sh/svah8j69","slide":9,"name":"benefit-core-shadow","bbox":[498,266,284,284]}
+{"kind":"shape","id":"sh/3qhgbu5s","slide":9,"name":"benefit-core","bbox":[484,252,284,284]}
+{"kind":"textbox","id":"sh/5szyd4ny","slide":9,"name":"benefit-core-label","text":"MEMBER\nVALUE","textPreview":"MEMBER | VALUE","textChars":12,"textLines":2,"bbox":[550,390,152,76]}
+{"kind":"textbox","id":"sh/4rqx4z6d","slide":9,"name":"benefit-core-copy","text":"One connected experience","textPreview":"One connected experience","textChars":24,"textLines":1,"bbox":[520,478,212,22]}
+{"kind":"shape","id":"sh/vmxg7upw","slide":9,"name":"benefit-left-box-0","bbox":[72,235,300,58]}
+{"kind":"textbox","id":"sh/yxozqp83","slide":9,"name":"benefit-left-label-0","text":"Digital Identity","textPreview":"Digital Identity","textChars":16,"textLines":1,"bbox":[136,235,215,58]}
+{"kind":"shape","id":"sh/zyxgja9o","slide":9,"name":"benefit-left-box-1","bbox":[72,329,300,58]}
+{"kind":"textbox","id":"sh/lkfylkru","slide":9,"name":"benefit-left-label-1","text":"Verified Membership","textPreview":"Verified Membership","textChars":19,"textLines":1,"bbox":[136,329,215,58]}
+{"kind":"shape","id":"sh/mlozup8f","slide":9,"name":"benefit-left-box-2","bbox":[72,423,300,58]}
+{"kind":"textbox","id":"sh/8n6hwzq5","slide":9,"name":"benefit-left-label-2","text":"Easy Access to Services","textPreview":"Easy Access to Services","textChars":23,"textLines":1,"bbox":[136,423,215,58]}
+{"kind":"shape","id":"sh/tozip4rq","slide":9,"name":"benefit-left-box-3","bbox":[72,517,300,58]}
+{"kind":"textbox","id":"sh/vqh0ru9w","slide":9,"name":"benefit-left-label-3","text":"Professional CV","textPreview":"Professional CV","textChars":15,"textLines":1,"bbox":[136,517,215,58]}
+{"kind":"shape","id":"sh/5kj2h8by","slide":9,"name":"benefit-right-box-0","bbox":[908,235,300,58]}
+{"kind":"textbox","id":"sh/3i1kfyts","slide":9,"name":"benefit-right-label-0","text":"Better Communication","textPreview":"Better Communication","textChars":20,"textLines":1,"bbox":[972,235,215,58]}
+{"kind":"shape","id":"sh/ihsjmtsn","slide":9,"name":"benefit-right-box-1","bbox":[908,329,300,58]}
+{"kind":"textbox","id":"sh/snu1s3ap","slide":9,"name":"benefit-right-label-1","text":"Transparency","textPreview":"Transparency","textChars":12,"textLines":1,"bbox":[972,329,215,58]}
+{"kind":"shape","id":"sh/rm1kjyt4","slide":9,"name":"benefit-right-box-2","bbox":[908,423,300,58]}
+{"kind":"textbox","id":"sh/1c32psb6","slide":9,"name":"benefit-right-label-2","text":"Global Networking","textPreview":"Global Networking","textChars":17,"textLines":1,"bbox":[972,423,215,58]}
+{"kind":"shape","id":"sh/0bulwnal","slide":9,"name":"benefit-right-box-3","bbox":[908,517,300,58]}
+{"kind":"textbox","id":"sh/x87mxwve","slide":9,"name":"benefit-right-label-3","text":"Centralized Opportunities","textPreview":"Centralized Opportunities","textChars":25,"textLines":1,"bbox":[972,517,215,58]}
+{"kind":"shape","id":"sh/a5wnmhcn","slide":9,"name":"footer-rule-9","bbox":[72,671,1136,0]}
+{"kind":"textbox","id":"sh/b6p4vmd8","slide":9,"name":"footer-label-9","text":"CONNECTED • TRANSPARENT • FUTURE-READY","textPreview":"CONNECTED • TRANSPARENT • FUTURE-READY","textChars":38,"textLines":1,"bbox":[72,680,420,16]}
+{"kind":"textbox","id":"sh/o3e5k7ux","slide":9,"name":"footer-page-9","text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1160,678,48,18]}
+{"kind":"image","id":"im/dgbq5cbm","slide":9,"name":"","alt":"benefit-core-icon line icon","bbox":[592,304,68,68]}
+{"kind":"image","id":"im/tk76tsb2","slide":9,"name":"","alt":"benefit-left-icon-0 line icon","bbox":[92,250,28,28]}
+{"kind":"image","id":"im/n2xwzaho","slide":9,"name":"","alt":"benefit-left-icon-1 line icon","bbox":[92,344,28,28]}
+{"kind":"image","id":"im/w7qdcfi5","slide":9,"name":"","alt":"benefit-left-icon-2 line icon","bbox":[92,438,28,28]}
+{"kind":"image","id":"im/5cze94z2","slide":9,"name":"","alt":"benefit-left-icon-3 line icon","bbox":[92,532,28,28]}
+{"kind":"image","id":"im/3its36xk","slide":9,"name":"","alt":"benefit-right-icon-0 line icon","bbox":[928,250,28,28]}
+{"kind":"image","id":"im/qlkbe1gv","slide":9,"name":"","alt":"benefit-right-icon-1 line icon","bbox":[928,344,28,28]}
+{"kind":"image","id":"im/d8vu9gfm","slide":9,"name":"","alt":"benefit-right-icon-2 line icon","bbox":[928,438,28,28]}
+{"kind":"image","id":"im/n69sv6pw","slide":9,"name":"","alt":"benefit-right-icon-3 line icon","bbox":[928,532,28,28]}
+{"kind":"notes","id":"nt/6q4kb7","slide":9,"text":"[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}
+{"kind":"slide","id":"sl/tg8ine","slide":10,"title":"TNR DIGITAL PLATFORM","textShapes":6}
+{"kind":"shape","id":"sh/bqx8jm9c","slide":10,"name":"closing-side-panel","bbox":[934,0,346,720]}
+{"kind":"shape","id":"sh/wr69srax","slide":10,"name":"closing-mountain-1","bbox":[934,360,346,286]}
+{"kind":"shape","id":"sh/xsfalwri","slide":10,"name":"closing-mountain-2","bbox":[1040,472,240,174]}
+{"kind":"shape","id":"sh/yt8ru1s3","slide":10,"name":"closing-gold-peak","bbox":[1095,536,132,110]}
+{"kind":"shape","id":"sh/juhsn69o","slide":10,"name":"closing-bottom-mask","bbox":[930,646,350,74]}
+{"kind":"shape","id":"sh/kvq9wra9","slide":10,"name":"closing-rule-top","bbox":[72,78,82,5]}
+{"kind":"textbox","id":"sh/lwzapwre","slide":10,"name":"closing-eyebrow","text":"TNR DIGITAL PLATFORM","textPreview":"TNR DIGITAL PLATFORM","textChars":20,"textLines":1,"bbox":[72,101,330,24]}
+{"kind":"textbox","id":"sh/ex4rixsj","slide":10,"name":"closing-main","text":"Together, We Are Building\nthe Digital Future of TNR.","textPreview":"Together, We Are Building | the Digital Future of TNR.","textChars":52,"textLines":2,"bbox":[72,203,820,154]}
+{"kind":"shape","id":"sh/fyd8b2t4","slide":10,"name":"closing-rule-mid","bbox":[72,405,180,0]}
+{"kind":"textbox","id":"sh/3210vyh4","slide":10,"name":"closing-quote","text":"Technology becomes meaningful\nwhen it serves the community.","textPreview":"Technology becomes meaningful | when it serves the community.","textChars":59,"textLines":2,"bbox":[72,447,700,88]}
+{"kind":"textbox","id":"sh/218j2tgj","slide":10,"name":"closing-presenter","text":"SHABBIR HUSSAIN  •  TECHNICAL COORDINATOR – TNR","textPreview":"SHABBIR HUSSAIN  •  TECHNICAL COORDINATOR – TNR","textChars":47,"textLines":1,"bbox":[72,646,650,24]}
+{"kind":"textbox","id":"sh/pojixozu","slide":10,"name":"closing-tnr","text":"TNR","textPreview":"TNR","textChars":3,"textLines":1,"bbox":[1001,84,212,82]}
+{"kind":"textbox","id":"sh/43a143yp","slide":10,"name":"closing-connected","text":"ONE CONNECTED COMMUNITY","textPreview":"ONE CONNECTED COMMUNITY","textChars":23,"textLines":1,"bbox":[980,172,254,24]}
+{"kind":"notes","id":"nt/tg8ine","slide":10,"text":"Close on the community purpose: technology is the enabler, not the destination.\n[Sources]\n- Platform content and presenter details: user-provided TNR Digital Platform brief, 2026-08-04.\n- Icons: Lucide v1.8.0, ISC License, bundled runtime — https://lucide.dev/.\n- No external or AI-generated website screenshots used; interface frames are clearly labeled placeholders.\n[/Sources]"}

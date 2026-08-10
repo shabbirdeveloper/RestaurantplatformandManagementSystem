@@ -1,0 +1,1593 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/emnw27",
+    "id": "emnw27",
+    "slide": 8,
+    "layoutId": "1f8baa80-f68e-4d3c-9a3c-9a1e9cf67bba",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#071E18",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "1f8baa80-f68e-4d3c-9a3c-9a1e9cf67bba",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cna94nyl",
+      "id": "1",
+      "name": "brand-gold-square",
+      "bbox": [
+        72,
+        42,
+        10,
+        10
+      ],
+      "rotation": 0,
+      "geometry": "rect",
+      "fillColor": "#C6A15B",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/bm18bih0",
+      "id": "2",
+      "name": "brand-tag",
+      "bbox": [
+        94,
+        36,
+        260,
+        22
+      ],
+      "geometry": "rect",
+      "text": "TNR DIGITAL PLATFORM",
+      "textPreview": "TNR DIGITAL PLATFORM",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TNR DIGITAL PLATFORM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TNR DIGITAL PLATFORM",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TNR DIGITAL PLATFORM",
+              "fontSize": 14,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/als72dgf",
+      "id": "3",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        82,
+        1136,
+        54
+      ],
+      "geometry": "rect",
+      "text": "Secure participation strengthens governance",
+      "textPreview": "Secure participation strengthens governance",
+      "resolvedFontSize": 40,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 40,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Secure participation strengthens governance"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Secure participation strengthens governance",
+          "resolvedTextStyle": {
+            "fontSize": 40,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Secure participation strengthens governance",
+              "fontSize": 40,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lc3qhsz2",
+      "id": "4",
+      "name": "slide-subtitle",
+      "bbox": [
+        72,
+        141,
+        1030,
+        32
+      ],
+      "geometry": "rect",
+      "text": "Verified voting and structured organizational workflows support transparent decisions.",
+      "textPreview": "Verified voting and structured organizational workflows support transparent decisions.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "Aptos",
+        "color": "#E8D6AB",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Verified voting and structured organizational workflows support transparent decisions."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Verified voting and structured organizational workflows support transparent decisions.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Aptos",
+            "color": "#E8D6AB",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Verified voting and structured organizational workflows support transparent decisions.",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#E8D6AB",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kru98nyh",
+      "id": "5",
+      "name": "election-live-tag",
+      "bbox": [
+        882,
+        181,
+        326,
+        18
+      ],
+      "geometry": "rect",
+      "text": "REAL RESULTS VIEW • EVOTEGB.COM",
+      "textPreview": "REAL RESULTS VIEW • EVOTEGB.COM",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Aptos Display",
+        "color": "#C6A15B",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "REAL RESULTS VIEW • EVOTEGB.COM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "REAL RESULTS VIEW • EVOTEGB.COM",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos Display",
+            "color": "#C6A15B",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "REAL RESULTS VIEW • EVOTEGB.COM",
+              "fontSize": 11,
+              "typeface": "Aptos Display",
+              "color": "#C6A15B",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zql8f2hc",
+      "id": "6",
+      "name": "election-left-header",
+      "bbox": [
+        72,
+        218,
+        470,
+        24
+      ],
+      "geometry": "rect",
+      "text": "SECURE ONLINE VOTING",
+      "textPreview": "SECURE ONLINE VOTING",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 14,
+        "typeface": "Aptos Display",
+        "color": "#C6A15B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SECURE ONLINE VOTING"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SECURE ONLINE VOTING",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos Display",
+            "color": "#C6A15B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SECURE ONLINE VOTING",
+              "fontSize": 14,
+              "typeface": "Aptos Display",
+              "color": "#C6A15B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ypcr6xgr",
+      "id": "7",
+      "name": "election-left-big",
+      "bbox": [
+        72,
+        255,
+        470,
+        80
+      ],
+      "geometry": "rect",
+      "text": "ONE MEMBER.\nONE VERIFIED VOTE.",
+      "textPreview": "ONE MEMBER. | ONE VERIFIED VOTE.",
+      "resolvedFontSize": 31,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 31,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ONE MEMBER."
+          },
+          {
+            "index": 2,
+            "text": "ONE VERIFIED VOTE."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ONE MEMBER.",
+          "lineSpacingPercent": 102000,
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.02
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ONE MEMBER.",
+              "fontSize": 31,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.02
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "ONE VERIFIED VOTE.",
+          "lineSpacingPercent": 102000,
+          "resolvedTextStyle": {
+            "fontSize": 31,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 1.02
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ONE VERIFIED VOTE.",
+              "fontSize": 31,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 1.02
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1gzq58zy",
+      "id": "8",
+      "name": "election-process-proof",
+      "bbox": [
+        72,
+        342,
+        480,
+        22
+      ],
+      "geometry": "rect",
+      "text": "EMAIL OTP  •  IDENTITY CHECK  •  BALLOT RECEIPT",
+      "textPreview": "EMAIL OTP  •  IDENTITY CHECK  •  BALLOT RECEIPT",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Aptos Display",
+        "color": "#E8D6AB",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "EMAIL OTP  •  IDENTITY CHECK  •  BALLOT RECEIPT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "EMAIL OTP  •  IDENTITY CHECK  •  BALLOT RECEIPT",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Aptos Display",
+            "color": "#E8D6AB",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "EMAIL OTP  •  IDENTITY CHECK  •  BALLOT RECEIPT",
+              "fontSize": 12,
+              "typeface": "Aptos Display",
+              "color": "#E8D6AB",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0vqpw3yd",
+      "id": "9",
+      "name": "vote-item-0-disc",
+      "bbox": [
+        72,
+        382,
+        48,
+        48
+      ],
+      "rotation": 0,
+      "geometry": "ellipse",
+      "fillColor": "#174E3B",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/5cfyt03u",
+      "id": "10",
+      "bbox": [
+        84,
+        394,
+        24,
+        24
+      ],
+      "alt": "vote-item-0 line icon",
+      "contentType": "image/svg+xml",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "6da86a7a-5cde-4f82-a206-efb73acd8a8b",
+        "contentType": "image/svg+xml",
+        "byteLength": 287
+      }
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7ml0nalg",
+      "id": "11",
+      "name": "vote-label-0",
+      "bbox": [
+        134,
+        381,
+        162,
+        48
+      ],
+      "geometry": "rect",
+      "text": "Secure Online Voting",
+      "textPreview": "Secure Online Voting",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 17,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Secure Online Voting"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Secure Online Voting",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Secure Online Voting",
+              "fontSize": 17,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/snu1gf2l",
+      "id": "12",
+      "name": "vote-item-1-disc",
+      "bbox": [
+        302,
+        382,
+        48,
+        48
+      ],
+      "rotation": 0,
+      "geometry": "ellipse",
+      "fillColor": "#174E3B",
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/i9ozyl4j",
+      "id": "13",
+      "bbox": [
+        314,
+        394,
+        24,
+        24
+      ],
+      "alt": "vote-item-1 line icon",
+      "contentType": "image/svg+xml",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "c929f1a9-0d1f-44c7-b632-1eea0563b6f1",
+        "contentType": "image/svg+xml",
+        "byteLength": 264
+      }
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/upcji5kr",
+      "id": "14",
+      "name": "vote-label-1",
+      "bbox": [
+        364,
+        381,
+        162,
+        48
+      ],
+      "geometry": "rect",
+      "text": "OTP Verification",
+      "textPreview": "OTP Verification",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 17,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "OTP Verification"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "OTP Verification",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "OTP Verification",
+              "fontSize": 17,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/fql0ralc",
+      "id": "15",
+      "name": "vote-item-2-disc",
+      "bbox": [
+        72,
+        456,
+        48,
+        48
+      ],
+      "rotation": 0,
+      "geometry": "ellipse",
+      "fillColor": "#174E3B",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/v6dg36ls",
+      "id": "16",
+      "bbox": [
+        84,
+        468,
+        24,
+        24
+      ],
+      "alt": "vote-item-2 line icon",
+      "contentType": "image/svg+xml",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "a235603f-9a20-4643-b42a-4ef22bbb62a8",
+        "contentType": "image/svg+xml",
+        "byteLength": 389
+      }
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/hc32tk3i",
+      "id": "17",
+      "name": "vote-label-2",
+      "bbox": [
+        134,
+        455,
+        162,
+        48
+      ],
+      "geometry": "rect",
+      "text": "Duplicate Vote Prevention",
+      "textPreview": "Duplicate Vote Prevention",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 17,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Duplicate Vote"
+          },
+          {
+            "index": 2,
+            "text": "Prevention"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Duplicate Vote Prevention",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Duplicate Vote Prevention",
+              "fontSize": 17,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2dcjmpk3",
+      "id": "18",
+      "name": "vote-item-3-disc",
+      "bbox": [
+        302,
+        456,
+        48,
+        48
+      ],
+      "rotation": 0,
+      "geometry": "ellipse",
+      "fillColor": "#174E3B",
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/g3qh8fmh",
+      "id": "19",
+      "bbox": [
+        314,
+        468,
+        24,
+        24
+      ],
+      "alt": "vote-item-3 line icon",
+      "contentType": "image/svg+xml",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "cc1a2820-94ff-4609-9ded-6ea4778c7eb2",
+        "contentType": "image/svg+xml",
+        "byteLength": 247
+      }
+    },
+    {
+      "order": 20,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zi503uhg",
+      "id": "20",
+      "name": "vote-label-3",
+      "bbox": [
+        364,
+        455,
+        162,
+        48
+      ],
+      "geometry": "rect",
+      "text": "Live Results",
+      "textPreview": "Live Results",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 17,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Live Results"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Live Results",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Live Results",
+              "fontSize": 17,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 21,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ehwzap0v",
+      "id": "21",
+      "name": "org-left-header",
+      "bbox": [
+        72,
+        535,
+        470,
+        22
+      ],
+      "geometry": "rect",
+      "text": "ORGANIZATIONAL MANAGEMENT",
+      "textPreview": "ORGANIZATIONAL MANAGEMENT",
+      "resolvedFontSize": 13,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 13,
+        "typeface": "Aptos Display",
+        "color": "#C6A15B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "ORGANIZATIONAL MANAGEMENT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "ORGANIZATIONAL MANAGEMENT",
+          "resolvedTextStyle": {
+            "fontSize": 13,
+            "typeface": "Aptos Display",
+            "color": "#C6A15B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "ORGANIZATIONAL MANAGEMENT",
+              "fontSize": 13,
+              "typeface": "Aptos Display",
+              "color": "#C6A15B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 22,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1kni54zm",
+      "id": "22",
+      "name": "org-dot-0",
+      "bbox": [
+        72,
+        577,
+        9,
+        9
+      ],
+      "rotation": 0,
+      "geometry": "ellipse",
+      "fillColor": "#C6A15B",
+      "lineWidth": 0
+    },
+    {
+      "order": 23,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0jehczi1",
+      "id": "23",
+      "name": "org-label-0",
+      "bbox": [
+        90,
+        565,
+        145,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Application Review",
+      "textPreview": "Application Review",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Application Review"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Application Review",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Application Review",
+              "fontSize": 15,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 24,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/re50zahk",
+      "id": "24",
+      "name": "org-dot-1",
+      "bbox": [
+        231,
+        577,
+        9,
+        9
+      ],
+      "rotation": 0,
+      "geometry": "ellipse",
+      "fillColor": "#C6A15B",
+      "lineWidth": 0
+    },
+    {
+      "order": 25,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qdwz6p0z",
+      "id": "25",
+      "name": "org-label-1",
+      "bbox": [
+        249,
+        565,
+        128,
+        38
+      ],
+      "geometry": "rect",
+      "text": "CEC Management",
+      "textPreview": "CEC Management",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CEC Management"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CEC Management",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CEC Management",
+              "fontSize": 15,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 26,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/dgni1kzq",
+      "id": "26",
+      "name": "org-dot-2",
+      "bbox": [
+        373,
+        577,
+        9,
+        9
+      ],
+      "rotation": 0,
+      "geometry": "ellipse",
+      "fillColor": "#C6A15B",
+      "lineWidth": 0
+    },
+    {
+      "order": 27,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/cfeh8fi5",
+      "id": "27",
+      "name": "org-label-2",
+      "bbox": [
+        391,
+        565,
+        190,
+        38
+      ],
+      "geometry": "rect",
+      "text": "Advisory Council Management",
+      "textPreview": "Advisory Council Management",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Advisory Council Management"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Advisory Council Management",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Advisory Council Management",
+              "fontSize": 15,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 28,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/3ql0va18",
+      "id": "28",
+      "name": "election-results-shadow",
+      "bbox": [
+        638,
+        222,
+        570,
+        414
+      ],
+      "rotation": 0,
+      "geometry": "roundRect",
+      "fillColor": "rgba(0, 0, 0, 0.15686)",
+      "lineWidth": 0
+    },
+    {
+      "order": 29,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/2pcz2503",
+      "id": "29",
+      "name": "election-results-frame",
+      "bbox": [
+        626,
+        210,
+        582,
+        414
+      ],
+      "rotation": 0,
+      "geometry": "roundRect",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C6A15B",
+      "lineWidth": 1
+    },
+    {
+      "order": 30,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/rm5sve14",
+      "id": "30",
+      "bbox": [
+        640,
+        224,
+        554,
+        386
+      ],
+      "alt": "Real TNR election results dashboard screenshot",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "cea06bba-dbaf-4247-9ff2-2a8d11fa6d14",
+        "contentType": "image/png",
+        "byteLength": 124234
+      }
+    },
+    {
+      "order": 31,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/twje5gf6",
+      "id": "31",
+      "name": "footer-rule-8",
+      "bbox": [
+        72,
+        671,
+        1136,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#2D6552",
+      "lineWidth": 1
+    },
+    {
+      "order": 32,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6t8fa1gv",
+      "id": "32",
+      "name": "footer-label-8",
+      "bbox": [
+        72,
+        680,
+        420,
+        16
+      ],
+      "geometry": "rect",
+      "text": "CONNECTED • TRANSPARENT • FUTURE-READY",
+      "textPreview": "CONNECTED • TRANSPARENT • FUTURE-READY",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Aptos Display",
+        "color": "#A7BBB2",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CONNECTED • TRANSPARENT • FUTURE-READY"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CONNECTED • TRANSPARENT • FUTURE-READY",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos Display",
+            "color": "#A7BBB2",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CONNECTED • TRANSPARENT • FUTURE-READY",
+              "fontSize": 11,
+              "typeface": "Aptos Display",
+              "color": "#A7BBB2",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 33,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7u1w36x0",
+      "id": "33",
+      "name": "footer-page-8",
+      "bbox": [
+        1160,
+        678,
+        48,
+        18
+      ],
+      "geometry": "rect",
+      "text": "08",
+      "textPreview": "08",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Aptos Display",
+        "color": "#C6A15B",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "08"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "08",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Aptos Display",
+            "color": "#C6A15B",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "08",
+              "fontSize": 12,
+              "typeface": "Aptos Display",
+              "color": "#C6A15B",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

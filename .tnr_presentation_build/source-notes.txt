@@ -1,0 +1,8 @@
+TNR DIGITAL PLATFORM — source notes
+
+- All platform names, modules, features, benefits, presenter details, and closing language come from the user-provided brief dated 2026-08-04.
+- Official TNR logo supplied by the user: F:\TNR\tnr-logo-transparent.png.
+- No official platform screenshots were available in the workspace.
+- No random or AI-generated website imagery is used.
+- Platform interface frames are original, clearly labeled screenshot placeholders and illustrative layouts.
+- Clean line icons are sourced from Lucide v1.8.0 (ISC License), available in the bundled Codex presentation runtime: https://lucide.dev/

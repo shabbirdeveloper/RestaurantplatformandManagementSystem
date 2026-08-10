@@ -584,6 +584,9 @@
 .admin-history-fields { padding: 15px; }
 .admin-history-meta { display: grid; grid-template-columns: minmax(0, 1fr) 120px 150px; gap: 10px; }
 .admin-history-empty { padding: 28px 20px; border: 1px dashed var(--admin-border); border-radius: 12px; background: var(--admin-soft); color: var(--admin-muted); font-size: 11px; text-align: center; }
+.admin-ticker-editor > .admin-panel-heading p { max-width: 600px; margin: 6px 0 0; color: var(--admin-muted); font-size: 10px; line-height: 1.5; }
+.admin-ticker-preview { display: flex; min-height: 46px; align-items: center; gap: 13px; overflow: hidden; padding: 0 16px; border-block: 1px solid rgba(31, 77, 58, .16); background: var(--admin-soft); color: var(--admin-green); font-size: 10px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; white-space: nowrap; }
+.admin-ticker-preview i { width: 6px; height: 6px; flex: 0 0 auto; border-radius: 50%; background: var(--admin-green); box-shadow: 0 0 0 4px rgba(31, 77, 58, .08); }
 
 @media (max-width: 760px) {
   .admin-typography-fields { grid-template-columns: 1fr; }

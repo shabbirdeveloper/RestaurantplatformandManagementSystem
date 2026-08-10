@@ -1,0 +1,764 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/lp41oj",
+    "id": "lp41oj",
+    "slide": 1,
+    "layoutId": "1f8baa80-f68e-4d3c-9a3c-9a1e9cf67bba",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#071E18",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "1f8baa80-f68e-4d3c-9a3c-9a1e9cf67bba",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/h4vup0vm",
+      "id": "1",
+      "bbox": [
+        0,
+        0,
+        1280,
+        720
+      ],
+      "alt": "TNR community hero artwork supplied for the platform",
+      "contentType": "image/png",
+      "imageFit": "cover",
+      "asset": {
+        "assetId": "34a06351-2579-4e99-a307-081bdc647b0c",
+        "contentType": "image/png",
+        "byteLength": 2032237
+      }
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7yd07i1g",
+      "id": "2",
+      "name": "cover-left-overlay",
+      "bbox": [
+        0,
+        0,
+        738,
+        720
+      ],
+      "rotation": 0,
+      "geometry": "rect",
+      "fillColor": "rgba(7, 30, 24, 0.94902)",
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/6x4zyxkv",
+      "id": "3",
+      "name": "cover-image-wash",
+      "bbox": [
+        738,
+        0,
+        150,
+        720
+      ],
+      "rotation": 0,
+      "geometry": "rect",
+      "fillColor": "rgba(7, 30, 24, 0.47059)",
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/lwbi5sja",
+      "id": "4",
+      "name": "cover-divider",
+      "bbox": [
+        736,
+        0,
+        5,
+        720
+      ],
+      "rotation": 0,
+      "geometry": "rect",
+      "fillColor": "#C6A15B",
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/kv2hwn2p",
+      "id": "5",
+      "name": "cover-logo-halo",
+      "bbox": [
+        72,
+        46,
+        92,
+        92
+      ],
+      "rotation": 0,
+      "geometry": "ellipse",
+      "fillColor": "#FFFFFF",
+      "lineColor": "#C6A15B",
+      "lineWidth": 2
+    },
+    {
+      "order": 6,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/6d4ba1cz",
+      "id": "6",
+      "bbox": [
+        79,
+        53,
+        78,
+        78
+      ],
+      "alt": "Official TNR community logo",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "16c07013-443a-42e3-ad4e-62882c30583a",
+        "contentType": "image/png",
+        "byteLength": 1409219
+      }
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/y9kzudkz",
+      "id": "7",
+      "name": "cover-tag-line",
+      "bbox": [
+        190,
+        78,
+        74,
+        5
+      ],
+      "rotation": 0,
+      "geometry": "rect",
+      "fillColor": "#C6A15B",
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/5sfihcju",
+      "id": "8",
+      "name": "cover-eyebrow",
+      "bbox": [
+        190,
+        95,
+        430,
+        24
+      ],
+      "geometry": "rect",
+      "text": "TNR • DIGITAL TRANSFORMATION",
+      "textPreview": "TNR • DIGITAL TRANSFORMATION",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 15,
+        "typeface": "Aptos Display",
+        "color": "#E8D6AB",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TNR • DIGITAL TRANSFORMATION"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TNR • DIGITAL TRANSFORMATION",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos Display",
+            "color": "#E8D6AB",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TNR • DIGITAL TRANSFORMATION",
+              "fontSize": 15,
+              "typeface": "Aptos Display",
+              "color": "#E8D6AB",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/4r6187i9",
+      "id": "9",
+      "name": "cover-title",
+      "bbox": [
+        72,
+        188,
+        620,
+        142
+      ],
+      "geometry": "rect",
+      "text": "TNR DIGITAL\nPLATFORM",
+      "textPreview": "TNR DIGITAL | PLATFORM",
+      "resolvedFontSize": 59,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 59,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TNR DIGITAL"
+          },
+          {
+            "index": 2,
+            "text": "PLATFORM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TNR DIGITAL",
+          "lineSpacingPercent": 94000,
+          "resolvedTextStyle": {
+            "fontSize": 59,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 0.94
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TNR DIGITAL",
+              "fontSize": 59,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 0.94
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "PLATFORM",
+          "lineSpacingPercent": 94000,
+          "resolvedTextStyle": {
+            "fontSize": 59,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left",
+            "lineSpacing": 0.94
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "PLATFORM",
+              "fontSize": 59,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left",
+              "lineSpacing": 0.94
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ets3a9cb",
+      "id": "10",
+      "name": "cover-title-rule",
+      "bbox": [
+        72,
+        352,
+        168,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#C6A15B",
+      "lineWidth": 4
+    },
+    {
+      "order": 11,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zu14jetw",
+      "id": "11",
+      "name": "cover-subtitle",
+      "bbox": [
+        72,
+        382,
+        620,
+        92
+      ],
+      "geometry": "rect",
+      "text": "Building a Connected, Transparent and\nFuture-Ready Roundu Community",
+      "textPreview": "Building a Connected, Transparent and | Future-Ready Roundu Community",
+      "resolvedFontSize": 26,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 26,
+        "typeface": "Aptos",
+        "color": "#E8D6AB",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 2,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Building a Connected, Transparent and"
+          },
+          {
+            "index": 2,
+            "text": "Future-Ready Roundu Community"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Building a Connected, Transparent and",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Aptos",
+            "color": "#E8D6AB",
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Building a Connected, Transparent and",
+              "fontSize": 26,
+              "typeface": "Aptos",
+              "color": "#E8D6AB",
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        },
+        {
+          "index": 2,
+          "text": "Future-Ready Roundu Community",
+          "lineSpacingPercent": 112000,
+          "resolvedTextStyle": {
+            "fontSize": 26,
+            "typeface": "Aptos",
+            "color": "#E8D6AB",
+            "alignment": "left",
+            "lineSpacing": 1.12
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Future-Ready Roundu Community",
+              "fontSize": 26,
+              "typeface": "Aptos",
+              "color": "#E8D6AB",
+              "alignment": "left",
+              "lineSpacing": 1.12
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 12,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/0valcjuh",
+      "id": "12",
+      "name": "cover-presenter",
+      "bbox": [
+        72,
+        570,
+        370,
+        30
+      ],
+      "geometry": "rect",
+      "text": "SHABBIR HUSSAIN",
+      "textPreview": "SHABBIR HUSSAIN",
+      "resolvedFontSize": 21,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 21,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "SHABBIR HUSSAIN"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "SHABBIR HUSSAIN",
+          "resolvedTextStyle": {
+            "fontSize": 21,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "SHABBIR HUSSAIN",
+              "fontSize": 21,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 13,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/1wjmlobm",
+      "id": "13",
+      "name": "cover-role",
+      "bbox": [
+        72,
+        606,
+        370,
+        26
+      ],
+      "geometry": "rect",
+      "text": "Technical Coordinator – TNR",
+      "textPreview": "Technical Coordinator – TNR",
+      "resolvedFontSize": 17,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 17,
+        "typeface": "Aptos",
+        "color": "#AFC4BA",
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Technical Coordinator – TNR"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Technical Coordinator – TNR",
+          "resolvedTextStyle": {
+            "fontSize": 17,
+            "typeface": "Aptos",
+            "color": "#AFC4BA",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Technical Coordinator – TNR",
+              "fontSize": 17,
+              "typeface": "Aptos",
+              "color": "#AFC4BA",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/qp83m9cz",
+      "id": "14",
+      "name": "cover-date",
+      "bbox": [
+        72,
+        666,
+        380,
+        18
+      ],
+      "geometry": "rect",
+      "text": "OFFICIAL PLATFORM OVERVIEW",
+      "textPreview": "OFFICIAL PLATFORM OVERVIEW",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Aptos Display",
+        "color": "#C6A15B",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "OFFICIAL PLATFORM OVERVIEW"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "OFFICIAL PLATFORM OVERVIEW",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos Display",
+            "color": "#C6A15B",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "OFFICIAL PLATFORM OVERVIEW",
+              "fontSize": 11,
+              "typeface": "Aptos Display",
+              "color": "#C6A15B",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/rqh4fetk",
+      "id": "15",
+      "name": "cover-site",
+      "bbox": [
+        1020,
+        669,
+        188,
+        18
+      ],
+      "geometry": "rect",
+      "text": "EVOTEGB.COM",
+      "textPreview": "EVOTEGB.COM",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "EVOTEGB.COM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "EVOTEGB.COM",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "EVOTEGB.COM",
+              "fontSize": 11,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

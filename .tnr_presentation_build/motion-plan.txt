@@ -1,0 +1,9 @@
+TNR DIGITAL PLATFORM — animation plan
+
+- Use a smooth fade transition on every slide; advance remains presenter-controlled.
+- Titles and subtitles enter automatically with the slide.
+- The principal content build starts on one presenter click, then reveals in a concise staged sequence.
+- Use Fade for text and modules, Wipe for the membership journey, and Zoom for the official logo and central identity/value moments.
+- Keep durations between 0.30 and 0.60 seconds; avoid sound, bouncing, spinning, or continuous motion.
+- Preserve the official-logo static deck as a fallback copy.
+

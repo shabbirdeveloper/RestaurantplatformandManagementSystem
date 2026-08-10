@@ -1,0 +1,880 @@
+{
+  "schema": "openai.presentation.layout/v4",
+  "unit": "px",
+  "slide": {
+    "aid": "sl/8xdyo9",
+    "id": "8xdyo9",
+    "slide": 6,
+    "layoutId": "1f8baa80-f68e-4d3c-9a3c-9a1e9cf67bba",
+    "layoutName": "Title Slide",
+    "layoutType": "title",
+    "masterLayoutId": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+    "masterLayoutName": "Master",
+    "backgroundColor": "#FFFFFF",
+    "frame": {
+      "left": 0,
+      "top": 0,
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "theme": {
+    "colorSchemeName": "ChatGPT",
+    "colors": {
+      "accent1": "#156082",
+      "accent2": "#E97132",
+      "accent3": "#196B24",
+      "accent4": "#0F9ED5",
+      "accent5": "#A02B93",
+      "accent6": "#4EA72E",
+      "bg1": "#FFFFFF",
+      "bg2": "#000000",
+      "tx1": "#1F1F1F",
+      "tx2": "#FFFFFF",
+      "dk1": "#000000",
+      "lt1": "#FFFFFF",
+      "dk2": "#0E2841",
+      "lt2": "#E8E8E8",
+      "hlink": "#467886",
+      "folHlink": "#96607D"
+    },
+    "typefaces": [
+      "Aptos",
+      "Aptos Display"
+    ]
+  },
+  "inheritedLayers": [
+    {
+      "scope": "layout",
+      "id": "1f8baa80-f68e-4d3c-9a3c-9a1e9cf67bba",
+      "name": "Title Slide",
+      "type": "title",
+      "parentLayoutId": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+      "elements": []
+    },
+    {
+      "scope": "master",
+      "id": "6b1bfcc2-8bf1-4fbf-a676-dfd1c9c6481e",
+      "name": "Master",
+      "type": "master",
+      "elements": []
+    }
+  ],
+  "elements": [
+    {
+      "order": 1,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/ve1k3y1w",
+      "id": "1",
+      "name": "brand-gold-square",
+      "bbox": [
+        72,
+        42,
+        10,
+        10
+      ],
+      "rotation": 0,
+      "geometry": "rect",
+      "fillColor": "#C6A15B",
+      "lineWidth": 0
+    },
+    {
+      "order": 2,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/gfu1c32h",
+      "id": "2",
+      "name": "brand-tag",
+      "bbox": [
+        94,
+        36,
+        260,
+        22
+      ],
+      "geometry": "rect",
+      "text": "TNR DIGITAL PLATFORM",
+      "textPreview": "TNR DIGITAL PLATFORM",
+      "resolvedFontSize": 14,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 14,
+        "typeface": "Aptos Display",
+        "color": "#0D3B2E",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "TNR DIGITAL PLATFORM"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "TNR DIGITAL PLATFORM",
+          "resolvedTextStyle": {
+            "fontSize": 14,
+            "typeface": "Aptos Display",
+            "color": "#0D3B2E",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "TNR DIGITAL PLATFORM",
+              "fontSize": 14,
+              "typeface": "Aptos Display",
+              "color": "#0D3B2E",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 3,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/h03258j2",
+      "id": "3",
+      "name": "slide-title",
+      "bbox": [
+        72,
+        82,
+        1136,
+        54
+      ],
+      "geometry": "rect",
+      "text": "Digital identity is visible—and instantly verifiable",
+      "textPreview": "Digital identity is visible—and instantly verifiable",
+      "resolvedFontSize": 38,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 38,
+        "typeface": "Aptos Display",
+        "color": "#0D3B2E",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Digital identity is visible—and instantly verifiable"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Digital identity is visible—and instantly verifiable",
+          "resolvedTextStyle": {
+            "fontSize": 38,
+            "typeface": "Aptos Display",
+            "color": "#0D3B2E",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Digital identity is visible—and instantly verifiable",
+              "fontSize": 38,
+              "typeface": "Aptos Display",
+              "color": "#0D3B2E",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 4,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m9sj6tkf",
+      "id": "4",
+      "name": "slide-subtitle",
+      "bbox": [
+        72,
+        141,
+        1030,
+        32
+      ],
+      "geometry": "rect",
+      "text": "The actual member card and certificate carry the credentials needed to confirm identity and status.",
+      "textPreview": "The actual member card and certificate carry the credentials needed to confirm identity and status.",
+      "resolvedFontSize": 18,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 18,
+        "typeface": "Aptos",
+        "color": "#6E7A73",
+        "alignment": "left",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "The actual member card and certificate carry the credentials needed to confirm identity and status."
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "The actual member card and certificate carry the credentials needed to confirm identity and status.",
+          "resolvedTextStyle": {
+            "fontSize": 18,
+            "typeface": "Aptos",
+            "color": "#6E7A73",
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "The actual member card and certificate carry the credentials needed to confirm identity and status.",
+              "fontSize": 18,
+              "typeface": "Aptos",
+              "color": "#6E7A73",
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 5,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/7a1kzy10",
+      "id": "5",
+      "name": "identity-front-label",
+      "bbox": [
+        72,
+        199,
+        222,
+        20
+      ],
+      "geometry": "rect",
+      "text": "DIGITAL CARD • FRONT",
+      "textPreview": "DIGITAL CARD • FRONT",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Aptos Display",
+        "color": "#C6A15B",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "DIGITAL CARD • FRONT"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "DIGITAL CARD • FRONT",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos Display",
+            "color": "#C6A15B",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "DIGITAL CARD • FRONT",
+              "fontSize": 11,
+              "typeface": "Aptos Display",
+              "color": "#C6A15B",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 6,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/8ba18j2l",
+      "id": "6",
+      "name": "identity-back-label",
+      "bbox": [
+        316,
+        199,
+        222,
+        20
+      ],
+      "geometry": "rect",
+      "text": "QR VERIFICATION • BACK",
+      "textPreview": "QR VERIFICATION • BACK",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Aptos Display",
+        "color": "#C6A15B",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "QR VERIFICATION • BACK"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "QR VERIFICATION • BACK",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos Display",
+            "color": "#C6A15B",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "QR VERIFICATION • BACK",
+              "fontSize": 11,
+              "typeface": "Aptos Display",
+              "color": "#C6A15B",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 7,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/tcj21ojq",
+      "id": "7",
+      "name": "identity-certificate-label",
+      "bbox": [
+        668,
+        199,
+        540,
+        20
+      ],
+      "geometry": "rect",
+      "text": "MEMBERSHIP CERTIFICATE • QR + REFERENCE",
+      "textPreview": "MEMBERSHIP CERTIFICATE • QR + REFERENCE",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Aptos Display",
+        "color": "#C6A15B",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "MEMBERSHIP CERTIFICATE • QR + REFERENCE"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "MEMBERSHIP CERTIFICATE • QR + REFERENCE",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos Display",
+            "color": "#C6A15B",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "MEMBERSHIP CERTIFICATE • QR + REFERENCE",
+              "fontSize": 11,
+              "typeface": "Aptos Display",
+              "color": "#C6A15B",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 8,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/q5cjidkj",
+      "id": "8",
+      "name": "identity-front-shadow",
+      "bbox": [
+        80,
+        238,
+        222,
+        341
+      ],
+      "rotation": 0,
+      "geometry": "roundRect",
+      "fillColor": "rgba(0, 0, 0, 0.09412)",
+      "lineWidth": 0
+    },
+    {
+      "order": 9,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/r65kbi14",
+      "id": "9",
+      "name": "identity-back-shadow",
+      "bbox": [
+        324,
+        238,
+        222,
+        341
+      ],
+      "rotation": 0,
+      "geometry": "roundRect",
+      "fillColor": "rgba(0, 0, 0, 0.09412)",
+      "lineWidth": 0
+    },
+    {
+      "order": 10,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/belc7qx8",
+      "id": "10",
+      "name": "identity-certificate-shadow",
+      "bbox": [
+        678,
+        238,
+        530,
+        378
+      ],
+      "rotation": 0,
+      "geometry": "roundRect",
+      "fillColor": "rgba(0, 0, 0, 0.08627)",
+      "lineWidth": 0
+    },
+    {
+      "order": 11,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/xw3atore",
+      "id": "11",
+      "bbox": [
+        72,
+        229,
+        222,
+        341
+      ],
+      "alt": "Actual TNR digital membership card front",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "6947a8ff-5c74-483d-85c9-6007e30baf99",
+        "contentType": "image/png",
+        "byteLength": 127030
+      }
+    },
+    {
+      "order": 12,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/atcbi98n",
+      "id": "12",
+      "bbox": [
+        316,
+        229,
+        222,
+        341
+      ],
+      "alt": "Actual TNR digital membership card QR verification back",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "af606303-796d-4f2b-ad3a-9892c7c3a4ab",
+        "contentType": "image/png",
+        "byteLength": 107898
+      }
+    },
+    {
+      "order": 13,
+      "kind": "image",
+      "scope": "slide",
+      "aid": "im/bulsre98",
+      "id": "13",
+      "bbox": [
+        668,
+        229,
+        540,
+        385
+      ],
+      "alt": "Actual TNR membership certificate with QR and reference number",
+      "contentType": "image/png",
+      "imageFit": "contain",
+      "asset": {
+        "assetId": "e42ea11d-bd2e-4a08-85e7-a2d5cf112381",
+        "contentType": "image/png",
+        "byteLength": 109112
+      }
+    },
+    {
+      "order": 14,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/zilcbqxk",
+      "id": "14",
+      "name": "identity-divider",
+      "bbox": [
+        603,
+        232,
+        0,
+        368
+      ],
+      "geometry": "line",
+      "lineColor": "#E8D6AB",
+      "lineWidth": 2
+    },
+    {
+      "order": 15,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/yhcvilwz",
+      "id": "15",
+      "name": "identity-feature-band",
+      "bbox": [
+        72,
+        620,
+        1136,
+        42
+      ],
+      "rotation": 0,
+      "geometry": "roundRect",
+      "fillColor": "#0D3B2E",
+      "lineWidth": 0
+    },
+    {
+      "order": 16,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/l43ed0fq",
+      "id": "16",
+      "name": "identity-features",
+      "bbox": [
+        92,
+        629,
+        1096,
+        24
+      ],
+      "geometry": "rect",
+      "text": "Unique Membership ID   •   QR-verified Digital Card   •   Certificate Verification   •   Reference Number Verification   •   Secure Member Records",
+      "textPreview": "Unique Membership ID   •   QR-verified Digital Card   •   Certificate Verification   •   Reference Number Verification   •   Secure Membe...",
+      "resolvedFontSize": 15,
+      "resolvedTextStyle": {
+        "anchor": 2,
+        "fontSize": 15,
+        "typeface": "Aptos Display",
+        "color": "#FFFFFF",
+        "bold": true,
+        "alignment": "center",
+        "verticalAlignment": "middle",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "Unique Membership ID   •   QR-verified Digital Card   •   Certificate Verification   •   Reference Number Verification   •   Secure Member Records"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "Unique Membership ID   •   QR-verified Digital Card   •   Certificate Verification   •   Reference Number Verification   •   Secure Member Records",
+          "resolvedTextStyle": {
+            "fontSize": 15,
+            "typeface": "Aptos Display",
+            "color": "#FFFFFF",
+            "bold": true,
+            "alignment": "center"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "Unique Membership ID   •   QR-verified Digital Card   •   Certificate Verification   •   Reference Number Verification   •   Secure Member Records",
+              "fontSize": 15,
+              "typeface": "Aptos Display",
+              "color": "#FFFFFF",
+              "bold": true,
+              "alignment": "center"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 17,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/k3udkve5",
+      "id": "17",
+      "name": "footer-rule-6",
+      "bbox": [
+        72,
+        671,
+        1136,
+        0
+      ],
+      "geometry": "line",
+      "lineColor": "#DADDD7",
+      "lineWidth": 1
+    },
+    {
+      "order": 18,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/765wfaxg",
+      "id": "18",
+      "name": "footer-label-6",
+      "bbox": [
+        72,
+        680,
+        420,
+        16
+      ],
+      "geometry": "rect",
+      "text": "CONNECTED • TRANSPARENT • FUTURE-READY",
+      "textPreview": "CONNECTED • TRANSPARENT • FUTURE-READY",
+      "resolvedFontSize": 11,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 11,
+        "typeface": "Aptos Display",
+        "color": "#6E7A73",
+        "bold": true,
+        "alignment": "left",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "CONNECTED • TRANSPARENT • FUTURE-READY"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "CONNECTED • TRANSPARENT • FUTURE-READY",
+          "resolvedTextStyle": {
+            "fontSize": 11,
+            "typeface": "Aptos Display",
+            "color": "#6E7A73",
+            "bold": true,
+            "alignment": "left"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "CONNECTED • TRANSPARENT • FUTURE-READY",
+              "fontSize": 11,
+              "typeface": "Aptos Display",
+              "color": "#6E7A73",
+              "bold": true,
+              "alignment": "left"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    },
+    {
+      "order": 19,
+      "kind": "shape",
+      "scope": "slide",
+      "aid": "sh/m5wvm5wv",
+      "id": "19",
+      "name": "footer-page-6",
+      "bbox": [
+        1160,
+        678,
+        48,
+        18
+      ],
+      "geometry": "rect",
+      "text": "06",
+      "textPreview": "06",
+      "resolvedFontSize": 12,
+      "resolvedTextStyle": {
+        "anchor": 1,
+        "fontSize": 12,
+        "typeface": "Aptos Display",
+        "color": "#0D3B2E",
+        "bold": true,
+        "alignment": "right",
+        "verticalAlignment": "top",
+        "wrap": "square",
+        "autoFit": "none",
+        "insets": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0
+        }
+      },
+      "textLayout": {
+        "lineCount": 1,
+        "lines": [
+          {
+            "index": 1,
+            "text": "06"
+          }
+        ]
+      },
+      "paragraphs": [
+        {
+          "index": 1,
+          "text": "06",
+          "resolvedTextStyle": {
+            "fontSize": 12,
+            "typeface": "Aptos Display",
+            "color": "#0D3B2E",
+            "bold": true,
+            "alignment": "right"
+          },
+          "runs": [
+            {
+              "index": 1,
+              "text": "06",
+              "fontSize": 12,
+              "typeface": "Aptos Display",
+              "color": "#0D3B2E",
+              "bold": true,
+              "alignment": "right"
+            }
+          ],
+          "marginLeft": 0
+        }
+      ],
+      "lineWidth": 0
+    }
+  ],
+  "composeRuns": []
+}

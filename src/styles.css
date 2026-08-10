@@ -1828,7 +1828,55 @@ body {
 }
 .home-page .quick-info-item svg { color: var(--maroon); }
 
-.homepage-stats { padding: 62px 0 18px; background: var(--white); }
+.welcome-ticker { padding: 28px 0 0; overflow: hidden; background: var(--white); }
+.welcome-ticker-window {
+  position: relative;
+  min-height: 54px;
+  overflow: hidden;
+  border-block: 1px solid rgba(31, 77, 58, .16);
+  background: linear-gradient(90deg, rgba(31, 77, 58, .025), transparent 18%, transparent 82%, rgba(31, 77, 58, .025));
+}
+.welcome-ticker-window::before,
+.welcome-ticker-window::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 54px;
+  content: '';
+  pointer-events: none;
+}
+.welcome-ticker-window::before { left: 0; background: linear-gradient(90deg, var(--white), transparent); }
+.welcome-ticker-window::after { right: 0; background: linear-gradient(270deg, var(--white), transparent); }
+.welcome-ticker-track {
+  display: flex;
+  width: max-content;
+  min-height: 54px;
+  align-items: center;
+  animation: welcome-ticker-left var(--ticker-duration, 18s) linear infinite;
+  will-change: transform;
+}
+.welcome-ticker.moves-right .welcome-ticker-track { animation-name: welcome-ticker-right; }
+.welcome-ticker-window:hover .welcome-ticker-track { animation-play-state: paused; }
+.welcome-ticker-group { display: flex; flex: 0 0 auto; align-items: center; }
+.welcome-ticker-message {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding-inline: 34px;
+  color: var(--maroon);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .14em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.welcome-ticker-message i { width: 6px; height: 6px; border-radius: 50%; background: var(--maroon); box-shadow: 0 0 0 5px rgba(31, 77, 58, .08); }
+@keyframes welcome-ticker-left { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes welcome-ticker-right { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+
+.homepage-stats { padding: 30px 0 18px; background: var(--white); }
 .homepage-stats-grid { border-color: rgba(31, 77, 58, .13); }
 .homepage-stat { min-height: 122px; }
 .homepage-stat strong { color: var(--maroon); font-size: clamp(32px, 3.4vw, 46px); }
@@ -2231,7 +2279,13 @@ body {
   .home-page .quick-info-inner { padding: 8px; }
   .home-page .quick-info-item { color: #414943; font-size: 9px; }
 
-  .homepage-stats { padding: 42px 0 0; }
+  .welcome-ticker { padding-top: 18px; }
+  .welcome-ticker-window,
+  .welcome-ticker-track { min-height: 44px; }
+  .welcome-ticker-message { gap: 12px; padding-inline: 24px; font-size: 10px; letter-spacing: .11em; }
+  .welcome-ticker-window::before,
+  .welcome-ticker-window::after { width: 28px; }
+  .homepage-stats { padding: 26px 0 0; }
   .homepage-stat { min-height: 98px; }
   .homepage-stat strong { font-size: 32px; }
   .home-page .coverflow-section { padding-block: 64px; }
@@ -2287,6 +2341,8 @@ body {
   .category-card:hover img,
   .about-band-image:hover img,
   .home-team-card:hover { transform: none; }
+  .welcome-ticker-track { animation: none; transform: none; }
+  .welcome-ticker-group:nth-child(2) { display: none; }
 }
 
 /* Floating WhatsApp contact */

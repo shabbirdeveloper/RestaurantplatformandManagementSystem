@@ -1,0 +1,27 @@
+TNR Digital Platform presentation update - source notes
+
+User-provided assets
+- Official logo: assets/tnr-logo-transparent.png
+- Hero artwork: assets/hero.jpg
+- Member portal dashboard: assets/tnr portal dashbaoard.png
+- Membership card: assets/TNR Card.pdf, rendered as pdf_renders/tnr-card-front.png and tnr-card-back.png
+- Membership certificate: assets/tnr certificate.pdf, rendered as pdf_renders/tnr-certificate-cropped.png
+- AI Assistant interface: assets/ai-assistant-real.png, user-provided real platform screenshot
+- Election results dashboard: assets/election-results-real.png, user-provided real platform screenshot
+- Circle-animation reference: assets/circle-animation-reference.png, user annotation identifying the slide 3 timeline nodes
+
+User-provided platform status, 2026-08-05
+- Completed / implemented module inventory: 24 modules across the public website, membership, verification, elections, AI and CV services, councils, organizational workflows, information, communications, administration, security and analytics.
+- Upcoming / planned module inventory: 30 modules across community services, inclusion, regional and overseas networks, learning, talent, emergency response, digital participation and research.
+- The final slide is a Thank You / Questions & Answers close.
+
+Live platform review, accessed 2026-08-04
+- Main public platform: https://www.evotegb.com/
+  Public navigation and services include membership, leadership, opportunities, Roundu statistics, public verification, member login and election access.
+- Membership overview: https://www.evotegb.com/membership
+  The live page describes online application, committee review, approval with a unique membership ID, and portal access. It also lists digital identity, card/certificate, CV and cover-letter tools, opportunities, community and volunteering benefits.
+- Election portal: https://www.evotegb.com/election-portal
+  The live process describes a six-digit email OTP with a five-minute expiry, member identity confirmation, candidate/profile/manifesto review, one complete ballot submission and a unique receipt code. The portal also exposes election overview and results routes; voting was not yet open at review time.
+
+Icons
+- Lucide v1.8.0, ISC License: https://lucide.dev/

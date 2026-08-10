@@ -19,6 +19,8 @@ const navItems = [
   { label: 'Home', href: '/' }, { label: 'Menu', href: '/menu' }, { label: 'Services', href: '/services' }, { label: 'Promotions', href: '/promotions' }, { label: 'Branches', href: '/branches' }, { label: 'About Us', href: '/about' }, { label: 'Our Team', href: '/our-team' }, { label: 'Gallery', href: '/gallery' }, { label: 'Contact', href: '/contact' },
 ];
 
+const tickerRepeatSlots = [0, 1, 2, 3, 4, 5];
+
 const routeMeta = {
   '/': ['Naseeb Chapati Restaurant | Authentic Flavours, Freshly Served', 'Authentic Pakistani favourites, fresh chapati, naan, biryani, grills, and family meals across Johor.'],
   '/menu': ['Full Menu | Naseeb Chapati Restaurant', 'Search the Naseeb Chapati menu by dish, category, spice level, vegetarian options, and branch availability.'],
@@ -361,6 +363,14 @@ function QuickInfo() {
   return <section className="quick-info"><MotionGroup className="container quick-info-inner" amount={.2}>{items.map((item, index) => { const Icon = iconMap[item.icon] || Check; return <MotionCard as="div" className="quick-info-item" key={item.title} index={index}><Icon size={20} /><span>{item.title}</span></MotionCard>; })}</MotionGroup></section>;
 }
 
+function WelcomeTicker() {
+  const text = String(homepageContent.tickerText || '').trim();
+  if (homepageContent.showTicker === false || !text) return null;
+  const duration = Math.min(60, Math.max(8, Number(homepageContent.tickerSpeed) || 18));
+  const direction = homepageContent.tickerDirection === 'right' ? 'right' : 'left';
+  return <section className={`welcome-ticker moves-${direction}`} aria-label={`Restaurant announcement: ${text}`}><div className="container welcome-ticker-window"><div className="welcome-ticker-track" aria-hidden="true" style={{ '--ticker-duration': `${duration}s` }}>{[0, 1].map((group) => <div className="welcome-ticker-group" key={group}>{tickerRepeatSlots.map((slot) => <span className="welcome-ticker-message" key={`${group}-${slot}`}><i />{text}</span>)}</div>)}</div></div></section>;
+}
+
 function HomepageStats() {
   const stats = Array.isArray(homepageContent.stats)
     ? homepageContent.stats.filter((item) => item?.value && item?.label)
@@ -639,7 +649,7 @@ function SocialSection() {
 }
 
 function HomePage() {
-  return <div className="home-page"><Hero /><QuickInfo /><HomepageStats /><FoodCoverflow /><BestSellers /><CategoryGrid /><AboutBand /><PromotionsSection /><HomeTeamSection /><ReviewSection /><GalleryStrip /><ReservationSection /><HistorySection /><SocialSection /><BranchSection /></div>;
+  return <div className="home-page"><Hero /><QuickInfo /><WelcomeTicker /><HomepageStats /><FoodCoverflow /><BestSellers /><CategoryGrid /><AboutBand /><PromotionsSection /><HomeTeamSection /><ReviewSection /><GalleryStrip /><ReservationSection /><HistorySection /><SocialSection /><BranchSection /></div>;
 }
 
 function DishModal({ item, onClose }) {
