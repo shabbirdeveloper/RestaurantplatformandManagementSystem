@@ -433,6 +433,101 @@ on public.team_members for delete
 to authenticated
 using (auth.uid() is not null);
 
+-- Public career openings managed from Admin -> Website Content -> Careers.
+create table if not exists public.career_roles (
+  id uuid primary key default gen_random_uuid(),
+  title text not null check (char_length(trim(title)) between 2 and 160),
+  slug text not null unique check (slug ~ '^[a-z0-9]+(?:-[a-z0-9]+)*$'),
+  short_description text not null check (char_length(trim(short_description)) between 10 and 500),
+  full_description text,
+  image text,
+  image_alt text,
+  location text,
+  employment_type text,
+  department text,
+  requirements jsonb not null default '[]'::jsonb check (jsonb_typeof(requirements) = 'array'),
+  contact_email text,
+  display_order integer not null default 0 check (display_order >= 0),
+  featured boolean not null default false,
+  status text not null default 'Draft' check (status in ('Draft', 'Published', 'Archived')),
+  created_at timestamptz not null default timezone('utc', now()),
+  updated_at timestamptz not null default timezone('utc', now())
+);
+
+drop trigger if exists career_roles_updated_at on public.career_roles;
+create trigger career_roles_updated_at
+before update on public.career_roles
+for each row execute function public.naseeb_set_updated_at();
+
+create index if not exists career_roles_status_order_idx
+on public.career_roles (status, featured desc, display_order, title);
+
+create index if not exists career_roles_published_order_idx
+on public.career_roles (featured desc, display_order, title)
+where status = 'Published';
+
+alter table public.career_roles enable row level security;
+
+drop policy if exists "Public can read published career roles" on public.career_roles;
+create policy "Public can read published career roles"
+on public.career_roles for select
+to anon
+using (status = 'Published');
+
+drop policy if exists "Authenticated admins can read career roles" on public.career_roles;
+create policy "Authenticated admins can read career roles"
+on public.career_roles for select to authenticated
+using (auth.uid() is not null);
+
+drop policy if exists "Authenticated admins can insert career roles" on public.career_roles;
+create policy "Authenticated admins can insert career roles"
+on public.career_roles for insert to authenticated
+with check (auth.uid() is not null);
+
+drop policy if exists "Authenticated admins can update career roles" on public.career_roles;
+create policy "Authenticated admins can update career roles"
+on public.career_roles for update to authenticated
+using (auth.uid() is not null)
+with check (auth.uid() is not null);
+
+drop policy if exists "Authenticated admins can delete career roles" on public.career_roles;
+create policy "Authenticated admins can delete career roles"
+on public.career_roles for delete to authenticated
+using (auth.uid() is not null);
+
+insert into public.career_roles (
+  title, slug, short_description, full_description, image, image_alt, location, employment_type,
+  department, requirements, display_order, featured, status
+) values
+  (
+    'Waiters / Waitresses', 'waiters-waitresses',
+    'Deliver warm, attentive table service and help every guest enjoy a welcoming dining experience.',
+    'Support guests from arrival through the end of their meal while keeping tables, orders, and service areas organised.',
+    '/careers/waiters-waitresses.webp', 'Restaurant waiter welcoming guests with a prepared dish',
+    'All branches', 'Full-time', 'Service',
+    '["Friendly and respectful communication", "Comfortable working with a busy service team", "Committed to clean and attentive service"]'::jsonb,
+    0, true, 'Published'
+  ),
+  (
+    'Cashier', 'cashier',
+    'Manage guest payments and order details accurately while keeping the counter experience friendly and efficient.',
+    'Welcome guests at the counter, process payments carefully, and coordinate clearly with the kitchen and service team.',
+    '/careers/cashier.webp', 'Restaurant cashier operating the point-of-sale system',
+    'All branches', 'Full-time', 'Front of House',
+    '["Accurate with payments and order details", "Clear and friendly communication", "Able to stay organised during busy periods"]'::jsonb,
+    1, false, 'Published'
+  ),
+  (
+    'Cook', 'cook',
+    'Prepare fresh dishes with care, consistency, and respect for Naseeb Chapati recipes and kitchen standards.',
+    'Work with the kitchen team to prepare ingredients, cook menu items consistently, and maintain a clean, safe workspace.',
+    '/careers/cook.webp', 'Restaurant cook preparing curry in the kitchen',
+    'All branches', 'Full-time', 'Kitchen',
+    '["Experience in a restaurant kitchen is preferred", "Strong food-safety and cleanliness habits", "Reliable teamwork during service"]'::jsonb,
+    2, false, 'Published'
+  )
+on conflict (slug) do nothing;
+
 -- Public event and catering enquiries. Service content itself is stored in the
 -- versioned CMS payload so the existing website publishing workflow stays atomic.
 create table if not exists public.naseeb_event_enquiries (

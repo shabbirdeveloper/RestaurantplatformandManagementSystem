@@ -253,4 +253,98 @@ export async function reorderTeamMembers(members) {
   return { error: results.find((result) => result.error)?.error || null };
 }
 
+const CAREER_ROLE_COLUMNS = 'id, title, slug, short_description, full_description, image, image_alt, location, employment_type, department, requirements, contact_email, display_order, featured, status, created_at, updated_at';
+
+export function createCareerSlug(value = '') {
+  return String(value)
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 120);
+}
+
+function normalizeCareerRole(role) {
+  if (!role) return role;
+  return {
+    ...role,
+    requirements: Array.isArray(role.requirements) ? role.requirements.filter(Boolean) : [],
+    display_order: Number.isFinite(Number(role.display_order)) ? Number(role.display_order) : 0,
+    featured: Boolean(role.featured),
+  };
+}
+
+function careerRolePayload(role) {
+  const nullableFields = ['full_description', 'image', 'image_alt', 'location', 'employment_type', 'department', 'contact_email'];
+  const payload = {
+    title: String(role.title || '').trim(),
+    slug: createCareerSlug(role.slug || role.title),
+    short_description: String(role.short_description || '').trim(),
+    requirements: Array.isArray(role.requirements) ? role.requirements.map((item) => String(item).trim()).filter(Boolean) : [],
+    display_order: Math.max(0, Number(role.display_order) || 0),
+    featured: Boolean(role.featured),
+    status: ['Draft', 'Published', 'Archived'].includes(role.status) ? role.status : 'Draft',
+  };
+  nullableFields.forEach((field) => {
+    const value = typeof role[field] === 'string' ? role[field].trim() : role[field];
+    payload[field] = value || null;
+  });
+  return payload;
+}
+
+export async function listPublishedCareerRoles() {
+  if (!supabase) return { data: [], error: new Error('Supabase is not configured.') };
+  const { data, error } = await supabase
+    .from('career_roles')
+    .select(CAREER_ROLE_COLUMNS)
+    .eq('status', 'Published')
+    .order('featured', { ascending: false })
+    .order('display_order', { ascending: true })
+    .order('title', { ascending: true });
+  return { data: (data || []).map(normalizeCareerRole), error };
+}
+
+export async function listAdminCareerRoles() {
+  if (!supabase) return { data: [], error: new Error('Supabase is not configured.') };
+  const { data, error } = await supabase
+    .from('career_roles')
+    .select(CAREER_ROLE_COLUMNS)
+    .order('display_order', { ascending: true })
+    .order('updated_at', { ascending: false });
+  return { data: (data || []).map(normalizeCareerRole), error };
+}
+
+export async function saveCareerRole(role) {
+  if (!supabase) return { data: null, error: new Error('Supabase is not configured.') };
+  const payload = careerRolePayload(role);
+  const query = role.id
+    ? supabase.from('career_roles').update(payload).eq('id', role.id)
+    : supabase.from('career_roles').insert(payload);
+  const { data, error } = await query.select(CAREER_ROLE_COLUMNS).single();
+  return { data: normalizeCareerRole(data), error };
+}
+
+export async function updateCareerRoles(ids, changes) {
+  if (!supabase) return { data: [], error: new Error('Supabase is not configured.') };
+  if (!ids.length) return { data: [], error: null };
+  const allowed = {};
+  if (changes.status && ['Draft', 'Published', 'Archived'].includes(changes.status)) allowed.status = changes.status;
+  if (typeof changes.featured === 'boolean') allowed.featured = changes.featured;
+  const { data, error } = await supabase.from('career_roles').update(allowed).in('id', ids).select(CAREER_ROLE_COLUMNS);
+  return { data: (data || []).map(normalizeCareerRole), error };
+}
+
+export async function deleteCareerRoles(ids) {
+  if (!supabase) return { error: new Error('Supabase is not configured.') };
+  if (!ids.length) return { error: null };
+  const { error } = await supabase.from('career_roles').delete().in('id', ids);
+  return { error };
+}
+
+export async function reorderCareerRoles(roles) {
+  if (!supabase) return { error: new Error('Supabase is not configured.') };
+  const results = await Promise.all(roles.map((role, index) => supabase.from('career_roles').update({ display_order: index }).eq('id', role.id)));
+  return { error: results.find((result) => result.error)?.error || null };
+}
+
 export { CONTENT_ROW_ID };

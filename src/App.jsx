@@ -13,10 +13,11 @@ const TeamPage = lazy(() => import('./team/TeamPages').then((module) => ({ defau
 const TeamProfilePage = lazy(() => import('./team/TeamPages').then((module) => ({ default: module.TeamProfilePage })));
 const ServicesPage = lazy(() => import('./services/ServicesPages').then((module) => ({ default: module.ServicesPage })));
 const ServiceDetailPage = lazy(() => import('./services/ServicesPages').then((module) => ({ default: module.ServiceDetailPage })));
+const CareersPage = lazy(() => import('./careers/CareersPage'));
 const DegreeSample = lazy(() => import('./degree/DegreeSample'));
 
 const navItems = [
-  { label: 'Home', href: '/' }, { label: 'Menu', href: '/menu' }, { label: 'Services', href: '/services' }, { label: 'Promotions', href: '/promotions' }, { label: 'Branches', href: '/branches' }, { label: 'About Us', href: '/about' }, { label: 'Our Team', href: '/our-team' }, { label: 'Gallery', href: '/gallery' }, { label: 'Contact', href: '/contact' },
+  { label: 'Home', href: '/' }, { label: 'Menu', href: '/menu' }, { label: 'Services', href: '/services' }, { label: 'Promotions', href: '/promotions' }, { label: 'Branches', href: '/branches' }, { label: 'About Us', href: '/about' }, { label: 'Our Team', href: '/our-team' }, { label: 'Careers', href: '/careers' }, { label: 'Gallery', href: '/gallery' }, { label: 'Contact', href: '/contact' },
 ];
 
 const tickerRepeatSlots = [0, 1, 2, 3, 4, 5];
@@ -29,6 +30,7 @@ const routeMeta = {
   '/services': [servicesContent.settings.seoTitle, servicesContent.settings.seoDescription],
   '/about': ['About Us | Naseeb Chapati Restaurant', 'Discover the warm, family-first story behind Naseeb Chapati Restaurant.'],
   '/our-team': ['Our Team | Naseeb Chapati Restaurant', 'Meet the leadership team behind Naseeb Chapati Restaurant and its commitment to authentic Pakistani cuisine.'],
+  '/careers': ['Careers | Naseeb Chapati Restaurant', 'Explore current restaurant careers and join the Naseeb Chapati team in Johor, Malaysia.'],
   '/branches': ['Branches | Naseeb Chapati Restaurant', 'Find Naseeb Chapati branches, independent opening hours, contact details, and directions.'],
   '/gallery': ['Gallery | Naseeb Chapati Restaurant', 'A visual taste of Naseeb Chapati food, interiors, preparation, and family dining.'],
   '/promotions': ['Promotions | Naseeb Chapati Restaurant', 'See current Naseeb Chapati offers and branch-specific promotions.'],
@@ -811,6 +813,10 @@ function ServiceRouteLoader() {
   return <section aria-label="Loading services page" style={{ display: 'grid', placeItems: 'center', minHeight: '72vh', padding: 32, background: '#f7f8f6', color: '#1f4d3a' }}><div style={{ display: 'grid', justifyItems: 'center', gap: 14 }}><span style={{ width: 46, height: 46, border: '3px solid #dce6df', borderTopColor: '#1f4d3a', borderRadius: '50%', animation: 'spin .8s linear infinite' }} /><strong>Preparing services...</strong></div></section>;
 }
 
+function CareerRouteLoader() {
+  return <section aria-label="Loading careers page" style={{ display: 'grid', placeItems: 'center', minHeight: '72vh', padding: 32, background: '#f7f8f6', color: '#1f4d3a' }}><div style={{ display: 'grid', justifyItems: 'center', gap: 14 }}><span style={{ width: 46, height: 46, border: '3px solid #dce6df', borderTopColor: '#1f4d3a', borderRadius: '50%', animation: 'spin .8s linear infinite' }} /><strong>Loading careers...</strong></div></section>;
+}
+
 class AdminErrorBoundary extends Component {
   state = { hasError: false };
   static getDerivedStateFromError() { return { hasError: true }; }
@@ -834,6 +840,7 @@ function App() {
   else if (path === '/about') page = <AboutPage />;
   else if (path === '/our-team') page = <Suspense fallback={<TeamRouteLoader />}><TeamPage /></Suspense>;
   else if (path.startsWith('/our-team/')) page = <Suspense fallback={<TeamRouteLoader />}><TeamProfilePage slug={path.split('/')[2]} /></Suspense>;
+  else if (path === '/careers') page = <Suspense fallback={<CareerRouteLoader />}><CareersPage /></Suspense>;
   else if (path === '/branches') page = <BranchesPage />;
   else if (path === '/gallery') page = <GalleryPage />;
   else if (path === '/promotions') page = <PromotionsPage />;
