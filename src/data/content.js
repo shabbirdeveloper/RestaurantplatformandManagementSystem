@@ -34,6 +34,8 @@ export const defaultHistoryMilestones = [
     period: '1999',
     title: 'The journey begins',
     description: 'Naseeb Chapati begins its story with authentic Pakistani flavour and a warm welcome at the heart of every meal.',
+    image: imageUrls.interior,
+    imageAlt: 'The welcoming restaurant atmosphere at the beginning of the Naseeb Chapati journey',
     order: 1,
     status: 'Published',
   },
@@ -42,6 +44,8 @@ export const defaultHistoryMilestones = [
     period: 'Our roots',
     title: 'Recipes carried forward',
     description: 'Traditional recipes, familiar spices, and freshly prepared breads become the foundation of the Naseeb Chapati table.',
+    image: imageUrls.kitchen,
+    imageAlt: 'Fresh food preparation representing the recipes carried forward by Naseeb Chapati',
     order: 2,
     status: 'Published',
   },
@@ -50,6 +54,8 @@ export const defaultHistoryMilestones = [
     period: 'Growing together',
     title: 'A table for the community',
     description: 'The restaurant grows around family dining, generous portions, and the communities that continue to gather with us.',
+    image: imageUrls.family,
+    imageAlt: 'A shared restaurant table representing Naseeb Chapati and its community',
     order: 3,
     status: 'Published',
   },
@@ -58,10 +64,14 @@ export const defaultHistoryMilestones = [
     period: 'Today',
     title: 'The story continues',
     description: 'Every branch carries the same commitment to freshness, hospitality, and authentic flavour into the next chapter.',
+    image: imageUrls.hero,
+    imageAlt: 'A selection of Naseeb Chapati dishes representing the restaurant today',
     order: 4,
     status: 'Published',
   },
 ];
+
+const historyFallbackImages = [imageUrls.interior, imageUrls.kitchen, imageUrls.family, imageUrls.hero];
 
 export function normalizeHistoryMilestones(value) {
   if (!Array.isArray(value)) return [];
@@ -72,6 +82,9 @@ export function normalizeHistoryMilestones(value) {
       period: String(item.period ?? ''),
       title: String(item.title ?? ''),
       description: String(item.description ?? ''),
+      image: String(item.image || historyFallbackImages[index % historyFallbackImages.length] || ''),
+      imageAlt: String(item.imageAlt || `${item.title || 'Naseeb Chapati'} history milestone`),
+      imageStoragePath: String(item.imageStoragePath || ''),
       order: Number.isFinite(Number(item.order)) ? Math.max(1, Number(item.order)) : index + 1,
       status: ['Published', 'Draft', 'Archived'].includes(item.status) ? item.status : 'Published',
     }))
