@@ -413,6 +413,119 @@ function FoodCoverflow() {
   return <section className="section coverflow-section"><div className="container"><SectionHeading title={homepageContent.trendingTitle || 'Trending now'} copy={homepageContent.trendingSubtitle || 'The favourites our guests come back for, served warm and full of flavour.'} action={<Button href="/menu" variant="text" icon={ArrowUpRight}>View Full Menu</Button>} /><div className={`coverflow-viewport ${dragging ? 'is-dragging' : ''}`} onMouseEnter={() => setPaused(true)} onMouseLeave={() => setPaused(false)} onPointerDown={onPointerDown} onPointerUp={onPointerUp} onPointerCancel={stopDragging}><div className="coverflow-track">{slides.map((item, index) => { const rawOffset = index - active; const offset = Math.abs(rawOffset) > slides.length / 2 ? rawOffset - Math.sign(rawOffset) * slides.length : rawOffset; const distance = Math.abs(offset); const position = offset === 0 ? 'is-active' : offset === -1 ? 'is-prev' : offset === 1 ? 'is-next' : offset < 0 ? 'is-prev-far' : 'is-next-far'; return <article className={`food-slide ${position}`} key={item.id} style={{ '--distance': distance, opacity: distance > 2 ? .42 : 1, zIndex: 10 - distance }}><div className="food-slide-image"><img src={item.image} alt={item.name} loading="lazy" onError={(event) => { if (event.currentTarget.dataset.fallback !== 'true') { event.currentTarget.dataset.fallback = 'true'; event.currentTarget.src = imageUrls.naan; } }} /><span className="food-badge">{item.badge}</span></div><div className="food-slide-body"><div><span className="food-category">{item.category}</span><h3>{item.name}</h3><p>{item.description}</p></div><div className="food-slide-meta"><strong>{formatPrice(item.price)}</strong><div><Button href="/menu" variant="text">View Details</Button><Button href="https://www.foodpanda.my/chain/cx8vw/naseeb-capati-nan" variant="small" icon={ShoppingBag}>Order</Button></div></div></div></article>; })}</div><button className="carousel-arrow carousel-prev" aria-label="Previous trending dish" onClick={() => step(-1)}><ChevronLeft size={22} /></button><button className="carousel-arrow carousel-next" aria-label="Next trending dish" onClick={() => step(1)}><ChevronRight size={22} /></button></div><div className="carousel-dots" role="tablist" aria-label="Trending dishes">{slides.map((item, index) => <button key={item.id} className={index === active ? 'active' : ''} aria-label={`Show ${item.name}`} aria-selected={index === active} onClick={() => { setActive(index); setPaused(true); }} />)}</div></div></section>;
 }
 
+function SpecialPlattersCarousel() {
+  const platterItems = menuItems.filter((item) => String(item.category || '').toLowerCase().includes('platter'));
+  const platterCategories = menuCategories
+    .filter((category) => String(category.name || '').toLowerCase().includes('platter'))
+    .map((category, index) => ({
+      ...category,
+      id: category.id || category.slug || `platter-category-${index + 1}`,
+      name: category.name,
+      category: 'Naseeb Special Platters',
+      description: category.description || 'Explore generous sharing platters prepared for family tables and celebrations.',
+      badge: 'Sharing Menu',
+      isCategoryPreview: true,
+    }));
+  const slides = platterItems.length ? platterItems : platterCategories;
+  const reduceMotion = useReducedMotion();
+  const [active, setActive] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [dragging, setDragging] = useState(false);
+  const pointerStart = useRef(null);
+  const step = useCallback((direction) => {
+    if (slides.length < 2) return;
+    setActive((current) => (current + direction + slides.length) % slides.length);
+  }, [slides.length]);
+
+  useEffect(() => {
+    if (slides.length < 2 || paused || reduceMotion) return undefined;
+    const timer = window.setInterval(() => step(1), 5800);
+    return () => window.clearInterval(timer);
+  }, [paused, reduceMotion, slides.length, step]);
+
+  const stopDragging = () => {
+    pointerStart.current = null;
+    setDragging(false);
+    setPaused(false);
+  };
+  const onPointerDown = (event) => {
+    if (event.target.closest?.('button, a')) return;
+    pointerStart.current = event.clientX;
+    setDragging(true);
+    setPaused(true);
+    event.currentTarget.setPointerCapture?.(event.pointerId);
+  };
+  const onPointerUp = (event) => {
+    if (pointerStart.current != null) {
+      const distance = event.clientX - pointerStart.current;
+      if (Math.abs(distance) > 42) step(distance < 0 ? 1 : -1);
+    }
+    stopDragging();
+  };
+
+  if (!slides.length) return null;
+  return (
+    <section className="section special-platters-section" aria-labelledby="special-platters-title">
+      <div className="container">
+        <MotionReveal className="special-platters-heading" amount={.22} y={16}>
+          <div>
+            <span className="eyebrow">Made to share</span>
+            <h2 id="special-platters-title">Naseeb Special Platters</h2>
+            <p>Generous combinations prepared for family tables, celebrations, and memorable meals together.</p>
+          </div>
+          <Button href="/menu" variant="outline" icon={ArrowUpRight}>Explore Platters</Button>
+        </MotionReveal>
+
+        <div
+          className={`special-platter-viewport ${dragging ? 'is-dragging' : ''} ${slides.length === 1 ? 'has-single-slide' : ''}`}
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+          onFocusCapture={() => setPaused(true)}
+          onBlurCapture={() => setPaused(false)}
+          onPointerDown={onPointerDown}
+          onPointerUp={onPointerUp}
+          onPointerCancel={stopDragging}
+        >
+          <div className="special-platter-track" aria-live="polite">
+            {slides.map((item, index) => {
+              const rawOffset = index - active;
+              const offset = Math.abs(rawOffset) > slides.length / 2 ? rawOffset - Math.sign(rawOffset) * slides.length : rawOffset;
+              const distance = Math.abs(offset);
+              const position = offset === 0 ? 'is-active' : offset === -1 ? 'is-prev' : offset === 1 ? 'is-next' : offset < 0 ? 'is-prev-far' : 'is-next-far';
+              return (
+                <article
+                  className={`special-platter-card ${position}`}
+                  key={`${item.id || item.name}-${index}`}
+                  style={{ zIndex: 10 - distance }}
+                  aria-hidden={distance !== 0}
+                >
+                  <SafeImage src={item.image} fallback={imageUrls.family} alt={item.imageAlt || item.name} loading={index === 0 ? 'eager' : 'lazy'} decoding="async" />
+                  <div className="special-platter-shade" />
+                  <div className="special-platter-badge">{item.badge || 'Special Platter'}</div>
+                  <div className="special-platter-content">
+                    <span>{item.category}</span>
+                    <h3>{item.name}</h3>
+                    <p>{item.description}</p>
+                    <div className="special-platter-footer">
+                      <strong>{item.isCategoryPreview ? 'Explore the menu' : formatPrice(item.price)}</strong>
+                      {distance === 0 ? <div><Button href="/menu" variant="outline" icon={ArrowUpRight}>{item.isCategoryPreview ? 'View Platters' : 'View Details'}</Button>{item.isCategoryPreview ? null : <CartAddButton item={item} label="Add to Cart" />}</div> : null}
+                    </div>
+                  </div>
+                </article>
+              );
+            })}
+          </div>
+          {slides.length > 1 ? <>
+            <button className="special-platter-arrow is-prev" type="button" aria-label="Previous special platter" onClick={() => step(-1)}><ChevronLeft size={23} /></button>
+            <button className="special-platter-arrow is-next" type="button" aria-label="Next special platter" onClick={() => step(1)}><ChevronRight size={23} /></button>
+          </> : null}
+        </div>
+        {slides.length > 1 ? <div className="special-platter-dots" role="tablist" aria-label="Special platters">{slides.map((item, index) => <button type="button" key={`${item.id || item.name}-dot-${index}`} className={index === active ? 'active' : ''} aria-label={`Show ${item.name}`} aria-selected={index === active} onClick={() => setActive(index)} />)}</div> : null}
+      </div>
+    </section>
+  );
+}
+
 function CategoryGrid() {
   return <section className="section categories-section"><div className="container"><SectionHeading title="Browse by category" copy="Whatever the craving, there’s something warm, flavourful, and made to share." action={<Button href="/menu" variant="outline" icon={ArrowUpRight}>Explore all</Button>} /><MotionGroup className="category-grid" amount={.12}>{menuCategories.slice(0, 6).map((category, index) => <MotionCard as="a" className="category-card" href="/menu" key={category.id || category.slug || `${category.name}-${index}`} index={index} onClick={(event) => { event.preventDefault(); navigateTo('/menu'); }}><CategoryCardMedia category={category} /><div className="category-card-overlay"><span className="category-card-label"><i><CategoryIcon name={category.icon} size={15} /></i>{category.name}</span><ArrowUpRight size={17} /></div></MotionCard>)}</MotionGroup></div></section>;
 }
@@ -665,7 +778,7 @@ function SocialSection() {
 }
 
 function HomePage() {
-  return <MotionReplayProvider><div className="home-page"><Hero /><QuickInfo /><WelcomeTicker /><HomepageStats /><MotionScrollScene><FoodCoverflow /></MotionScrollScene><MotionScrollScene><BestSellers /></MotionScrollScene><MotionScrollScene><CategoryGrid /></MotionScrollScene><MotionScrollScene><AboutBand /></MotionScrollScene><MotionScrollScene><PromotionsSection /></MotionScrollScene><MotionScrollScene><HomeTeamSection /></MotionScrollScene><MotionScrollScene><ReviewSection /></MotionScrollScene><MotionScrollScene><GalleryStrip /></MotionScrollScene><MotionScrollScene><ReservationSection /></MotionScrollScene><MotionScrollScene><HistorySection /></MotionScrollScene><MotionScrollScene><SocialSection /></MotionScrollScene><MotionScrollScene><BranchSection /></MotionScrollScene></div></MotionReplayProvider>;
+  return <MotionReplayProvider><div className="home-page"><Hero /><QuickInfo /><WelcomeTicker /><HomepageStats /><MotionScrollScene><FoodCoverflow /></MotionScrollScene><MotionScrollScene><SpecialPlattersCarousel /></MotionScrollScene><MotionScrollScene><BestSellers /></MotionScrollScene><MotionScrollScene><CategoryGrid /></MotionScrollScene><MotionScrollScene><AboutBand /></MotionScrollScene><MotionScrollScene><PromotionsSection /></MotionScrollScene><MotionScrollScene><HomeTeamSection /></MotionScrollScene><MotionScrollScene><ReviewSection /></MotionScrollScene><MotionScrollScene><GalleryStrip /></MotionScrollScene><MotionScrollScene><ReservationSection /></MotionScrollScene><MotionScrollScene><HistorySection /></MotionScrollScene><MotionScrollScene><SocialSection /></MotionScrollScene><MotionScrollScene><BranchSection /></MotionScrollScene></div></MotionReplayProvider>;
 }
 
 function DishModal({ item, onClose }) {
