@@ -257,6 +257,9 @@
 .admin-typography-fields { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 13px; padding: 15px; border: 1px solid var(--admin-border); border-radius: 11px; background: var(--admin-soft); }
 .admin-typography-fields label:first-child { grid-column: 1 / -1; }
 .admin-field-help { margin-top: -6px; color: var(--admin-muted); font-size: 9px; font-weight: 600; line-height: 1.5; }
+.admin-field-summary { display: grid; align-content: center; gap: 5px; min-height: 70px; padding: 13px 14px; border: 1px solid var(--admin-border); border-radius: 10px; background: var(--admin-soft); }
+.admin-field-summary strong { color: var(--admin-green); font-size: 11px; }
+.admin-field-summary small { color: var(--admin-muted); font-size: 9px; line-height: 1.45; }
 .admin-save-wide { width: 100%; min-height: 44px; }
 .admin-preview-panel { position: sticky; top: 95px; }
 .admin-hero-preview { overflow: hidden; border: 1px solid var(--admin-border); border-radius: 10px; background: var(--admin-soft); }

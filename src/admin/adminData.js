@@ -9,6 +9,7 @@ import {
   normalizeHeroSlides,
   normalizeHeroTypography,
   normalizeHistoryMilestones,
+  normalizeSpecialPlattersSettings,
   promotions as publicPromotions,
   reviews as publicReviews,
 } from '../data/content';
@@ -167,6 +168,7 @@ const makeSeedState = () => ({
     trendingAutoplay: true,
     trendingSpeed: 4500,
     trendingEffect: true,
+    ...normalizeSpecialPlattersSettings(),
     aboutEyebrow: 'About Naseeb Chapati',
     aboutHeading: 'Food that brings people closer.',
     aboutText: 'From traditional recipes to modern favourites, Naseeb Chapati brings the true taste of Pakistan to Malaysia. Our table is made for generous portions, easy conversation, and the comfort of a meal served with care.',
@@ -227,6 +229,7 @@ function normalizeAdminState(state) {
       ...seed.homepage,
       ...incomingHomepage,
       ...normalizeHeroTypography({ ...seed.homepage, ...incomingHomepage }),
+      ...normalizeSpecialPlattersSettings({ ...seed.homepage, ...incomingHomepage }),
       heroSlides: normalizeHeroSlides(incomingHomepage.heroSlides),
     },
     servicesContent: normalizeServicesContent(incoming.servicesContent),

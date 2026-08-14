@@ -414,9 +414,14 @@ function FoodCoverflow() {
 }
 
 function SpecialPlattersCarousel() {
-  const platterItems = menuItems.filter((item) => String(item.category || '').toLowerCase().includes('platter'));
+  const selectedCategory = String(homepageContent.specialPlattersCategory || '').trim().toLowerCase();
+  const categoryMatches = (value) => {
+    const normalized = String(value || '').trim().toLowerCase();
+    return selectedCategory ? normalized === selectedCategory : normalized.includes('platter');
+  };
+  const platterItems = menuItems.filter((item) => categoryMatches(item.category));
   const platterCategories = menuCategories
-    .filter((category) => String(category.name || '').toLowerCase().includes('platter'))
+    .filter((category) => categoryMatches(category.name))
     .map((category, index) => ({
       ...category,
       id: category.id || category.slug || `platter-category-${index + 1}`,
@@ -438,8 +443,8 @@ function SpecialPlattersCarousel() {
   }, [slides.length]);
 
   useEffect(() => {
-    if (slides.length < 2 || paused || reduceMotion) return undefined;
-    const timer = window.setInterval(() => step(1), 5800);
+    if (slides.length < 2 || paused || reduceMotion || homepageContent.specialPlattersAutoplay === false) return undefined;
+    const timer = window.setInterval(() => step(1), Math.min(12000, Math.max(3000, Number(homepageContent.specialPlattersSpeed) || 5800)));
     return () => window.clearInterval(timer);
   }, [paused, reduceMotion, slides.length, step]);
 
@@ -463,17 +468,17 @@ function SpecialPlattersCarousel() {
     stopDragging();
   };
 
-  if (!slides.length) return null;
+  if (!slides.length || homepageContent.showSpecialPlatters === false) return null;
   return (
     <section className="section special-platters-section" aria-labelledby="special-platters-title">
       <div className="container">
         <MotionReveal className="special-platters-heading" amount={.22} y={16}>
           <div>
-            <span className="eyebrow">Made to share</span>
-            <h2 id="special-platters-title">Naseeb Special Platters</h2>
-            <p>Generous combinations prepared for family tables, celebrations, and memorable meals together.</p>
+            <span className="eyebrow">{homepageContent.specialPlattersEyebrow}</span>
+            <h2 id="special-platters-title">{homepageContent.specialPlattersTitle}</h2>
+            <p>{homepageContent.specialPlattersSubtitle}</p>
           </div>
-          <Button href="/menu" variant="outline" icon={ArrowUpRight}>Explore Platters</Button>
+          <Button href="/menu" variant="outline" icon={ArrowUpRight}>{homepageContent.specialPlattersButtonLabel}</Button>
         </MotionReveal>
 
         <div

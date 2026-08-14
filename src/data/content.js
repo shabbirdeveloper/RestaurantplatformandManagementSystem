@@ -118,6 +118,31 @@ export function getHeroTitleFontFamily(value) {
   return heroTitleFontMap.get(value) || heroTitleFontMap.get('montserrat');
 }
 
+const specialPlattersDefaults = {
+  specialPlattersEyebrow: 'Made to share',
+  specialPlattersTitle: 'Naseeb Special Platters',
+  specialPlattersSubtitle: 'Generous combinations prepared for family tables, celebrations, and memorable meals together.',
+  specialPlattersCategory: 'NASEEB PLATTERS',
+  specialPlattersButtonLabel: 'Explore Platters',
+  specialPlattersAutoplay: true,
+  specialPlattersSpeed: 5800,
+  showSpecialPlatters: true,
+};
+
+export function normalizeSpecialPlattersSettings(value = {}) {
+  const speed = Number(value.specialPlattersSpeed);
+  return {
+    specialPlattersEyebrow: String(value.specialPlattersEyebrow || specialPlattersDefaults.specialPlattersEyebrow),
+    specialPlattersTitle: String(value.specialPlattersTitle || specialPlattersDefaults.specialPlattersTitle),
+    specialPlattersSubtitle: String(value.specialPlattersSubtitle || specialPlattersDefaults.specialPlattersSubtitle),
+    specialPlattersCategory: String(value.specialPlattersCategory || specialPlattersDefaults.specialPlattersCategory),
+    specialPlattersButtonLabel: String(value.specialPlattersButtonLabel || specialPlattersDefaults.specialPlattersButtonLabel),
+    specialPlattersAutoplay: value.specialPlattersAutoplay !== false,
+    specialPlattersSpeed: Number.isFinite(speed) ? Math.min(12000, Math.max(3000, speed)) : specialPlattersDefaults.specialPlattersSpeed,
+    showSpecialPlatters: value.showSpecialPlatters !== false,
+  };
+}
+
 const defaultHomepageContent = {
   heroHeading: 'Authentic Flavours, Freshly Served',
   heroText: 'Enjoy freshly prepared Pakistani favourites, delicious chapati, flavourful curries, biryani, grills, drinks, and family meals at Naseeb Chapati.',
@@ -152,6 +177,7 @@ const defaultHomepageContent = {
   trendingAutoplay: true,
   trendingSpeed: 4500,
   trendingEffect: true,
+  ...normalizeSpecialPlattersSettings(),
   aboutEyebrow: 'About Naseeb Chapati',
   aboutHeading: 'Food that brings people closer.',
   aboutText: 'From traditional recipes to modern favourites, Naseeb Chapati brings the true taste of Pakistan to Malaysia. Our table is made for generous portions, easy conversation, and the comfort of a meal served with care.',
@@ -178,6 +204,7 @@ export const homepageContent = {
   ...defaultHomepageContent,
   ...persistedHomepageContent,
   ...normalizeHeroTypography({ ...defaultHomepageContent, ...persistedHomepageContent }),
+  ...normalizeSpecialPlattersSettings({ ...defaultHomepageContent, ...persistedHomepageContent }),
   historyMilestones: normalizeHistoryMilestones(
     Array.isArray(persistedHomepageContent.historyMilestones)
       ? persistedHomepageContent.historyMilestones
