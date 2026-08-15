@@ -6,6 +6,7 @@ import {
   clearAdminSession, loadAdminState, persistAdminState, readAdminSession, readAdminState, roleCatalog, saveAdminSession, saveAdminState, sessionFromSupabaseUser, signInAdmin, signOutAdmin,
 } from './adminData';
 import WebsiteContentPage from './WebsiteContentPage';
+import SpecialPlattersPage from './SpecialPlattersPage';
 import TeamMembersPage from './TeamMembersPage';
 import ServicesAdminPage from './ServicesAdminPage';
 import CareersAdminPage from './CareersAdminPage';
@@ -20,6 +21,7 @@ const navigation = [
   { id: 'website', label: 'Website Content', icon: PanelsTopLeft, children: [{ id: 'website', label: 'Homepage' }, { id: 'team', label: 'Team Members' }, { id: 'careers', label: 'Careers' }] },
   { id: 'services-overview', label: 'Services', icon: PartyPopper, children: [{ id: 'services-overview', label: 'Service Overview' }, { id: 'service-events', label: 'Event Types' }, { id: 'service-packages', label: 'Event Packages' }, { id: 'catering-packages', label: 'Catering Packages' }, { id: 'service-facilities', label: 'Facilities' }, { id: 'service-gallery', label: 'Service Gallery' }, { id: 'service-enquiries', label: 'Event Enquiries' }, { id: 'service-settings', label: 'Service Settings' }] },
   { id: 'menu', label: 'Menu Management', icon: Utensils, children: [{ id: 'menu', label: 'Menu Items' }, { id: 'categories', label: 'Categories' }] },
+  { id: 'special-platters', label: 'Naseeb Special Platters', icon: TableProperties },
   { id: 'branches', label: 'Branches', icon: MapPin },
   { id: 'promotions', label: 'Promotions', icon: TicketPercent },
   { id: 'gallery', label: 'Gallery', icon: Images },
@@ -50,6 +52,7 @@ const pageMeta = {
   'service-settings': ['Services', 'Service Settings', 'Control hero content, capacity, calls to action, SEO, and FAQs.'],
   menu: ['Menu Management', 'Menu Items', 'Manage dishes, prices, availability, and publishing.'],
   categories: ['Menu Management', 'Categories', 'Organise the menu into clear, discoverable groups.'],
+  'special-platters': ['Special Platters', 'Naseeb Special Platters', 'Control the homepage platter carousel, selected category, visibility, and animation.'],
   branches: ['Branches', 'Branch Directory', 'Manage branch details, hours, and availability.'],
   promotions: ['Promotions', 'Offers', 'Schedule, publish, and retire promotions.'],
   gallery: ['Gallery', 'Gallery Items', 'Curate food, interior, staff, and events imagery.'],
@@ -67,10 +70,10 @@ const pageMeta = {
 
 const roleAccess = {
   super_admin: ['*'],
-  content_manager: ['dashboard', 'website', 'team', 'careers', 'services-overview', 'service-events', 'service-packages', 'catering-packages', 'service-facilities', 'service-gallery', 'service-settings', 'menu', 'categories', 'promotions', 'gallery', 'social', 'seo', 'media'],
-  branch_manager: ['dashboard', 'branches', 'team', 'careers', 'services-overview', 'service-events', 'service-packages', 'catering-packages', 'service-facilities', 'service-gallery', 'service-enquiries', 'menu', 'promotions', 'gallery', 'reservations', 'enquiries', 'hr'],
+  content_manager: ['dashboard', 'website', 'team', 'careers', 'services-overview', 'service-events', 'service-packages', 'catering-packages', 'service-facilities', 'service-gallery', 'service-settings', 'menu', 'categories', 'special-platters', 'promotions', 'gallery', 'social', 'seo', 'media'],
+  branch_manager: ['dashboard', 'branches', 'team', 'careers', 'services-overview', 'service-events', 'service-packages', 'catering-packages', 'service-facilities', 'service-gallery', 'service-enquiries', 'menu', 'special-platters', 'promotions', 'gallery', 'reservations', 'enquiries', 'hr'],
   reservation_manager: ['dashboard', 'reservations', 'enquiries', 'service-enquiries'],
-  viewer: ['dashboard', 'team', 'careers', 'services-overview', 'service-events', 'service-packages', 'catering-packages', 'service-facilities', 'service-gallery', 'service-enquiries', 'service-settings', 'menu', 'categories', 'branches', 'promotions', 'gallery', 'reviews', 'reservations', 'enquiries', 'finance', 'hr', 'social', 'seo', 'media'],
+  viewer: ['dashboard', 'team', 'careers', 'services-overview', 'service-events', 'service-packages', 'catering-packages', 'service-facilities', 'service-gallery', 'service-enquiries', 'service-settings', 'menu', 'categories', 'special-platters', 'branches', 'promotions', 'gallery', 'reviews', 'reservations', 'enquiries', 'finance', 'hr', 'social', 'seo', 'media'],
 };
 
 const resourceConfig = {
@@ -229,6 +232,7 @@ function AdminView({ view, session, state, commit, notify, selectView }) {
   if (!hasAccess(session, view)) return <AccessDenied />;
   if (view === 'dashboard') return <OverviewPage state={state} selectView={selectView} />;
   if (view === 'website') return <WebsiteContentPage state={state} commit={commit} notify={notify} />;
+  if (view === 'special-platters') return <SpecialPlattersPage state={state} commit={commit} notify={notify} />;
   if (view === 'team') return <TeamMembersPage notify={notify} />;
   if (view === 'careers') return <CareersAdminPage notify={notify} />;
   if (view === 'services-overview' || view.startsWith('service-') || view === 'catering-packages') return <ServicesAdminPage section={view} state={state} commit={commit} notify={notify} navigate={selectView} />;

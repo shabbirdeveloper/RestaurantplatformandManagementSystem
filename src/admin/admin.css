@@ -262,6 +262,20 @@
 .admin-field-summary small { color: var(--admin-muted); font-size: 9px; line-height: 1.45; }
 .admin-save-wide { width: 100%; min-height: 44px; }
 .admin-preview-panel { position: sticky; top: 95px; }
+.admin-platter-preview { display: grid; gap: 14px; }
+.admin-platter-preview-cover { position: relative; min-height: 250px; overflow: hidden; border-radius: 12px; background: var(--admin-green-dark); color: #fff; }
+.admin-platter-preview-cover::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,56,43,.05) 30%, rgba(18,56,43,.9) 100%); }
+.admin-platter-preview-cover img { width: 100%; height: 250px; object-fit: cover; }
+.admin-platter-preview-cover span, .admin-platter-preview-cover h3 { position: absolute; z-index: 1; left: 18px; right: 18px; }
+.admin-platter-preview-cover span { bottom: 58px; font-size: 9px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
+.admin-platter-preview-cover h3 { bottom: 18px; margin: 0; color: #fff; font-size: 24px; line-height: 1.05; }
+.admin-platter-preview-list { display: grid; gap: 8px; }
+.admin-platter-preview-list > div { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 10px; align-items: center; padding: 8px; border: 1px solid var(--admin-border); border-radius: 10px; background: var(--admin-white); }
+.admin-platter-preview-list img { width: 48px; height: 48px; border-radius: 8px; object-fit: cover; background: var(--admin-soft); }
+.admin-platter-preview-list span { display: grid; gap: 3px; min-width: 0; }
+.admin-platter-preview-list strong { overflow: hidden; color: var(--admin-black); font-size: 10px; text-overflow: ellipsis; white-space: nowrap; }
+.admin-platter-preview-list small, .admin-platter-preview-list p { margin: 0; color: var(--admin-muted); font-size: 9px; line-height: 1.5; }
+.admin-platter-preview > .admin-outline-button { width: 100%; }
 .admin-hero-preview { overflow: hidden; border: 1px solid var(--admin-border); border-radius: 10px; background: var(--admin-soft); }
 .admin-hero-preview > img { width: 100%; height: 150px; object-fit: cover; }
 .admin-hero-preview > div { padding: 14px; }
