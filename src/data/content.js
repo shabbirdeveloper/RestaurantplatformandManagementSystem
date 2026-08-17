@@ -122,12 +122,32 @@ const specialPlattersDefaults = {
   specialPlattersEyebrow: 'Made to share',
   specialPlattersTitle: 'Naseeb Special Platters',
   specialPlattersSubtitle: 'Generous combinations prepared for family tables, celebrations, and memorable meals together.',
-  specialPlattersCategory: 'NASEEB PLATTERS',
   specialPlattersButtonLabel: 'Explore Platters',
   specialPlattersAutoplay: true,
   specialPlattersSpeed: 5800,
   showSpecialPlatters: true,
+  specialPlattersItems: [],
 };
+
+export function normalizeSpecialPlatterItems(items = []) {
+  if (!Array.isArray(items)) return [];
+  return items.map((item, index) => {
+    const parsedPrice = Number(item?.price);
+    const status = ['Published', 'Draft', 'Archived'].includes(item?.status) ? item.status : 'Draft';
+    return {
+      id: String(item?.id || `special-platter-${index + 1}`),
+      name: String(item?.name || ''),
+      description: String(item?.description || ''),
+      price: item?.price === '' || item?.price == null || !Number.isFinite(parsedPrice) ? '' : parsedPrice,
+      badge: String(item?.badge || ''),
+      image: String(item?.image || ''),
+      imageAlt: String(item?.imageAlt || item?.name || ''),
+      imageStoragePath: String(item?.imageStoragePath || ''),
+      order: Math.max(1, Number(item?.order) || index + 1),
+      status,
+    };
+  }).sort((a, b) => a.order - b.order);
+}
 
 export function normalizeSpecialPlattersSettings(value = {}) {
   const speed = Number(value.specialPlattersSpeed);
@@ -135,11 +155,11 @@ export function normalizeSpecialPlattersSettings(value = {}) {
     specialPlattersEyebrow: String(value.specialPlattersEyebrow || specialPlattersDefaults.specialPlattersEyebrow),
     specialPlattersTitle: String(value.specialPlattersTitle || specialPlattersDefaults.specialPlattersTitle),
     specialPlattersSubtitle: String(value.specialPlattersSubtitle || specialPlattersDefaults.specialPlattersSubtitle),
-    specialPlattersCategory: String(value.specialPlattersCategory || specialPlattersDefaults.specialPlattersCategory),
     specialPlattersButtonLabel: String(value.specialPlattersButtonLabel || specialPlattersDefaults.specialPlattersButtonLabel),
     specialPlattersAutoplay: value.specialPlattersAutoplay !== false,
     specialPlattersSpeed: Number.isFinite(speed) ? Math.min(12000, Math.max(3000, speed)) : specialPlattersDefaults.specialPlattersSpeed,
     showSpecialPlatters: value.showSpecialPlatters !== false,
+    specialPlattersItems: normalizeSpecialPlatterItems(value.specialPlattersItems),
   };
 }
 

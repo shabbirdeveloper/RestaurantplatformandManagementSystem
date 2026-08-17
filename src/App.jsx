@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { AnimatePresence, LazyMotion, domAnimation, m as motion, useReducedMotion } from 'framer-motion';
 import {
   ArrowDown, ArrowLeft, ArrowRight, ArrowUpRight, BadgeCheck, Bike, BookOpen, Camera, Check, ChevronLeft, ChevronRight, CircleAlert, Clock3, Flame, Heart, Home, Leaf, Mail, MapPin, Maximize2, Menu as MenuIcon, MessageCircle, Moon, Navigation, Phone, Search, Send, Share2, ShoppingBag, ShoppingCart, Star, TicketPercent, Utensils, Users, X, } from 'lucide-react';
-import { branches, contactInfo, galleryItems, getHeroTitleFontFamily, heroSlides, homepageContent, imageUrls, menuCategories, menuItems, normalizeHeroTypography, promotions, reviews, servicesContent, socialLinks } from './data/content';
+import { branches, contactInfo, galleryItems, getHeroTitleFontFamily, heroSlides, homepageContent, imageUrls, menuCategories, menuItems, normalizeHeroTypography, normalizeSpecialPlatterItems, promotions, reviews, servicesContent, socialLinks } from './data/content';
 import { CategoryIcon } from './categoryIcons';
 import AdminApp from './admin/AdminApp';
 import { listPublishedTeamMembers, submitEnquiry, submitReservation } from './lib/supabase';
@@ -414,24 +414,9 @@ function FoodCoverflow() {
 }
 
 function SpecialPlattersCarousel() {
-  const selectedCategory = String(homepageContent.specialPlattersCategory || '').trim().toLowerCase();
-  const categoryMatches = (value) => {
-    const normalized = String(value || '').trim().toLowerCase();
-    return selectedCategory ? normalized === selectedCategory : normalized.includes('platter');
-  };
-  const platterItems = menuItems.filter((item) => categoryMatches(item.category));
-  const platterCategories = menuCategories
-    .filter((category) => categoryMatches(category.name))
-    .map((category, index) => ({
-      ...category,
-      id: category.id || category.slug || `platter-category-${index + 1}`,
-      name: category.name,
-      category: 'Naseeb Special Platters',
-      description: category.description || 'Explore generous sharing platters prepared for family tables and celebrations.',
-      badge: 'Sharing Menu',
-      isCategoryPreview: true,
-    }));
-  const slides = platterItems.length ? platterItems : platterCategories;
+  const slides = normalizeSpecialPlatterItems(homepageContent.specialPlattersItems)
+    .filter((item) => item.status === 'Published' && item.name.trim() && item.image.trim())
+    .map((item) => ({ ...item, category: 'Naseeb Special Platters' }));
   const reduceMotion = useReducedMotion();
   const [active, setActive] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -512,8 +497,8 @@ function SpecialPlattersCarousel() {
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
                     <div className="special-platter-footer">
-                      <strong>{item.isCategoryPreview ? 'Explore the menu' : formatPrice(item.price)}</strong>
-                      {distance === 0 ? <div><Button href="/menu" variant="outline" icon={ArrowUpRight}>{item.isCategoryPreview ? 'View Platters' : 'View Details'}</Button>{item.isCategoryPreview ? null : <CartAddButton item={item} label="Add to Cart" />}</div> : null}
+                      <strong>{item.price === '' ? 'Ask in branch' : formatPrice(item.price)}</strong>
+                      {distance === 0 ? <div><Button href="/menu" variant="outline" icon={ArrowUpRight}>View Details</Button><CartAddButton item={item} label="Add to Cart" /></div> : null}
                     </div>
                   </div>
                 </article>

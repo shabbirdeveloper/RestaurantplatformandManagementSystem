@@ -52,7 +52,7 @@ const pageMeta = {
   'service-settings': ['Services', 'Service Settings', 'Control hero content, capacity, calls to action, SEO, and FAQs.'],
   menu: ['Menu Management', 'Menu Items', 'Manage dishes, prices, availability, and publishing.'],
   categories: ['Menu Management', 'Categories', 'Organise the menu into clear, discoverable groups.'],
-  'special-platters': ['Special Platters', 'Naseeb Special Platters', 'Control the homepage platter carousel, selected category, visibility, and animation.'],
+  'special-platters': ['Special Platters', 'Naseeb Special Platters', 'Manage independent platter cards, images, publishing, visibility, and carousel animation.'],
   branches: ['Branches', 'Branch Directory', 'Manage branch details, hours, and availability.'],
   promotions: ['Promotions', 'Offers', 'Schedule, publish, and retire promotions.'],
   gallery: ['Gallery', 'Gallery Items', 'Curate food, interior, staff, and events imagery.'],
