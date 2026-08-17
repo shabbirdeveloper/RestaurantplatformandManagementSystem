@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowUpRight, ChevronDown, Plus, Save, Trash2, Upload, Utensils } from 'lucide-react';
+import { ArrowUpRight, ChevronDown, CircleAlert, Plus, Save, Trash2, Upload, Utensils } from 'lucide-react';
 import { normalizeSpecialPlatterItems, normalizeSpecialPlattersSettings } from '../data/content';
 import { isSupabaseConfigured, uploadMediaFile } from '../lib/supabase';
 
@@ -13,6 +13,7 @@ const fileToDataUrl = (file) => new Promise((resolve, reject) => {
 function SpecialPlattersPage({ state, commit, notify }) {
   const [draft, setDraft] = useState(() => normalizeSpecialPlattersSettings(state.homepage || {}));
   const [uploadingItem, setUploadingItem] = useState('');
+  const [saving, setSaving] = useState(false);
   const update = (key, value) => setDraft((current) => ({ ...current, [key]: value }));
   const updateItem = (id, changes) => setDraft((current) => ({
     ...current,
@@ -72,22 +73,37 @@ function SpecialPlattersPage({ state, commit, notify }) {
     }
   };
 
-  const publishedItems = draft.specialPlattersItems.filter((item) => item.status === 'Published');
-  const save = () => {
-    const settings = normalizeSpecialPlattersSettings(draft);
-    const incompletePublishedItem = settings.specialPlattersItems.find((item) => (
-      item.status === 'Published' && (!item.name.trim() || !item.image.trim())
-    ));
-    if (incompletePublishedItem) {
-      notify('Every published platter needs its own name and image.');
-      return;
-    }
+  const isComplete = (item) => Boolean(item.name.trim() && item.image.trim());
+  const publishedItems = draft.specialPlattersItems.filter((item) => item.status === 'Published' && isComplete(item));
+  const incompletePublishedItems = draft.specialPlattersItems.filter((item) => item.status === 'Published' && !isComplete(item));
+  const save = async () => {
+    const normalized = normalizeSpecialPlattersSettings(draft);
+    const incompleteCount = normalized.specialPlattersItems.filter((item) => item.status === 'Published' && !isComplete(item)).length;
+    const settings = {
+      ...normalized,
+      specialPlattersItems: normalized.specialPlattersItems.map((item) => (
+        item.status === 'Published' && !isComplete(item) ? { ...item, status: 'Draft' } : item
+      )),
+    };
     setDraft(settings);
-    commit((current) => ({
-      ...current,
-      homepage: { ...current.homepage, ...settings },
-    }));
-    notify('Naseeb Special Platters published successfully.');
+    setSaving(true);
+    try {
+      const result = await commit((current) => ({
+        ...current,
+        homepage: { ...current.homepage, ...settings },
+      }));
+      if (result?.contentOk === false) {
+        notify(`Special Platters could not sync to Supabase: ${result.contentError?.message || 'database update failed'}`);
+        return;
+      }
+      notify(incompleteCount
+        ? `Published complete platters. ${incompleteCount} incomplete ${incompleteCount === 1 ? 'card was' : 'cards were'} kept as Draft.`
+        : 'Naseeb Special Platters synced and published successfully.');
+    } catch (error) {
+      notify(`Special Platters could not be published: ${error.message || 'unknown error'}`);
+    } finally {
+      setSaving(false);
+    }
   };
 
   return <section className="admin-content-page admin-special-platters-page">
@@ -181,6 +197,7 @@ function SpecialPlattersPage({ state, commit, notify }) {
                     <label>Display order<input type="number" min="1" value={item.order || index + 1} onChange={(event) => updateItem(item.id, { order: event.target.value })} /></label>
                     <label>Status<select value={item.status || 'Draft'} onChange={(event) => updateItem(item.id, { status: event.target.value })}><option>Draft</option><option>Published</option><option>Archived</option></select></label>
                   </div>
+                  {item.status === 'Published' && !isComplete(item) ? <div className="admin-form-error" role="alert"><CircleAlert size={15} />Add both a platter name and image before publishing. This card will remain Draft.</div> : null}
                 </div>
               </div>
             </article>)}
@@ -201,8 +218,8 @@ function SpecialPlattersPage({ state, commit, notify }) {
             <h3>{draft.specialPlattersTitle || 'Naseeb Special Platters'}</h3>
           </div>
           <div className="admin-field-summary">
-            <strong>{publishedItems.length} published platter {publishedItems.length === 1 ? 'card' : 'cards'}</strong>
-            <small>Only complete cards marked Published appear on the homepage.</small>
+            <strong>{publishedItems.length} ready platter {publishedItems.length === 1 ? 'card' : 'cards'}</strong>
+            <small>{incompletePublishedItems.length ? `${incompletePublishedItems.length} incomplete published ${incompletePublishedItems.length === 1 ? 'card needs' : 'cards need'} a name and image.` : 'Complete cards marked Published appear on the homepage.'}</small>
           </div>
           <div className="admin-platter-preview-list">
             {draft.specialPlattersItems.slice(0, 4).map((item) => <div key={item.id}>
@@ -213,7 +230,7 @@ function SpecialPlattersPage({ state, commit, notify }) {
           </div>
           <a href="/" target="_blank" rel="noreferrer" className="admin-outline-button">Preview homepage <ArrowUpRight size={15} /></a>
         </div>
-        <button className="admin-primary-button admin-save-wide" type="button" onClick={save}><Save size={16} />Publish Special Platters</button>
+        <button className="admin-primary-button admin-save-wide" type="button" onClick={save} disabled={saving}><Save size={16} />{saving ? 'Publishing to Supabase…' : 'Publish Special Platters'}</button>
       </aside>
     </div>
   </section>;

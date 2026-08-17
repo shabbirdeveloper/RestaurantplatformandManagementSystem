@@ -567,8 +567,9 @@ export async function persistAdminState(state) {
     attendanceRows.length ? supabase.from('naseeb_attendance').upsert(attendanceRows, { onConflict: 'id' }) : Promise.resolve({ error: null }),
     leaveRows.length ? supabase.from('naseeb_leave_requests').upsert(leaveRows, { onConflict: 'id' }) : Promise.resolve({ error: null }),
   ]);
-  const error = contentResult.error || operationsResult.error || reservationsResult.error || enquiriesResult.error || eventEnquiriesResult.error || financeResult.error || staffResult.error || attendanceResult.error || leaveResult.error;
-  return { ok: !error, source: error ? 'local' : 'supabase', error };
+  const contentError = contentResult.error || null;
+  const error = contentError || operationsResult.error || reservationsResult.error || enquiriesResult.error || eventEnquiriesResult.error || financeResult.error || staffResult.error || attendanceResult.error || leaveResult.error;
+  return { ok: !error, contentOk: !contentError, contentError, source: error ? 'local' : 'supabase', error };
 }
 
 export async function signInAdmin({ email, password }) {

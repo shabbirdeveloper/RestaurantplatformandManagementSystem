@@ -192,7 +192,18 @@ function AdminApp() {
     return { ok: true };
   };
   const logout = async () => { await signOutAdmin(); clearAdminSession(); setSession(null); };
-  const commit = (updater) => setState((current) => { const next = typeof updater === 'function' ? updater(current) : { ...current, ...updater }; saveAdminState(next); if (isSupabaseConfigured) { setSyncState('saving'); void persistAdminState(next).then((result) => { setDataSource(result.source); setSyncState(result.ok ? 'synced' : 'error'); }); } return next; });
+  const commit = (updater) => {
+    const next = typeof updater === 'function' ? updater(state) : { ...state, ...updater };
+    setState(next);
+    saveAdminState(next);
+    if (!isSupabaseConfigured) return Promise.resolve({ ok: true, contentOk: true, source: 'local', error: null });
+    setSyncState('saving');
+    return persistAdminState(next).then((result) => {
+      setDataSource(result.source);
+      setSyncState(result.ok ? 'synced' : 'error');
+      return result;
+    });
+  };
   if (booting) return <div className="admin-loading-screen"><img src="/naseeb-chapati-logo.png" alt="Naseeb Chapati" /><span>Connecting to the admin workspace…</span></div>;
   if (!session) return <AdminLogin onLogin={login} authMode={isSupabaseConfigured} />;
   return <AdminShell session={session} state={state} view={view} setView={setView} commit={commit} onLogout={logout} syncState={syncState} dataSource={dataSource} />;
