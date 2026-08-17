@@ -496,10 +496,6 @@ function SpecialPlattersCarousel() {
                     <span>{item.category}</span>
                     <h3>{item.name}</h3>
                     <p>{item.description}</p>
-                    <div className="special-platter-footer">
-                      <strong>{item.price === '' ? 'Ask in branch' : formatPrice(item.price)}</strong>
-                      {distance === 0 ? <div><Button href="/menu" variant="outline" icon={ArrowUpRight}>View Details</Button><CartAddButton item={item} label="Add to Cart" /></div> : null}
-                    </div>
                   </div>
                 </article>
               );
