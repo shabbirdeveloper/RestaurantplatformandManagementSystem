@@ -1719,7 +1719,7 @@ body {
 .site-header-home .logo-wordmark em { color: var(--maroon); }
 .desktop-nav { gap: clamp(16px, 1.65vw, 25px); }
 .desktop-nav a,
-.site-header-home .desktop-nav a { color: #343a36; font-size: 11px; letter-spacing: .015em; }
+.site-header-home .desktop-nav a { color: #343a36; font-size: 12px; letter-spacing: .015em; }
 .desktop-nav a::after,
 .site-header-home .desktop-nav a::after { background: var(--maroon); }
 .desktop-nav a:hover,
@@ -2370,7 +2370,6 @@ body {
 
 @media (max-width: 1080px) {
   .desktop-nav { gap: 10px; }
-  .desktop-nav a { font-size: 10px; }
   .site-header .header-actions .button { padding-inline: 14px; }
   .home-page .hero-media { left: 50%; }
   .home-page .hero-copy { max-width: 500px; }
